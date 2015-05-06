@@ -9,13 +9,10 @@ package kreach;
  *
  * @author Helmond
  */
-public class KReach {
-
-    /**
-     * @param args the command line arguments
-     */
-    public static void main(String[] args) {
-        System.out.println("Hello world");
-    }
+public interface Edge {
+    
+    public int getU();
+    
+    public int getV();
     
 }
