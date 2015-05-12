@@ -18,8 +18,9 @@ public class VertexCoverAlgorithms{
 
     
     public static Set<Integer> computeBasic2AproxVertexCover(Graph G) {
-        
+        System.out.println(G);
         G = Graph.toUndirected(G);
+        System.out.println(G);
         Set<Edge> edges = G.edges();
         Set<Integer> cover = new HashSet<Integer>();
         while(!edges.isEmpty())
