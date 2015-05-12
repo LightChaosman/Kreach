@@ -75,9 +75,10 @@ public class Graph {
         Graph G2 = new Graph(G.directed);
         for (int v : G.vertices()) {
             G2.addVertex(v);
-            for (Edge e : G.adjecent(v)) {
-                G2.addEdge(e.getU(), e.getV());
-            }
+        }
+        for(Edge e:G.edges())
+        {
+            G2.addEdge(e.getU(), e.getV());
         }
         return G2;
     }
@@ -108,6 +109,8 @@ public class Graph {
                     int v = Integer.parseInt(ids[1]);
                     if (!g.hasVertex(u)) {
                         g.addVertex(u);
+                    }if (!g.hasVertex(v)) {
+                        g.addVertex(v);
                     }
                     g.addEdge(u, v);
                 }
