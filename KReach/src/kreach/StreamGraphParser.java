@@ -16,7 +16,7 @@ public abstract class StreamGraphParser implements Consumer<String>{
     protected final Graph g;
 
     public StreamGraphParser(boolean directed) {
-        g = new Graph(directed);
+        g = new Graph();
     }
 
     public Graph getG() {

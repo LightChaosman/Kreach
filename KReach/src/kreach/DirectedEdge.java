@@ -26,5 +26,18 @@ public class DirectedEdge extends AbstractEdge{
     {
         return new DirectedEdge(v,u);
     }
+
+    @Override
+    public boolean equals(Object obj) {
+        if (obj == null) {
+            return false;
+        }
+        if (getClass() != obj.getClass()) {
+            return false;
+        }
+        final DirectedEdge other = (DirectedEdge) obj;
+        
+        return this.u == other.u && this.v == other.v;
+    }
     
 }

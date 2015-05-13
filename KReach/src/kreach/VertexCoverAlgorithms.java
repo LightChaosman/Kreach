@@ -21,29 +21,34 @@ public class VertexCoverAlgorithms{
     
     public static Set<Integer> computeBasic2AproxVertexCover(Graph G) {
         System.out.println("input for 2aprox vcover: " + G);
-        G = Graph.toUndirected(G);
         System.out.println("undirected variant: " + G);
-        Set<Edge> edges = G.edges();
+        Set<DirectedEdge> edges = G.edges();
         System.out.println("ammount of edges: " + edges.size());
         Set<Integer> cover = new HashSet<Integer>();
         int i = 0;
         //System.out.println(edges);
         while(!edges.isEmpty())
         {
-            Edge e = edges.iterator().next();
+            DirectedEdge e = edges.iterator().next();
             int u = e.getU(),v=e.getV();
             cover.add(u);
             cover.add(v);
             edges.remove(e);
-            for(int uprime: G.adjecent(u))
+            for(int up:G.out(u))
             {
-                Edge e2 = new UndirectedEdge(u,uprime);
-                boolean a = edges.remove(e2);
+                edges.remove(new DirectedEdge(u,up));
             }
-            for(int vprime: G.adjecent(v))
+            for(int up:G.in(u))
             {
-                
-                edges.remove(new UndirectedEdge(v,vprime));
+                edges.remove(new DirectedEdge(up,u));
+            }
+            for(int vp:G.out(v))
+            {
+                edges.remove(new DirectedEdge(v,vp));
+            }
+            for(int vp:G.in(v))
+            {
+                edges.remove(new DirectedEdge(vp,v));
             }
             if((++i)%1000==0)
             {
@@ -55,7 +60,6 @@ public class VertexCoverAlgorithms{
     
     public static Set<Integer> computeBudgetedVertexCover(Graph G, int budget) {
         System.out.println("input to budgeted cover: " + G + ", budget: " + budget);
-        G = Graph.toUndirected(G);
         Set<Integer> cover = new HashSet<Integer>();
         DegreeStructure ds = new DegreeStructure(G);
         while(cover.size()<budget)
@@ -69,7 +73,6 @@ public class VertexCoverAlgorithms{
     
     public static Set<Integer> computeRelaxedVertexCover(Graph G, int budget, int k) {
         
-        G = Graph.toUndirected(G);
         Set<Integer> cover = new HashSet<Integer>();
         return cover;
     }
@@ -90,7 +93,7 @@ public class VertexCoverAlgorithms{
             degree = new HashMap<>();
             for(int v:g.vertices())
             {
-                int d = g.adjecent(v).size();
+                int d = g.out(v).size() + g.in(v).size();
                 degree.put(v, d);
                 for(int i = curmax; i<= d;i++)
                 {
@@ -110,7 +113,14 @@ public class VertexCoverAlgorithms{
             HashSet<Integer> maxset = verticesOfDegree.get(curmax);
             int v = maxset.iterator().next();
             maxset.remove(v);
-            for(int u:g.adjecent(v))
+            for(int u:g.out(v))
+            {
+                int deg = degree.get(u);
+                degree.put(u, deg-1);
+                boolean wasPresent = verticesOfDegree.get(deg).remove(u);
+                if(wasPresent)verticesOfDegree.get(deg-1).add(u);
+            }
+            for(int u:g.in(v))
             {
                 int deg = degree.get(u);
                 degree.put(u, deg-1);

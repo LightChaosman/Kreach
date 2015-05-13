@@ -63,10 +63,10 @@ public class KReach {
             {
                 break;
             }
-            if(g.adjecent(v).size()>0)
+            if(g.out(v).size()>0)
             {
                 induced.add(v);
-                induced.addAll(g.adjecent(v));
+                induced.addAll(g.out(v));
             }
         }
         System.out.println(g + " " + induced.size());
