@@ -1,8 +1,3 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package kreach;
 
 /**
@@ -12,7 +7,7 @@ package kreach;
 public class UndirectedEdge extends AbstractEdge{
 
     public UndirectedEdge(int u, int v) {
-        super(u, v);
+        super(u<v?u:v, v>u?v:u);
     }
 
     @Override

@@ -1,5 +1,6 @@
 package kreach;
 
+import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.Iterator;
@@ -13,7 +14,7 @@ import java.util.Set;
  */
 public class Graph {
 
-    private final HashMap<Integer, List<Edge>> adjecency = new HashMap<>();
+    private final HashMap<Integer, List<Integer>> adjecency = new HashMap<>();
     private int m;
     private int n;
     private final boolean directed;
@@ -22,9 +23,11 @@ public class Graph {
         this.directed = directed;
     }
 
-    public void addVertex(int v) {
-        adjecency.put(v, new LinkedList<>());
+    public boolean addVertex(int v) {
+        if(hasVertex(v))return false;
+        adjecency.put(v, new ArrayList<>());
         n++;
+        return true;
     }
 
     public boolean hasVertex(int v) {
@@ -32,19 +35,43 @@ public class Graph {
     }
 
     public void addEdge(int u, int v) {
-        adjecency.get(u).add(directed ? new DirectedEdge(u, v) : new UndirectedEdge(u, v));
-        m++;
+        addVertex(u);
+        addVertex(v);
+        boolean n = false;
+        if (directed) {
+            n = adjecency.get(u).add(v);
+            
+            //System.out.println(adjecency.get(u).size());
+        } else {
+            boolean a = adjecency.get(u).add(v);
+            boolean b = adjecency.get(v).add(u);
+            assert b == a;
+            n = a;
+        }
+        if (n) {
+            m++;
+        }
     }
 
     public Set<Integer> vertices() {
         return adjecency.keySet();
     }
 
-    public List<Edge> adjecent(int u) {
+    public List<Integer> adjecent(int u) {
         return adjecency.get(u);
     }
 
     public int getM() {
+        return m;
+    }
+    
+    public int getComputedM()
+    {
+        int m = 0;
+        for(Integer v:adjecency.keySet())
+        {
+            m+=adjecent(v).size();
+        }
         return m;
     }
 
@@ -54,18 +81,26 @@ public class Graph {
 
     public Set<Edge> edges() {
         Set<Edge> edges = new HashSet<>();
-        for (int u : adjecency.keySet()) {
-            edges.addAll(adjecency.get(u));
+        if (directed) {
+            for (int u : adjecency.keySet()) {
+                for (int v : adjecency.get(u)) {
+                    edges.add(new DirectedEdge(u, v));
+                }
+            }
+        } else {
+            for (int u : adjecency.keySet()) {
+                for (int v : adjecency.get(u)) {
+                    edges.add(new UndirectedEdge(u, v));
+                }
+            }
         }
         return edges;
     }
 
     @Override
     public String toString() {
-        return "G: n=" + getN() + ", m=" + getM(); //To change body of generated methods, choose Tools | Templates.
+        return "G: n=" + getN() + ", m=" + getM() + ", cm="+getComputedM(); //To change body of generated methods, choose Tools | Templates.
     }
-    
-    
 
     public boolean isDirected() {
         return directed;
@@ -76,8 +111,7 @@ public class Graph {
         for (int v : G.vertices()) {
             G2.addVertex(v);
         }
-        for(Edge e:G.edges())
-        {
+        for (Edge e : G.edges()) {
             G2.addEdge(e.getU(), e.getV());
         }
         return G2;
@@ -88,11 +122,31 @@ public class Graph {
         for (int v : G.vertices()) {
             G2.addVertex(v);
         }
-        for(Edge e:G.edges())
-        {
+        for (Edge e : G.edges()) {
             G2.addEdge(e.getU(), e.getV());
         }
         return G2;
+    }
+    
+    public static Graph getInducedGraph(Set<Integer> vertices, Graph g)
+    {
+        System.out.println("inducing " + "" + " from " + g);
+        Graph induced = new Graph(g.directed);
+        for(Integer i:vertices)
+        {
+            induced.addVertex(i);
+        }
+        for(Integer u:vertices)
+        {
+            for(Integer v:g.adjecent(u))
+            {
+                if(vertices.contains(v))
+                {
+                    induced.addEdge(u, v);
+                }
+            }
+        }
+        return induced;
     }
 
     public static StreamGraphParser parseLineSeparatedEdgeFormat(boolean directed) {
@@ -107,11 +161,7 @@ public class Graph {
                     String[] ids = t.split("	");
                     int u = Integer.parseInt(ids[0]);
                     int v = Integer.parseInt(ids[1]);
-                    if (!g.hasVertex(u)) {
-                        g.addVertex(u);
-                    }if (!g.hasVertex(v)) {
-                        g.addVertex(v);
-                    }
+                    
                     g.addEdge(u, v);
                 }
             }

@@ -10,6 +10,7 @@ import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
+import java.util.HashSet;
 import java.util.Set;
 import java.util.function.Consumer;
 
@@ -23,6 +24,14 @@ public class KReach {
      * @param args the command line arguments
      */
     public static void main(String[] args) throws FileNotFoundException, IOException {
+        Graph g2 = loadPatents(100000);
+        System.out.println(g2);
+       Set<Integer> vc2 = VertexCoverAlgorithms.computeBudgetedVertexCover(g2,VertexCoverAlgorithms.DEFAULT_BUDGET);
+       // Set<Integer> vc2 = VertexCoverAlgorithms.computeBasic2AproxVertexCover(g2);
+        System.out.println(vc2.size());
+    }
+
+    private static Graph loadPatents(int vertices) throws FileNotFoundException, IOException {
         File f = new File("D:\\studie\\Master\\14-15\\Q4\\2ID35\\paper\\datasets\\cit-Patents.txt\\cit-Patents.txt");
         FileReader fr = new FileReader(f);
         BufferedReader br = new BufferedReader(fr);
@@ -32,9 +41,23 @@ public class KReach {
         br.close();
         fr.close();
         Graph g = parser.getG();
+        System.out.println(g);
+
+        HashSet<Integer> induced = new HashSet<>();
+        for (Integer v:g.vertices()) {
+            if(induced.size()>vertices)
+            {
+                break;
+            }
+            if(g.adjecent(v).size()>0)
+            {
+                induced.add(v);
+                induced.addAll(g.adjecent(v));
+            }
+        }
+        System.out.println(g + " " + induced.size());
         
-        Set<Integer> vc2 = VertexCoverAlgorithms.computeBasic2AproxVertexCover(g);
-        System.out.println(vc2.size());
+        return Graph.getInducedGraph(induced, g);
     }
-    
+
 }

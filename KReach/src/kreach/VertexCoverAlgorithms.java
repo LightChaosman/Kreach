@@ -15,31 +15,48 @@ import java.util.Set;
  * @author Helmond
  */
 public class VertexCoverAlgorithms{
+    
+    public static final int DEFAULT_BUDGET = 1000;
 
     
     public static Set<Integer> computeBasic2AproxVertexCover(Graph G) {
-        System.out.println(G);
+        System.out.println("input for 2aprox vcover: " + G);
         G = Graph.toUndirected(G);
-        System.out.println(G);
+        System.out.println("undirected variant: " + G);
         Set<Edge> edges = G.edges();
+        System.out.println("ammount of edges: " + edges.size());
         Set<Integer> cover = new HashSet<Integer>();
+        int i = 0;
         while(!edges.isEmpty())
         {
             Edge e = edges.iterator().next();
-            cover.add(e.getU());
-            cover.add(e.getV());
-            edges.removeAll(G.adjecent(e.getU()));
-            edges.removeAll(G.adjecent(e.getV()));
+            int u = e.getU(),v=e.getV();
+            cover.add(u);
+            cover.add(v);
+            edges.remove(e);
+            for(int uprime: G.adjecent(u))
+            {
+                edges.remove(new UndirectedEdge(u,uprime));
+            }
+            for(int vprime: G.adjecent(v))
+            {
+                
+                edges.remove(new UndirectedEdge(v,vprime));
+            }
+            if((++i)%1000==0)
+            {
+                System.out.println("i=" + i + ", edges left: " + edges.size() + ", vertices in cover: " + cover.size());
+            }
         }
         return cover;
     }
     
     public static Set<Integer> computeBudgetedVertexCover(Graph G, int budget) {
-        
+        System.out.println("input to budgeted cover: " + G + ", budget: " + budget);
         G = Graph.toUndirected(G);
         Set<Integer> cover = new HashSet<Integer>();
         DegreeStructure ds = new DegreeStructure(G);
-        while(budget>0)
+        while(cover.size()<budget)
         {
             int v = ds.popMax();
             if(v==-1)break;
@@ -58,9 +75,9 @@ public class VertexCoverAlgorithms{
     
     private static class DegreeStructure{
         
-        ArrayList<HashSet<Integer>> verticesOfDegree;
-        HashMap<Integer,Integer> degree;
-        Graph g;
+        private final ArrayList<HashSet<Integer>> verticesOfDegree;
+        private final HashMap<Integer,Integer> degree;
+        private final Graph g;
         int curmax;
         
         public DegreeStructure(Graph g)
@@ -68,11 +85,12 @@ public class VertexCoverAlgorithms{
             this.g=g;
             curmax = 0;
             verticesOfDegree = new ArrayList<>();
+            degree = new HashMap<>();
             for(int v:g.vertices())
             {
                 int d = g.adjecent(v).size();
                 degree.put(v, d);
-                for(int i = curmax; i< d;i++)
+                for(int i = curmax; i<= d;i++)
                 {
                     verticesOfDegree.add(new HashSet<>());
                 }
@@ -90,17 +108,17 @@ public class VertexCoverAlgorithms{
             HashSet<Integer> maxset = verticesOfDegree.get(curmax);
             int v = maxset.iterator().next();
             maxset.remove(v);
-            while(verticesOfDegree.get(curmax).isEmpty() && curmax >0)
+            for(int u:g.adjecent(v))
             {
-                curmax--;
-            }
-            for(Edge uv:g.adjecent(v))
-            {
-                int u = uv.getU()==v?uv.getV():uv.getU();
                 int deg = degree.get(u);
                 degree.put(u, deg-1);
                 boolean wasPresent = verticesOfDegree.get(deg).remove(u);
                 if(wasPresent)verticesOfDegree.get(deg-1).add(u);
+            }
+            
+            while(verticesOfDegree.get(curmax).isEmpty() && curmax >0)
+            {
+                curmax--;
             }
             return v;
         }
