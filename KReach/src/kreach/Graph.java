@@ -14,6 +14,7 @@ import java.util.Set;
  */
 public class Graph {
 
+    private String name = "G";
     private final HashMap<Integer, List<Integer>> adjecency = new HashMap<>();
     private int m;
     private int n;
@@ -32,6 +33,10 @@ public class Graph {
 
     public boolean hasVertex(int v) {
         return adjecency.containsKey(v);
+    }
+
+    public void setName(String name) {
+        this.name = name;
     }
 
     public void addEdge(int u, int v) {
@@ -99,7 +104,7 @@ public class Graph {
 
     @Override
     public String toString() {
-        return "G: n=" + getN() + ", m=" + getM() + ", cm="+getComputedM(); //To change body of generated methods, choose Tools | Templates.
+        return name+": n=" + getN() + ", m=" + getM() + ", cm="+getComputedM(); //To change body of generated methods, choose Tools | Templates.
     }
 
     public boolean isDirected() {

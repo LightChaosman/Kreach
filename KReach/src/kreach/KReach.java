@@ -27,8 +27,8 @@ public class KReach {
         //Graph g2 = loadPatents(100000);
         Graph g2 = loadARXiv();
         System.out.println(g2);
-       Set<Integer> vc2 = VertexCoverAlgorithms.computeBudgetedVertexCover(g2,VertexCoverAlgorithms.DEFAULT_BUDGET);
-       // Set<Integer> vc2 = VertexCoverAlgorithms.computeBasic2AproxVertexCover(g2);
+       //Set<Integer> vc2 = VertexCoverAlgorithms.computeBudgetedVertexCover(g2,VertexCoverAlgorithms.DEFAULT_BUDGET);
+        Set<Integer> vc2 = VertexCoverAlgorithms.computeBasic2AproxVertexCover(g2);
         System.out.println(vc2.size());
     }
     

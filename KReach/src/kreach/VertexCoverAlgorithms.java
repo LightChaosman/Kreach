@@ -27,6 +27,7 @@ public class VertexCoverAlgorithms{
         System.out.println("ammount of edges: " + edges.size());
         Set<Integer> cover = new HashSet<Integer>();
         int i = 0;
+        //System.out.println(edges);
         while(!edges.isEmpty())
         {
             Edge e = edges.iterator().next();
@@ -36,7 +37,8 @@ public class VertexCoverAlgorithms{
             edges.remove(e);
             for(int uprime: G.adjecent(u))
             {
-                edges.remove(new UndirectedEdge(u,uprime));
+                Edge e2 = new UndirectedEdge(u,uprime);
+                boolean a = edges.remove(e2);
             }
             for(int vprime: G.adjecent(v))
             {
