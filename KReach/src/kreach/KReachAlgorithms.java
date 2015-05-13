@@ -6,8 +6,10 @@
 package kreach;
 
 import java.util.HashMap;
+import java.util.HashSet;
 import java.util.LinkedList;
 import java.util.List;
+import java.util.Map;
 import java.util.Queue;
 import java.util.Set;
 import temporary.Tuple;
@@ -18,14 +20,18 @@ import temporary.Tuple;
  */
 public class KReachAlgorithms {
 
-    public Tuple<Graph,HashMap<DirectedEdge,Integer>> computeOriginalKReachGraph(Graph g, int k) {
+    public static Tuple<Graph, HashMap<DirectedEdge, Integer>> computeOriginalKReachGraph(Graph g, int k) {
         Set<Integer> S = VertexCoverAlgorithms.computeBasic2AproxVertexCover(g);
         Graph I = new Graph();
+        System.out.println("Found vertex cover of size" + S.size());
         HashMap<DirectedEdge, Integer> wI = new HashMap<>();
+        int i = 0;
         for (Integer u : S) {
+            if(i++%100==0)System.out.println(i);
             HashMap<Integer, Integer> Sku = BFSu(g, u, k);
-            for (int v : Sku.keySet()) {
-                int d = Sku.get(v);
+            for (Map.Entry<Integer,Integer> e:Sku.entrySet()) {
+                int d = e.getValue();
+                int v = e.getKey();
                 I.addEdge(u, v);
                 if (d <= k - 2) {
                     wI.put(new DirectedEdge(u, v), k - 2);
@@ -36,39 +42,60 @@ public class KReachAlgorithms {
                 }
             }
         }
-        return new Tuple<>(I,wI);
+        return new Tuple<>(I, wI);
     }
-    
-    public boolean queryKReach1(Graph g, int s, int t, Tuple<Graph,HashMap<DirectedEdge,Integer>> kreach)
-    {
+
+    public static boolean queryKReach1(Graph g, int s, int t, Tuple<Graph, HashMap<DirectedEdge, Integer>> kreach, int k) {
         Graph gI = kreach.k1;
-        HashMap wI = kreach.k2;
-        Set VI = gI.vertices();
-        Set EI = gI.edges();
+        HashMap<DirectedEdge, Integer> wI = kreach.k2;
+        HashSet<Integer> VI = gI.vertices();
+        HashSet<DirectedEdge> EI = gI.edges();
+        System.out.println("query...");
         // case 1: both s and t are in the vertex cover
-        if(VI.contains(s) && VI.contains(t))
-        {
-            return EI.contains(new DirectedEdge(s,t));
+        if (VI.contains(s) && VI.contains(t)) {
+            System.out.println("case 1");
+            return EI.contains(new DirectedEdge(s, t));
         }
         // case 2: only s is in the vertex cover
-        if(VI.contains(s) && !VI.contains(t))
-        {
-            
+        if (VI.contains(s) && !VI.contains(t)) {
+            System.out.println("case 2");
+            for (int v : g.in(t)) {
+                DirectedEdge e = new DirectedEdge(s, v);
+                if (EI.contains(e) && wI.get(e) <= k - 1) {
+                    return true;
+                }
+            }
+            return false;
         }
-        
+
         // case 3: only t is in the vertex cover
-        if(!VI.contains(s) && VI.contains(t))
-        {
-            
-        }
-        // case 4: both s and t are not in the vertex cover
+        if (!VI.contains(s) && VI.contains(t)) {
+            System.out.println("case 3");
+            for (int v : g.out(s)) {
+                DirectedEdge e = new DirectedEdge(v, t);
+                if (EI.contains(e) && wI.get(e) <= k - 1) {
+                    return true;
+                }
+            }
+            return false;
+        } // case 4: both s and t are not in the vertex cover
         else//(!VI.contains(s) && !VI.contains(t))
         {
-            
+            System.out.println("case 4");
+            for (int u : g.out(s)) {
+
+                for (int v : g.in(t)) {
+                    DirectedEdge e = new DirectedEdge(u, v);
+                    if (EI.contains(e) && wI.get(e) <= k - 2) {
+                        return true;
+                    }
+                }
+            }
+            return false;
         }
     }
 
-    public HashMap<Integer, Integer> BFSu(Graph g, int source, int k) {
+    public static HashMap<Integer, Integer> BFSu(Graph g, int source, int k) {
         Queue<Integer> Q = new LinkedList<>();
         HashMap<Integer, Integer> dist = new HashMap<>();
         Q.add(source);

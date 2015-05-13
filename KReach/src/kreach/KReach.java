@@ -10,9 +10,11 @@ import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
+import java.util.HashMap;
 import java.util.HashSet;
 import java.util.Set;
 import java.util.function.Consumer;
+import temporary.Tuple;
 
 /**
  *
@@ -30,6 +32,26 @@ public class KReach {
        //Set<Integer> vc2 = VertexCoverAlgorithms.computeBudgetedVertexCover(g2,VertexCoverAlgorithms.DEFAULT_BUDGET);
         Set<Integer> vc2 = VertexCoverAlgorithms.computeBasic2AproxVertexCover(g2);
         System.out.println(vc2.size());
+        int k = 3;
+        Tuple<Graph,HashMap<DirectedEdge,Integer>> kreach = KReachAlgorithms.computeOriginalKReachGraph(g2, k);
+        for(int i = 0; i < 100; i ++)
+        {
+            int s=-1,t=-1;
+            for(int v:g2.vertices())
+            {
+                if(Math.random()<0.0005)
+                {
+                    s=v;
+                }else if(Math.random()<0.001)
+                {
+                    t=v;
+                }
+            }
+            System.out.println("querying ("+s+","+t+")");
+            boolean res = KReachAlgorithms.queryKReach1(g2, s, t, kreach, k);
+            System.out.println(i+"=querying ("+s+","+t+"):"+res);
+        }
+        
     }
     
      private static Graph loadARXiv() throws FileNotFoundException, IOException {

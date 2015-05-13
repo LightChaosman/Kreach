@@ -16,6 +16,8 @@ import temporary.Tuple;
 public class Graph {
 
     private String name = "G";
+    private final HashSet<Integer> V = new HashSet<>();
+    private final HashSet<DirectedEdge> E = new HashSet<>();
     private final HashMap<Integer, Tuple<List<Integer>, List<Integer>>> adjecency = new HashMap<>();
     private int m;
     private int n;
@@ -27,13 +29,14 @@ public class Graph {
         if (hasVertex(v)) {
             return false;
         }
+        V.add(v);
         adjecency.put(v, new Tuple(new ArrayList<>(), new ArrayList<>()));
         n++;
         return true;
     }
 
     public boolean hasVertex(int v) {
-        return adjecency.containsKey(v);
+        return V.contains(v);
     }
 
     public void setName(String name) {
@@ -45,15 +48,17 @@ public class Graph {
         addVertex(v);
         boolean a1 = adjecency.get(u).k2.add(v);
         boolean a2 = adjecency.get(v).k1.add(u);
+        
         assert a1 == a2;
         if (a1) {
             m++;
+            E.add(new DirectedEdge(u,v));
         }
         return a1;
     }
 
-    public Set<Integer> vertices() {
-        return adjecency.keySet();
+    public HashSet<Integer> vertices() {
+        return V;
     }
 
     public List<Integer> out(int u) {
@@ -80,14 +85,8 @@ public class Graph {
         return n;
     }
 
-    public Set<DirectedEdge> edges() {
-        Set<DirectedEdge> edges = new HashSet<>();
-        for (int u : adjecency.keySet()) {
-            for (int v : out(u)) {
-                edges.add(new DirectedEdge(u, v));
-            }
-        }
-        return edges;
+    public HashSet<DirectedEdge> edges() {
+        return E;
     }
 
     @Override
