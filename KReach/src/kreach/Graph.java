@@ -158,7 +158,10 @@ public class Graph {
                     if (t.startsWith("#")) {
                         return;
                     }
+                    if(!Character.isDigit(t.charAt(0)))return;
+                    
                     String[] ids = t.split("	");
+                    if(ids.length == 1) ids = t.split(" ");
                     int u = Integer.parseInt(ids[0]);
                     int v = Integer.parseInt(ids[1]);
                     
