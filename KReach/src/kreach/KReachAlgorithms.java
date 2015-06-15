@@ -117,10 +117,7 @@ public class KReachAlgorithms {
 
     }
 
-    public static Triple<
-            WeightedGraph,
-            WeightedGraph,
-            Graph> algorithm3(Graph g, int k, int b) {
+    public static Triple<WeightedGraph,  WeightedGraph,Graph> algorithm3(Graph g, int k, int b) {
         HashSet<Integer> S = new HashSet<>();
         Graph D1 = new Graph();
         HashMap<DirectedEdge,Integer> w1 = new HashMap<>();
@@ -175,25 +172,16 @@ public class KReachAlgorithms {
                     {
                         for(int y:S)
                         {
-                            if(!(g.hasVertex(x)))
-                            {
-                                System.out.println("x not present in g");
-                            }
-                            if(!(g.hasVertex(y)))
-                            {
-                                System.out.println("y not present in g");
-                            }
-                            if(!(g.hasVertex(u)))
-                            {
-                                System.out.println("u not present in g");
-                            }
-                            if(!(g.hasVertex(v)))
-                            {
-                                System.out.println("v not present in g");
-                            }
-                            int xw1 = w1.get(new DirectedEdge(u,x));
-                            int xw2 = (x==y?0:w1.get(new DirectedEdge(x,y)));
-                            int xw3 = w1.get(new DirectedEdge(y,v));
+                            
+                            DirectedEdge ux = new DirectedEdge(u,x);
+                            if(!w1.containsKey(ux))continue;
+                            int xw1 = w1.get(ux);
+                            DirectedEdge xy = new DirectedEdge(x,y);
+                            if(!w1.containsKey(xy) && x!=y)continue;
+                            int xw2 = (x==y?0:w1.get(xy));
+                            DirectedEdge yv = new DirectedEdge(y,v);
+                            if(!w1.containsKey(yv))continue;
+                            int xw3 = w1.get(yv);
                             int thisweight = xw1+xw2+xw3;
                             minw=Math.min(minw,thisweight);
                         }
@@ -205,10 +193,31 @@ public class KReachAlgorithms {
                     for(int x:S)
                     {
                         for(int y:S)
-                        {
-                            int xw1 = w1.get(new DirectedEdge(u,x));
-                            int xw2 = (x==y?0:w1.get(new DirectedEdge(x,y)));
-                            int xw3 = w1.get(new DirectedEdge(y,v));
+                        {if(!(D1.hasVertex(x)))
+                            {
+                                System.out.println("x not present in g");
+                            }
+                            if(!(D1.hasVertex(y)))
+                            {
+                                System.out.println("y not present in g");
+                            }
+                            if(!(D1.hasVertex(u)))
+                            {
+                                System.out.println("u not present in g");
+                            }
+                            if(!(D1.hasVertex(v)))
+                            {
+                                System.out.println("v not present in g");
+                            }
+                            DirectedEdge ux = new DirectedEdge(u,x);
+                            if(!w1.containsKey(ux))continue;
+                            int xw1 = w1.get(ux);
+                            DirectedEdge xy = new DirectedEdge(x,y);
+                            if(!w1.containsKey(xy) && x!=y)continue;
+                            int xw2 = (x==y?0:w1.get(xy));
+                            DirectedEdge yv = new DirectedEdge(y,v);
+                            if(!w1.containsKey(yv))continue;
+                            int xw3 = w1.get(yv);
                             int thisweight = xw1+xw2+xw3;
                             d=Math.min(d,thisweight);
                         }
