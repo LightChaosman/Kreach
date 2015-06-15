@@ -59,24 +59,7 @@ public class VertexCoverAlgorithms{
         return cover;
     }
     
-    public static Set<Integer> computeBudgetedVertexCover(Graph G, int budget) {
-        System.out.println("input to budgeted cover: " + G + ", budget: " + budget);
-        Set<Integer> cover = new HashSet<Integer>();
-        DegreeStructure ds = new DegreeStructure(G);
-        while(cover.size()<budget)
-        {
-            int v = ds.popMax();
-            if(v==-1)break;
-            cover.add(v);
-        }
-        return cover;
-    }
-    
-    public static Set<Integer> computeRelaxedVertexCover(Graph G, int budget, int k) {
-        
-        Set<Integer> cover = new HashSet<Integer>();
-        return cover;
-    }
+   
     
     
     

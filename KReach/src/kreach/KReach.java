@@ -10,9 +10,11 @@ import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
+import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.LinkedList;
+import java.util.List;
 import java.util.Queue;
 import java.util.Set;
 import java.util.function.Consumer;
@@ -41,30 +43,22 @@ public class KReach {
             maxdeg = Math.max(maxdeg, g2.in(v).size()+g2.out(v).size());
         }
         System.out.println(maxdeg);}
+        
+        
+        
+        
         g2 = loadGeneral(ALL[1]);
-       // System.out.println(getDiameter(g2));
-       //Set<Integer> vc2 = VertexCoverAlgorithms.computeBudgetedVertexCover(g2,VertexCoverAlgorithms.DEFAULT_BUDGET);
-       // Set<Integer> vc2 = VertexCoverAlgorithms.computeBasic2AproxVertexCover(g2);
-        //System.out.println(vc2.size());
         int k = 10;
         int b = 100;
         Quintuple<WeightedGraph, WeightedGraph, Graph, HashSet<Integer>, HashSet<Integer>> algorithm3 = KReachAlgorithms.algorithm3(g2, k, b);
-        //Tuple<Graph,HashMap<DirectedEdge,Integer>> kreach = KReachAlgorithms.computeOriginalKReachGraph(g2, k);
         int trues = 0;
+        List<Integer> vertices = new ArrayList<>();
+        vertices.addAll(g2.vertices());
         long startime = System.currentTimeMillis();
         for(int i = 0; i < 1000000; i ++)
         {
-            int s=-1,t=-1;
-            for(int v:g2.vertices())
-            {
-                if(Math.random()<0.0005)
-                {
-                    s=v;
-                }else if(Math.random()<0.001)
-                {
-                    t=v;
-                }
-            }
+            int s = vertices.get((int)Math.floor(Math.random()*vertices.size()));
+            int t = vertices.get((int)Math.floor(Math.random()*vertices.size()));
             //System.out.println("querying ("+s+","+t+")");
             boolean res = KReachAlgorithms.algorithm4(algorithm3,k,s,t);
             trues +=res?1:0;

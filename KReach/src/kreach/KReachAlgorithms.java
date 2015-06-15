@@ -17,7 +17,7 @@ import temporary.Tuple;
  */
 public class KReachAlgorithms {
 
-    public static Tuple<Graph, HashMap<DirectedEdge, Integer>> computeOriginalKReachGraph(Graph g, int k) {
+    public static WeightedGraph computeOriginalKReachGraph(Graph g, int k) {
         Set<Integer> S = VertexCoverAlgorithms.computeBasic2AproxVertexCover(g);
         Graph I = new Graph();
         System.out.println("Found vertex cover of size" + S.size());
@@ -41,10 +41,10 @@ public class KReachAlgorithms {
                 }
             }
         }
-        return new Tuple<>(I, wI);
+        return new WeightedGraph(I, wI);
     }
 
-    public static boolean queryKReach1(Graph g, int s, int t, Tuple<Graph, HashMap<DirectedEdge, Integer>> kreach, int k) {
+    public static boolean queryKReach1(Graph g, int s, int t, WeightedGraph kreach, int k) {
         Graph gI = kreach.k1;
         HashMap<DirectedEdge, Integer> wI = kreach.k2;
         HashSet<Integer> VI = gI.vertices();
