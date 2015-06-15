@@ -28,7 +28,7 @@ class DegreeStructure {
             int d = g.out(v).size() + g.in(v).size();
             degree.put(v, d);
             for (int i = curmax; i <= d; i++) {
-                verticesOfDegree.add(new HashSet<>());
+                verticesOfDegree.add(new HashSet<Integer>());
             }
             verticesOfDegree.get(d).add(v);
             curmax = Math.max(curmax, d);

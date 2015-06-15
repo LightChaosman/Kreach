@@ -123,7 +123,9 @@ public class KReachAlgorithms {
     }
 
     public static Triple<
-            Tuple<Graph, HashMap<DirectedEdge, Integer>>, Tuple<Graph, HashMap<DirectedEdge, Integer>>, Graph> algorithm3(Graph g, int k, int b) {
+            Tuple<Graph, HashMap<DirectedEdge, Integer>>,
+            Tuple<Graph, HashMap<DirectedEdge, Integer>>,
+            Graph> algorithm3(Graph g, int k, int b) {
         HashSet<Integer> S = new HashSet<>();
         Graph D1 = new Graph();
         HashMap<DirectedEdge,Integer> w1 = new HashMap<>();
@@ -162,7 +164,58 @@ public class KReachAlgorithms {
             mvPrime = ds.popMax();
             enoughmem = Math.random()>0.01;
         }
-        return null;//TODO
+        HashSet<Integer> VD1capSprime = new HashSet<>(SPrime);
+        VD1capSprime.retainAll(D1.vertices());
+        for(int u:VD1capSprime)
+        {
+            for(int v:VD1capSprime)
+            {
+                if(u==v)continue;
+                DirectedEdge uv = new DirectedEdge(u,v);
+                if(D2.edges().contains(uv))
+                {
+                    int weight2 = w2.get(uv);
+                    int minw = weight2;
+                    for(int x:S)
+                    {
+                        for(int y:S)
+                        {
+                            int thisweight = w1.get(new DirectedEdge(u,x))+(x==y?0:w1.get(new DirectedEdge(x,y)))+w1.get(new DirectedEdge(y,v));
+                            minw=Math.min(minw,thisweight);
+                        }
+                    }
+                    w2.put(uv, minw);
+                }else
+                {
+                    int d =999999999;
+                    for(int x:S)
+                    {
+                        for(int y:S)
+                        {
+                            int thisweight = w1.get(new DirectedEdge(u,x))+(x==y?0:w1.get(new DirectedEdge(x,y)))+w1.get(new DirectedEdge(y,v));
+                            d=Math.min(d,thisweight);
+                        }
+                    }
+                    if(d<=k)
+                    {
+                        Gprime.addEdge(u, v);
+                        w2.put(uv, d);
+                    }
+                }
+            }
+        }
+        Graph D3 = new Graph();
+        for(int v:Gprime.vertices())
+        {
+            if(!SPrime.contains(v))
+                D3.addVertex(v);
+        }
+        for(DirectedEdge e:Gprime.edges())
+        {
+            if(SPrime.contains(e.u) || SPrime.contains(e.v))continue;
+            D3.addEdge(e.u, e.v);
+        }
+        return new Triple<>(new Tuple<>(g,w1),new Tuple<>(Gprime,w2),D3);//TODO
     }
 
     public static void khopbfs(Graph g, int source, int k, HashSet<Integer> S, Graph d1, HashMap<DirectedEdge,Integer> w1) {
