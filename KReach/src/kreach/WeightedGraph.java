@@ -18,12 +18,12 @@ public class WeightedGraph extends Tuple<Graph,HashMap<DirectedEdge,Integer>>{
         super(k1, k2);
     }
     
-    public int getWeight(DirectedEdge e)
+    public Integer getWeight(DirectedEdge e)
     {
         return k2.get(e);
     }
     
-    public int getWeight(int u, int v)
+    public Integer getWeight(int u, int v)
     {
         return k2.get(new DirectedEdge(u,v));
     }

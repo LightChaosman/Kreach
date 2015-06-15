@@ -136,5 +136,63 @@ public class Graph {
         };
 
     }
+    
+    public static Graph inverseLayer(final Graph g)
+    {
+        return new Graph(){
+            
+            
+
+            @Override
+            public boolean addEdge(int u, int v) {
+                throw new UnsupportedOperationException();
+            }
+
+            @Override
+            public boolean addVertex(int v) {
+                throw new UnsupportedOperationException();
+            }
+
+            @Override
+            public List<Integer> in(int u) {
+                return g.out(u);
+            }
+
+            @Override
+            public List<Integer> out(int u) {
+                return g.in(u); //To change body of generated methods, choose Tools | Templates.
+            }
+
+            @Override
+            public boolean hasVertex(int v) {
+                return g.hasVertex(v); //To change body of generated methods, choose Tools | Templates.
+            }
+
+            @Override
+            public HashSet<Integer> vertices() {
+                return g.vertices(); //To change body of generated methods, choose Tools | Templates.
+            }
+
+            @Override
+            public int getN() {
+                return g.getN(); //To change body of generated methods, choose Tools | Templates.
+            }
+
+            @Override
+            public int getM() {
+                return g.getM(); //To change body of generated methods, choose Tools | Templates.
+            }
+
+            @Override
+            public HashSet<DirectedEdge> edges() {
+               throw new UnsupportedOperationException();
+            }
+            
+            
+            
+            
+          
+        };
+    }
 
 }
