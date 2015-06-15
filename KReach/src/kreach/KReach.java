@@ -12,8 +12,11 @@ import java.io.FileReader;
 import java.io.IOException;
 import java.util.HashMap;
 import java.util.HashSet;
+import java.util.LinkedList;
+import java.util.Queue;
 import java.util.Set;
 import java.util.function.Consumer;
+import temporary.Quintuple;
 import temporary.Tuple;
 
 /**
@@ -26,17 +29,30 @@ public class KReach {
      * @param args the command line arguments
      */
     public static void main(String[] args) throws FileNotFoundException, IOException {
-        //Graph g2 = loadPatents(100000);
-        Graph g2 = loadARXiv();
+        Graph g2 = null;
+        
+        for(File f:ALL){System.out.println("Loading" + f);
+            g2 = loadGeneral(f);
+        
         System.out.println(g2);
+        int maxdeg = 0;
+        for(int v:g2.vertices())
+        {
+            maxdeg = Math.max(maxdeg, g2.in(v).size()+g2.out(v).size());
+        }
+        System.out.println(maxdeg);}
+        g2 = loadGeneral(ALL[1]);
+       // System.out.println(getDiameter(g2));
        //Set<Integer> vc2 = VertexCoverAlgorithms.computeBudgetedVertexCover(g2,VertexCoverAlgorithms.DEFAULT_BUDGET);
        // Set<Integer> vc2 = VertexCoverAlgorithms.computeBasic2AproxVertexCover(g2);
         //System.out.println(vc2.size());
-        int k = 3;
+        int k = 10;
         int b = 100;
-        KReachAlgorithms.algorithm3(g2, k, b);
-        /*Tuple<Graph,HashMap<DirectedEdge,Integer>> kreach = KReachAlgorithms.computeOriginalKReachGraph(g2, k);
-        for(int i = 0; i < 100; i ++)
+        Quintuple<WeightedGraph, WeightedGraph, Graph, HashSet<Integer>, HashSet<Integer>> algorithm3 = KReachAlgorithms.algorithm3(g2, k, b);
+        //Tuple<Graph,HashMap<DirectedEdge,Integer>> kreach = KReachAlgorithms.computeOriginalKReachGraph(g2, k);
+        int trues = 0;
+        long startime = System.currentTimeMillis();
+        for(int i = 0; i < 1000000; i ++)
         {
             int s=-1,t=-1;
             for(int v:g2.vertices())
@@ -49,15 +65,30 @@ public class KReach {
                     t=v;
                 }
             }
-            System.out.println("querying ("+s+","+t+")");
-            boolean res = KReachAlgorithms.queryKReach1(g2, s, t, kreach, k);
-            System.out.println(i+"=querying ("+s+","+t+"):"+res);
-        }*/
+            //System.out.println("querying ("+s+","+t+")");
+            boolean res = KReachAlgorithms.algorithm4(algorithm3,k,s,t);
+            trues +=res?1:0;
+            //System.out.println(i+"=querying ("+s+","+t+"):"+res);
+            if(i%10000==0)System.out.println("Fraction of succesfull queries: " + ((double)trues/i) + ", avarage time per query; " + ((System.currentTimeMillis()-startime)/(i+1)) + " ms");
+        }
+//*/
         
     }
     
-     private static Graph loadARXiv() throws FileNotFoundException, IOException {
-        File f = new File("Datasets/Arxiv");
+    private static final File 
+            ARXIV = new File("Datasets\\Arxiv"),
+            FAA = new File("Datasets\\Air traffic control (FAA)\\out.maayan-faa"),
+            DBLP = new File("Datasets\\DBLP\\out.dblp-cite"),
+            EPINOMS = new File("Datasets\\Epinions\\out.soc-Epinions1"),
+            GNUTELLA2 = new File("Datasets\\Gnutella\\out.p2p-Gnutella31"),
+            GPLUS = new File("Datasets\\Google plus\\out.ego-gplus"),
+            FIGEYS = new File("Datasets\\Human protein (Figeys)\\out.maayan-figeys"),
+            STANFORD = new File("Datasets\\Stanford\\out.web-Stanford"),
+            TARO = new File("Datasets\\Taro exchange\\out.moreno_taro_taro");
+    private static File[] ALL = new File[]{ARXIV,FAA,DBLP,EPINOMS,GNUTELLA2,GPLUS,FIGEYS,STANFORD,TARO};
+    
+    private static Graph loadGeneral(File f) throws FileNotFoundException, IOException
+    {
         FileReader fr = new FileReader(f);
         BufferedReader br = new BufferedReader(fr);
         StreamGraphParser parser = Graph.parseLineSeparatedEdgeFormat(true);
@@ -67,7 +98,7 @@ public class KReach {
         fr.close();
         Graph g = parser.getG();
         return g;
-     }
+    }
 
     private static Graph loadPatents(int vertices) throws FileNotFoundException, IOException {
         File f = new File("D:\\studie\\Master\\14-15\\Q4\\2ID35\\paper\\datasets\\cit-Patents.txt\\cit-Patents.txt");
@@ -96,6 +127,40 @@ public class KReach {
         System.out.println(g + " " + induced.size());
         
         return Graph.getInducedGraph(induced, g);
+    }
+    
+    private static int getDiameter(Graph g)
+    {
+        int m = 0;
+        int i = 0;
+        for(int v:g.vertices())
+        {
+            i++;
+            m = Math.max(m, getMaxDistFrom(g, v));
+            if(i%1==0)System.out.println("Processed " + i + " vertices, current diameter; " + m) ;
+        }
+        return m;
+    }
+    
+    private static int getMaxDistFrom(Graph g, int v)
+    {
+        Queue<Integer> q = new LinkedList<>();
+        q.add(v);
+        HashMap<Integer,Integer> d = new HashMap<>();
+        d.put(v, 0);
+        int di = 0;
+        while(!q.isEmpty())
+        {
+            int u = q.poll();
+            di = d.get(u);
+            for(int s:g.out(u))
+            {
+                if(d.containsKey(s))continue;
+                d.put(s, di+1);
+                q.add(s);
+            }
+        }
+        return di;
     }
 
 }

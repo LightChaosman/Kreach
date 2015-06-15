@@ -132,6 +132,7 @@ public class KReachAlgorithms {
             mv = ds.popMax();
             i++;
         }
+        System.out.println("D1 done, building Gprime");
         Graph Gprime = new Graph();
         for (int v : g.vertices()) {
             if (!S.contains(v)) {
@@ -149,15 +150,19 @@ public class KReachAlgorithms {
         HashMap<DirectedEdge, Integer> w2 = new HashMap<>();
         DegreeStructure dsPrime = new DegreeStructure(Gprime);
         int mvPrime = dsPrime.popMax();
-        boolean enoughmem = Math.random() > 0.01;
+        Runtime runtime = Runtime.getRuntime();
+        boolean enoughmem = (runtime.maxMemory()-runtime.totalMemory())/(1024*1024)>1500;
+        
         while (enoughmem)//TODO
         {
             khopbfs(Gprime, mvPrime, k, SPrime, D2, w2);
             khopbfs2(Gprime, mvPrime, k, SPrime, D2, w2);
             SPrime.add(mvPrime);
             mvPrime = ds.popMax();
-            enoughmem = Math.random() > 0.01;
+            if(Math.random()>0.01)System.out.println((runtime.maxMemory()-runtime.totalMemory())/(1024*1024));
+            enoughmem = (runtime.maxMemory()-runtime.totalMemory())/(1024*1024)>1500;
         }
+        System.out.println("D2 step 1 done, fine tuning now");
         HashSet<Integer> VD1capSprime = new HashSet<>(SPrime);
         VD1capSprime.retainAll(D1.vertices());
         for (int u : VD1capSprime) {
@@ -196,18 +201,6 @@ public class KReachAlgorithms {
                     int d = 999999999;
                     for (int x : S) {
                         for (int y : S) {
-                            if (!(D1.hasVertex(x))) {
-                                System.out.println("x not present in g");
-                            }
-                            if (!(D1.hasVertex(y))) {
-                                System.out.println("y not present in g");
-                            }
-                            if (!(D1.hasVertex(u))) {
-                                System.out.println("u not present in g");
-                            }
-                            if (!(D1.hasVertex(v))) {
-                                System.out.println("v not present in g");
-                            }
                             DirectedEdge ux = new DirectedEdge(u, x);
                             if (!w1.containsKey(ux)) {
                                 continue;
@@ -234,6 +227,7 @@ public class KReachAlgorithms {
                 }
             }
         }
+        System.out.println("Tuning done, staring constrution of D3");
         Graph D3 = new Graph();
         for (int v : Gprime.vertices()) {
             if (!SPrime.contains(v)) {
@@ -249,7 +243,7 @@ public class KReachAlgorithms {
         return new Quintuple<>(new WeightedGraph(D1, w1), new WeightedGraph(D2, w2), D3, S, SPrime);
     }
 
-    public static boolean algrithm4(Quintuple<WeightedGraph, WeightedGraph, Graph, HashSet<Integer>, HashSet<Integer>> scaleIndex, int k, int s, int t) {
+    public static boolean algorithm4(Quintuple<WeightedGraph, WeightedGraph, Graph, HashSet<Integer>, HashSet<Integer>> scaleIndex, int k, int s, int t) {
         HashSet<Integer> S = scaleIndex.k4;
         HashSet<Integer> Sprime = scaleIndex.k5;
         WeightedGraph D1 = scaleIndex.k1;
@@ -296,6 +290,99 @@ public class KReachAlgorithms {
             
         } else if (Sps || Spt) {
             if (D1.k1.edges().contains(new DirectedEdge(s, t))) {
+                return true;
+            }
+            for (int v : Sprime) {
+
+                Integer w1 = D2.getWeight(s, v);
+                Integer w2 = D2.getWeight(v, t);
+                if (w1 != null && w2 != null && w1 + w2 <= k) {
+                    return true;
+                }
+            }
+            for (int u : S) {
+                for (int v : S) {
+                    Integer w1 = D1.getWeight(s, u);
+                    Integer w2 = D1.getWeight(u, v);
+                    Integer w3 = D1.getWeight(v, t);
+                    if (w1 != null && w2 != null && w3 != null && w1 + w2 + w3 <= k) {
+                        return true;
+                    }
+                }
+            }
+            return false;
+        } else {
+            for (int u : S) {
+                for (int v : S) {
+                    Integer w1 = D1.getWeight(s, u);
+                    Integer w2 = D1.getWeight(u, v);
+                    Integer w3 = D1.getWeight(v, t);
+                    if (w1 != null && w2 != null && w3 != null && w1 + w2 + w3 <= k) {
+                        return true;
+                    }
+                }
+            }
+            for (int u : Sprime) {
+                for (int v : Sprime) {
+                    Integer w1 = D2.getWeight(s, u);
+                    Integer w2 = D2.getWeight(u, v);
+                    Integer w3 = D2.getWeight(v, t);
+                    if (w1 != null && w2 != null && w3 != null && w1 + w2 + w3 <= k) {
+                        return true;
+                    }
+                }
+            }
+                return paralelBFS(D3,k,s,t);
+        }
+    }
+    
+        public static boolean algorithm5(Quintuple<WeightedGraph, WeightedGraph, Graph, HashSet<Integer>, HashSet<Integer>> scaleIndex, int k, int s, int t) {
+        HashSet<Integer> S = scaleIndex.k4;
+        HashSet<Integer> Sprime = scaleIndex.k5;
+        WeightedGraph D1 = scaleIndex.k1;
+        WeightedGraph D2 = scaleIndex.k2;
+        Graph D3 = scaleIndex.k3;
+        boolean Ss = S.contains(s);
+        boolean St = S.contains(t);
+        if (Ss && St) {
+            return D1.k1.edges().contains(new DirectedEdge(s, t)) && D1.getWeight(s, t)<=k;
+
+        } else if (Ss || St) {
+            boolean t1 = D1.k1.edges().contains(new DirectedEdge(s, t)) && D1.getWeight(s, t)<=k;
+            if (t1) {
+                return true;
+            }
+            for (int v : S) {
+                Integer w1 = D1.getWeight(s, v);
+                Integer w2 = D1.getWeight(v, t);
+                if (w1 != null && w2 != null && w1 + w2 <= k) {
+                    return true;
+                }
+
+            }
+            return false;
+        }
+        boolean Sps = Sprime.contains(s);
+        boolean Spt = Sprime.contains(t);
+        
+        if (Sps && Spt) {
+            if (D1.k1.edges().contains(new DirectedEdge(s, t))&& D2.getWeight(s, t)<=k) {
+                return true;
+            }
+            for (int u : S) {
+                for (int v : S) {
+                    Integer w1 = D1.getWeight(s, u);
+                    Integer w2 = D1.getWeight(u, v);
+                    Integer w3 = D1.getWeight(v, t);
+                    if (w1 != null && w2 != null && w3 != null && w1 + w2 + w3 <= k) {
+                        return true;
+                    }
+                }
+            }
+            return false;
+            
+        } else if (Sps || Spt) {
+            if (D1.k1.edges().contains(new DirectedEdge(s, t))&& D2.getWeight(s, t)<=k) {
                 return true;
             }
             for (int v : Sprime) {
@@ -450,8 +537,9 @@ public class KReachAlgorithms {
             if(d>=halfk)break;
             for(int v:g.out(u))
             {
+                if(!dist1.containsKey(v)){
                 dist1.put(v, d+1);
-                Q1.add(v);
+                Q1.add(v);}
             }
         }
         while(!Q2.isEmpty())
@@ -460,7 +548,7 @@ public class KReachAlgorithms {
             int d = dist2.get(u);
             if(d>=halfk)break;
             for(int v:g2.out(u))
-            {
+            {if(dist2.containsKey(v))continue;
                 dist2.put(v, d+1);
                 Q2.add(v);
                 if(dist1.keySet().contains(v))
