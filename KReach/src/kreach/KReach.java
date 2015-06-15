@@ -30,10 +30,12 @@ public class KReach {
         Graph g2 = loadARXiv();
         System.out.println(g2);
        //Set<Integer> vc2 = VertexCoverAlgorithms.computeBudgetedVertexCover(g2,VertexCoverAlgorithms.DEFAULT_BUDGET);
-        Set<Integer> vc2 = VertexCoverAlgorithms.computeBasic2AproxVertexCover(g2);
-        System.out.println(vc2.size());
+       // Set<Integer> vc2 = VertexCoverAlgorithms.computeBasic2AproxVertexCover(g2);
+        //System.out.println(vc2.size());
         int k = 3;
-        Tuple<Graph,HashMap<DirectedEdge,Integer>> kreach = KReachAlgorithms.computeOriginalKReachGraph(g2, k);
+        int b = 100;
+        KReachAlgorithms.algorithm3(g2, k, b);
+        /*Tuple<Graph,HashMap<DirectedEdge,Integer>> kreach = KReachAlgorithms.computeOriginalKReachGraph(g2, k);
         for(int i = 0; i < 100; i ++)
         {
             int s=-1,t=-1;
@@ -50,7 +52,7 @@ public class KReach {
             System.out.println("querying ("+s+","+t+")");
             boolean res = KReachAlgorithms.queryKReach1(g2, s, t, kreach, k);
             System.out.println(i+"=querying ("+s+","+t+"):"+res);
-        }
+        }*/
         
     }
     

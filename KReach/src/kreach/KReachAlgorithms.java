@@ -1,8 +1,3 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package kreach;
 
 import java.util.HashMap;
@@ -123,8 +118,8 @@ public class KReachAlgorithms {
     }
 
     public static Triple<
-            Tuple<Graph, HashMap<DirectedEdge, Integer>>,
-            Tuple<Graph, HashMap<DirectedEdge, Integer>>,
+            WeightedGraph,
+            WeightedGraph,
             Graph> algorithm3(Graph g, int k, int b) {
         HashSet<Integer> S = new HashSet<>();
         Graph D1 = new Graph();
@@ -159,7 +154,7 @@ public class KReachAlgorithms {
         while(enoughmem)//TODO
         {
             khopbfs(Gprime,mvPrime,k,SPrime,D2,w2);
-            khopbfs(Gprime,mvPrime,k,SPrime,D2,w2);
+            khopbfs2(Gprime,mvPrime,k,SPrime,D2,w2);
             SPrime.add(mvPrime);
             mvPrime = ds.popMax();
             enoughmem = Math.random()>0.01;
@@ -180,7 +175,26 @@ public class KReachAlgorithms {
                     {
                         for(int y:S)
                         {
-                            int thisweight = w1.get(new DirectedEdge(u,x))+(x==y?0:w1.get(new DirectedEdge(x,y)))+w1.get(new DirectedEdge(y,v));
+                            if(!(g.hasVertex(x)))
+                            {
+                                System.out.println("x not present in g");
+                            }
+                            if(!(g.hasVertex(y)))
+                            {
+                                System.out.println("y not present in g");
+                            }
+                            if(!(g.hasVertex(u)))
+                            {
+                                System.out.println("u not present in g");
+                            }
+                            if(!(g.hasVertex(v)))
+                            {
+                                System.out.println("v not present in g");
+                            }
+                            int xw1 = w1.get(new DirectedEdge(u,x));
+                            int xw2 = (x==y?0:w1.get(new DirectedEdge(x,y)));
+                            int xw3 = w1.get(new DirectedEdge(y,v));
+                            int thisweight = xw1+xw2+xw3;
                             minw=Math.min(minw,thisweight);
                         }
                     }
@@ -192,7 +206,10 @@ public class KReachAlgorithms {
                     {
                         for(int y:S)
                         {
-                            int thisweight = w1.get(new DirectedEdge(u,x))+(x==y?0:w1.get(new DirectedEdge(x,y)))+w1.get(new DirectedEdge(y,v));
+                            int xw1 = w1.get(new DirectedEdge(u,x));
+                            int xw2 = (x==y?0:w1.get(new DirectedEdge(x,y)));
+                            int xw3 = w1.get(new DirectedEdge(y,v));
+                            int thisweight = xw1+xw2+xw3;
                             d=Math.min(d,thisweight);
                         }
                     }
@@ -215,7 +232,7 @@ public class KReachAlgorithms {
             if(SPrime.contains(e.u) || SPrime.contains(e.v))continue;
             D3.addEdge(e.u, e.v);
         }
-        return new Triple<>(new Tuple<>(g,w1),new Tuple<>(Gprime,w2),D3);//TODO
+        return new Triple<>(new WeightedGraph(D1,w1),new WeightedGraph(D2,w2),D3);//TODO
     }
 
     public static void khopbfs(Graph g, int source, int k, HashSet<Integer> S, Graph d1, HashMap<DirectedEdge,Integer> w1) {
@@ -223,6 +240,7 @@ public class KReachAlgorithms {
         HashMap<Integer, Integer> dist = new HashMap<>();
         HashMap<Integer,Integer> parents = new HashMap<>();
         Q.add(source);
+        parents.put(source, source);
         dist.put(source, 0);
         while (!Q.isEmpty()) {
 
@@ -245,7 +263,7 @@ public class KReachAlgorithms {
                 w1.put(new DirectedEdge(source,u), d);
             }else
             {
-                int parent = parents.get(u);
+                Integer parent = parents.get(u);
                 boolean noneinS = true;
                 while(parent!=source)
                 {
@@ -267,6 +285,7 @@ public class KReachAlgorithms {
         HashMap<Integer, Integer> dist = new HashMap<>();
         HashMap<Integer,Integer> parents = new HashMap<>();
         Q.add(source);
+        parents.put(source, source);
         dist.put(source, 0);
         while (!Q.isEmpty()) {
 
