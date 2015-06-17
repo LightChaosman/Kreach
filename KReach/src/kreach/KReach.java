@@ -17,6 +17,7 @@ import java.util.HashSet;
 import java.util.LinkedList;
 import java.util.List;
 import java.util.Queue;
+import java.util.Random;
 import java.util.Set;
 import java.util.function.Consumer;
 import temporary.Quintuple;
@@ -42,10 +43,12 @@ public class KReach {
         vertices.addAll(g2.vertices());
         List<Integer> ss = new ArrayList<>(), ts = new ArrayList<>();
         int imax = 10000;
+        long seed = 28469247374783468l;
+        Random r = new Random(seed);
         for(int i = 0; i < imax;i++)
         {
-            ss.add(vertices.get((int)Math.floor(Math.random()*vertices.size())));
-            ts.add(vertices.get((int)Math.floor(Math.random()*vertices.size())));
+            ss.add(vertices.get(r.nextInt(vertices.size())));
+            ts.add(vertices.get(r.nextInt(vertices.size())));
         }
         for(int i = 0; i < imax; i ++)
         {
