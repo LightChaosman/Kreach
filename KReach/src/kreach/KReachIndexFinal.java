@@ -45,4 +45,9 @@ public class KReachIndexFinal extends KReachIndex{
         return index.getIndex();
     }
     
+    @Override
+    protected String getName() {
+        return "Final k-reach (k="+k+")";
+    }
+    
 }

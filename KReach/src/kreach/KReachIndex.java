@@ -51,13 +51,14 @@ public abstract class KReachIndex {
     
     protected abstract Object getIndex();
     
+    protected abstract String getName();
     
     public void printResults() {
         
-        System.out.println("Basic k-reach index on graph G; " +  g + "\n"
+        System.out.println(getName() +" index on graph G; " +  g + "\n"
                 + "Index size became; " + getIndex() + "\n"
                 + "Index construction time; " + constructionTime + "\n"
-                + "Query amount; " + queries + ", time spent on queries; " + queryTime  + ", ammount of trues returned; "  + trues + "\n"
+                + "Query amount; " + queries + ", time spent on queries; " + queryTime  + "ns ("+(queryTime/1000000)+"ms), ammount of trues returned; "  + trues + "\n"
                 + "Case partitioning; " + Arrays.toString(caseCounter) );
     }
     

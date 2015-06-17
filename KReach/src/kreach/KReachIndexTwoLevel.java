@@ -487,4 +487,10 @@ public class KReachIndexTwoLevel extends KReachIndex{
         return false;
     }
     
+    @Override
+    protected String getName() {
+        return "2 Level relaxed k-reach (k="+k+")";
+    }
+    
+    
 }

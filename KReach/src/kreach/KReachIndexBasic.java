@@ -132,6 +132,12 @@ public class KReachIndexBasic extends KReachIndex {
         return dist;
     }
 
+    @Override
+    protected String getName() {
+        return "Basic k-reach (k="+k+")";
+    }
+
+    
     
     
     
