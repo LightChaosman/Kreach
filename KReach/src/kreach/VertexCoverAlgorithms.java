@@ -15,10 +15,10 @@ public class VertexCoverAlgorithms{
     public static Set<Integer> computeBasic2AproxVertexCover(Graph G) {
         System.out.println("input for 2aprox vcover: " + G);
         System.out.println("undirected variant: " + G);
-        Set<DirectedEdge> edges =new HashSet<DirectedEdge>();
+        Set<DirectedEdge> edges =new HashSet<>();
         edges.addAll(G.edges());
         System.out.println("ammount of edges: " + edges.size());
-        Set<Integer> cover = new HashSet<Integer>();
+        Set<Integer> cover = new HashSet<>();
         int i = 0;
         //System.out.println(edges);
         while(!edges.isEmpty())

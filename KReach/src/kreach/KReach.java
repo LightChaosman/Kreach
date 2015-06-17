@@ -33,24 +33,11 @@ public class KReach {
      */
     public static void main(String[] args) throws FileNotFoundException, IOException {
         Graph g2 = null;
-        
-        /*for(File f:ALL){
-            g2 = loadGeneral(f);
-        
-        System.out.println(g2);
-        int maxdeg = 0;
-        for(int v:g2.vertices())
-        {
-            maxdeg = Math.max(maxdeg, g2.in(v).size()+g2.out(v).size());
-        }
-        System.out.println(maxdeg);}//*/
-        
-        
         g2 = loadGeneral(ALL[2]);
         int k = 10;
         int b = 100;
-        KReachIndex index = new KReachIndexBasic(g2, k);
-        int trues = 0;
+        KReachIndex index = new KReachIndexBasic(g2, k);;
+        //KReachIndex index = new KReachIndexTwoLevel(g2, k,b);
         List<Integer> vertices = new ArrayList<>();
         vertices.addAll(g2.vertices());
         List<Integer> ss = new ArrayList<>(), ts = new ArrayList<>();
@@ -60,16 +47,11 @@ public class KReach {
             ss.add(vertices.get((int)Math.floor(Math.random()*vertices.size())));
             ts.add(vertices.get((int)Math.floor(Math.random()*vertices.size())));
         }
-        long startime = System.nanoTime();
         for(int i = 0; i < imax; i ++)
         {
             int s = ss.get(i);
             int t = ts.get(i);
-            //System.out.println("querying ("+s+","+t+")");
-            //boolean res = KReachAlgorithms.algorithm4(algorithm3,k,s,t);
-            boolean res = index.query(s, t);
-            trues +=res?1:0;
-            //System.out.println(i+"=querying ("+s+","+t+"):"+res);
+            index.query(s, t);
             if(i%1000==0){index.printResults();}
         }
 //*/
@@ -101,68 +83,4 @@ public class KReach {
         Graph g = parser.getG();
         return g;
     }
-
-    private static Graph loadPatents(int vertices) throws FileNotFoundException, IOException {
-        File f = new File("D:\\studie\\Master\\14-15\\Q4\\2ID35\\paper\\datasets\\cit-Patents.txt\\cit-Patents.txt");
-        FileReader fr = new FileReader(f);
-        BufferedReader br = new BufferedReader(fr);
-        StreamGraphParser parser = Graph.parseLineSeparatedEdgeFormat(true);
-        br.lines().forEachOrdered(parser);
-        System.out.println("Stream done");
-        br.close();
-        fr.close();
-        Graph g = parser.getG();
-        System.out.println(g);
-
-        HashSet<Integer> induced = new HashSet<>();
-        for (Integer v:g.vertices()) {
-            if(induced.size()>vertices)
-            {
-                break;
-            }
-            if(g.out(v).size()>0)
-            {
-                induced.add(v);
-                induced.addAll(g.out(v));
-            }
-        }
-        System.out.println(g + " " + induced.size());
-        
-        return Graph.getInducedGraph(induced, g);
-    }
-    
-    private static int getDiameter(Graph g)
-    {
-        int m = 0;
-        int i = 0;
-        for(int v:g.vertices())
-        {
-            i++;
-            m = Math.max(m, getMaxDistFrom(g, v));
-            if(i%1==0)System.out.println("Processed " + i + " vertices, current diameter; " + m) ;
-        }
-        return m;
-    }
-    
-    private static int getMaxDistFrom(Graph g, int v)
-    {
-        Queue<Integer> q = new LinkedList<>();
-        q.add(v);
-        HashMap<Integer,Integer> d = new HashMap<>();
-        d.put(v, 0);
-        int di = 0;
-        while(!q.isEmpty())
-        {
-            int u = q.poll();
-            di = d.get(u);
-            for(int s:g.out(u))
-            {
-                if(d.containsKey(s))continue;
-                d.put(s, di+1);
-                q.add(s);
-            }
-        }
-        return di;
-    }
-
 }

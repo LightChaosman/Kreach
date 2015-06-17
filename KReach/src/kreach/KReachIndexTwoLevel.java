@@ -21,7 +21,8 @@ public class KReachIndexTwoLevel extends KReachIndex{
     
     private Quintuple<WeightedGraph,WeightedGraph,Graph,HashSet<Integer>,HashSet<Integer>> index;
     private final int b;
-
+    private static final int memTreshold = 2500;
+    
     public KReachIndexTwoLevel(Graph g, int k, int b) {
         super(g, k, 5);
         this.b = b;
@@ -62,8 +63,7 @@ public class KReachIndexTwoLevel extends KReachIndex{
         DegreeStructure dsPrime = new DegreeStructure(Gprime);
         int mvPrime = dsPrime.popMax();
         Runtime runtime = Runtime.getRuntime();
-        int memreq = 3000;
-        boolean enoughmem = (runtime.maxMemory()-runtime.totalMemory())/(1024*1024)>memreq;
+        boolean enoughmem = (runtime.maxMemory()-runtime.totalMemory())/(1024*1024)>memTreshold;
         
         while (enoughmem && mvPrime !=-1)
         {
@@ -72,7 +72,7 @@ public class KReachIndexTwoLevel extends KReachIndex{
             SPrime.add(mvPrime);
             mvPrime = ds.popMax();
             if(Math.random()>0.01)System.out.println((runtime.maxMemory()-runtime.totalMemory())/(1024*1024));
-            enoughmem = (runtime.maxMemory()-runtime.totalMemory())/(1024*1024)>memreq;
+            enoughmem = (runtime.maxMemory()-runtime.totalMemory())/(1024*1024)>memTreshold;
         }
         System.out.println("D2 step 1 done, fine tuning now");
         HashSet<Integer> VD1capSprime = new HashSet<>(SPrime);
