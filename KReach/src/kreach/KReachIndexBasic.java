@@ -95,6 +95,7 @@ public class KReachIndexBasic extends KReachIndex {
             for (Map.Entry<Integer, Integer> e : Sku.entrySet()) {
                 int d = e.getValue();
                 int v = e.getKey();
+                if(!S.contains(v))continue;
                 I.addEdge(u, v);
                 if (d <= k - 2) {
                     wI.put(new DirectedEdge(u, v), k - 2);

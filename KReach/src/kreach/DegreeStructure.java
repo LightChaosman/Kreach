@@ -14,6 +14,7 @@ import java.util.HashSet;
  * @author Helmond
  */
 class DegreeStructure {
+
     private final ArrayList<HashSet<Integer>> verticesOfDegree;
     private final HashMap<Integer, Integer> degree;
     private final Graph g;
@@ -34,30 +35,37 @@ class DegreeStructure {
             curmax = Math.max(curmax, d);
         }
     }
-    
-    public void removeV(int v)
-    {
+
+    public void removeV(int v) {
+        if (!degree.containsKey(v)) {
+            return;
+        }
         int d = degree.get(v);
         degree.remove(v);
         verticesOfDegree.get(d).remove(v);
         for (int u : g.out(v)) {
-            int deg = degree.get(u);
-            degree.put(u, deg - 1);
-            boolean wasPresent = verticesOfDegree.get(deg).remove(u);
-            if (wasPresent) {
-                verticesOfDegree.get(deg - 1).add(u);
-            }
+            DecreaseNeighbor(u);
         }
         for (int u : g.in(v)) {
-            int deg = degree.get(u);
-            degree.put(u, deg - 1);
-            boolean wasPresent = verticesOfDegree.get(deg).remove(u);
-            if (wasPresent) {
-                verticesOfDegree.get(deg - 1).add(u);
-            }
+            DecreaseNeighbor(u);
         }
         while (verticesOfDegree.get(curmax).isEmpty() && curmax > 0) {
             curmax--;
+        }
+    }
+
+    private void DecreaseNeighbor(int u) {
+        if (!degree.containsKey(u)) {
+            return;
+        }
+        int deg = degree.get(u);
+        if (deg == 0) {
+            return;
+        }
+        degree.put(u, deg - 1);
+        boolean wasPresent = verticesOfDegree.get(deg).remove(u);
+        if (wasPresent) {
+            verticesOfDegree.get(deg - 1).add(u);
         }
     }
 
@@ -69,25 +77,15 @@ class DegreeStructure {
         int v = maxset.iterator().next();
         maxset.remove(v);
         for (int u : g.out(v)) {
-            int deg = degree.get(u);
-            degree.put(u, deg - 1);
-            boolean wasPresent = verticesOfDegree.get(deg).remove(u);
-            if (wasPresent) {
-                verticesOfDegree.get(deg - 1).add(u);
-            }
+            DecreaseNeighbor(u);
         }
         for (int u : g.in(v)) {
-            int deg = degree.get(u);
-            degree.put(u, deg - 1);
-            boolean wasPresent = verticesOfDegree.get(deg).remove(u);
-            if (wasPresent) {
-                verticesOfDegree.get(deg - 1).add(u);
-            }
+            DecreaseNeighbor(u);
         }
         while (verticesOfDegree.get(curmax).isEmpty() && curmax > 0) {
             curmax--;
         }
         return v;
     }
-    
+
 }

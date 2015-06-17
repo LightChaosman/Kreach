@@ -17,5 +17,10 @@ public class Quintuple<K1,K2,K3,K4,K5> extends Quadruple<K1,K2,K3,K4> {
         this.k5 = k5;
     }
     
+    @Override
+    public String toString() {
+        return "<" +k1 + ", " + k2 + ", " + k3 +", " + k4 + ", " + k5 + ">"; //To change body of generated methods, choose Tools | Templates.
+    }
+    
     
 }

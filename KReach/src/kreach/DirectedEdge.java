@@ -39,5 +39,12 @@ public class DirectedEdge extends AbstractEdge{
         
         return this.u == other.u && this.v == other.v;
     }
+
+    @Override
+    public String toString() {
+        return u + "->" + v; //To change body of generated methods, choose Tools | Templates.
+    }
+    
+    
     
 }

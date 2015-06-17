@@ -16,6 +16,12 @@ public class Triple<K1,K2,K3> extends Tuple<K1,K2> {
         super(k1, k2);
         this.k3 = k3;
     }
+
+    @Override
+    public String toString() {
+        return "<" +k1 + ", " + k2 + ", " + k3 + ">"; //To change body of generated methods, choose Tools | Templates.
+    }
+    
     
     
 }
