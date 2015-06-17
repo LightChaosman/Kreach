@@ -33,11 +33,11 @@ public class KReach {
      */
     public static void main(String[] args) throws FileNotFoundException, IOException {
         Graph g2 = null;
-        g2 = loadGeneral(ALL[2]);
+        g2 = loadGeneral(ALL[0]);
         int k = 10;
-        int b = 100;
-        KReachIndex index = new KReachIndexBasic(g2, k);;
-        //KReachIndex index = new KReachIndexTwoLevel(g2, k,b);
+        int b = 250;
+        //KReachIndex index = new KReachIndexBasic(g2, k);;
+        KReachIndex index = new KReachIndexTwoLevel(g2, k,b);
         List<Integer> vertices = new ArrayList<>();
         vertices.addAll(g2.vertices());
         List<Integer> ss = new ArrayList<>(), ts = new ArrayList<>();
@@ -52,7 +52,7 @@ public class KReach {
             int s = ss.get(i);
             int t = ts.get(i);
             index.query(s, t);
-            if(i%1000==0){index.printResults();}
+            if(i%250==0){index.printResults();}
         }
 //*/
         

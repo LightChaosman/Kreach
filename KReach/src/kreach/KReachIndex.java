@@ -40,9 +40,9 @@ public abstract class KReachIndex {
     public final boolean query(int s,int t)
     {
         queries++;
-        queryTime-=System.currentTimeMillis();
+        queryTime-=System.nanoTime();
         boolean b = query2(s,t);
-        queryTime+=System.currentTimeMillis();
+        queryTime+=System.nanoTime();
         trues += (b?1:0);
         return b;
     }

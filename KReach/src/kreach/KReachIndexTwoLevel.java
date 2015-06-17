@@ -1,8 +1,3 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package kreach;
 
 import java.util.HashMap;
@@ -21,11 +16,12 @@ public class KReachIndexTwoLevel extends KReachIndex{
     
     private Quintuple<WeightedGraph,WeightedGraph,Graph,HashSet<Integer>,HashSet<Integer>> index;
     private final int b;
-    private static final int memTreshold = 2500;
+    private static final int memTreshold = 1000;
     
     public KReachIndexTwoLevel(Graph g, int k, int b) {
         super(g, k, 5);
         this.b = b;
+        construct(g);
     }
 
     @Override
@@ -38,8 +34,8 @@ public class KReachIndexTwoLevel extends KReachIndex{
         int mv = ds.popMax();
         while (i < b && mv != -1) {
             System.out.println("mv:"+mv);
-            khopbfs(g, mv, k, S, D1, w1);
-            khopbfs2(g, mv, k, S, D1, w1);
+            khopbfs(g, mv, k, S, D1, w1,ds);
+            khopbfs2(g, mv, k, S, D1, w1,ds);
             S.add(mv);
             mv = ds.popMax();
             i++;
@@ -67,8 +63,8 @@ public class KReachIndexTwoLevel extends KReachIndex{
         
         while (enoughmem && mvPrime !=-1)
         {
-            khopbfs(Gprime, mvPrime, k, SPrime, D2, w2);
-            khopbfs2(Gprime, mvPrime, k, SPrime, D2, w2);
+            khopbfs(Gprime, mvPrime, k, SPrime, D2, w2,dsPrime);
+            khopbfs2(Gprime, mvPrime, k, SPrime, D2, w2,dsPrime);
             SPrime.add(mvPrime);
             mvPrime = ds.popMax();
             if(Math.random()>0.01)System.out.println((runtime.maxMemory()-runtime.totalMemory())/(1024*1024));
@@ -350,11 +346,11 @@ public class KReachIndexTwoLevel extends KReachIndex{
 
     @Override
     protected Object getIndex() {
-        return new Triple<>(index.k1.k1,index.k2.k1,index.k3);
+        return new Quintuple<>(index.k1.k1,index.k2.k1,index.k3,index.k4.size(),index.k5.size());
     }
     
     
-    private static void khopbfs(Graph g, int source, int k, HashSet<Integer> S, Graph d1, HashMap<DirectedEdge, Integer> w1) {
+    private static void khopbfs(Graph g, int source, int k, HashSet<Integer> S, Graph d1, HashMap<DirectedEdge, Integer> w1,DegreeStructure ds) {
         Queue<Integer> Q = new LinkedList<>();
         HashMap<Integer, Integer> dist = new HashMap<>();
         HashMap<Integer, Integer> parents = new HashMap<>();
@@ -393,13 +389,14 @@ public class KReachIndexTwoLevel extends KReachIndex{
                     d1.addVertex(u);
                     d1.addEdge(source, u);
                     w1.put(new DirectedEdge(source, u), d);
+                    ds.removeV(u);
                 }
             }
         }
 
     }
 
-    private static void khopbfs2(Graph g, int source, int k, HashSet<Integer> S, Graph d1, HashMap<DirectedEdge, Integer> w1) {
+    private static void khopbfs2(Graph g, int source, int k, HashSet<Integer> S, Graph d1, HashMap<DirectedEdge, Integer> w1,DegreeStructure ds) {
         Queue<Integer> Q = new LinkedList<>();
         HashMap<Integer, Integer> dist = new HashMap<>();
         HashMap<Integer, Integer> parents = new HashMap<>();
@@ -438,6 +435,7 @@ public class KReachIndexTwoLevel extends KReachIndex{
                     d1.addVertex(u);
                     d1.addEdge(u, source);
                     w1.put(new DirectedEdge(u, source), d);
+                    ds.removeV(u);
                 }
             }
         }
