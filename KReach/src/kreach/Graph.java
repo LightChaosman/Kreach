@@ -118,6 +118,8 @@ public class Graph {
                 {
                     if (t.startsWith("#")) {
                         return;
+                    }if (t.startsWith("%")) {
+                        return;
                     }
                     if (!Character.isDigit(t.charAt(0))) {
                         return;

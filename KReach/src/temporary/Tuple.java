@@ -17,4 +17,11 @@ public class Tuple<K1,K2> {
         this.k1 = k1;
         this.k2 = k2;
     }
+
+    @Override
+    public String toString() {
+        return "<" + k1 + ", " + k2+">"; //To change body of generated methods, choose Tools | Templates.
+    }
+    
+    
 }

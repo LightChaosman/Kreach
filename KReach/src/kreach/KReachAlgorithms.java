@@ -126,6 +126,7 @@ public class KReachAlgorithms {
         DegreeStructure ds = new DegreeStructure(g);
         int mv = ds.popMax();
         while (i < b && mv != -1) {
+            System.out.println("mv:"+mv);
             khopbfs(g, mv, k, S, D1, w1);
             khopbfs2(g, mv, k, S, D1, w1);
             S.add(mv);
@@ -151,16 +152,16 @@ public class KReachAlgorithms {
         DegreeStructure dsPrime = new DegreeStructure(Gprime);
         int mvPrime = dsPrime.popMax();
         Runtime runtime = Runtime.getRuntime();
-        boolean enoughmem = (runtime.maxMemory()-runtime.totalMemory())/(1024*1024)>1500;
+        boolean enoughmem = (runtime.maxMemory()-runtime.totalMemory())/(1024*1024)>1750;
         
-        while (enoughmem)//TODO
+        while (enoughmem && mvPrime !=-1)//TODO
         {
             khopbfs(Gprime, mvPrime, k, SPrime, D2, w2);
             khopbfs2(Gprime, mvPrime, k, SPrime, D2, w2);
             SPrime.add(mvPrime);
             mvPrime = ds.popMax();
             if(Math.random()>0.01)System.out.println((runtime.maxMemory()-runtime.totalMemory())/(1024*1024));
-            enoughmem = (runtime.maxMemory()-runtime.totalMemory())/(1024*1024)>1500;
+            enoughmem = (runtime.maxMemory()-runtime.totalMemory())/(1024*1024)>1750;
         }
         System.out.println("D2 step 1 done, fine tuning now");
         HashSet<Integer> VD1capSprime = new HashSet<>(SPrime);
@@ -252,10 +253,10 @@ public class KReachAlgorithms {
         boolean Ss = S.contains(s);
         boolean St = S.contains(t);
         if (Ss && St) {
-            return D1.k1.edges().contains(new DirectedEdge(s, t));
+            return D1.getWeight(s, t)!=null;
 
         } else if (Ss || St) {
-            boolean t1 = D1.k1.edges().contains(new DirectedEdge(s, t));
+            boolean t1 = D1.getWeight(s, t)!=null;
             if (t1) {
                 return true;
             }
@@ -273,7 +274,7 @@ public class KReachAlgorithms {
         boolean Spt = Sprime.contains(t);
         
         if (Sps && Spt) {
-            if (D1.k1.edges().contains(new DirectedEdge(s, t))) {
+            if (D1.getWeight(s, t)!=null) {
                 return true;
             }
             for (int u : S) {
@@ -289,7 +290,7 @@ public class KReachAlgorithms {
             return false;
             
         } else if (Sps || Spt) {
-            if (D1.k1.edges().contains(new DirectedEdge(s, t))) {
+            if (D1.getWeight(s, t)!=null) {
                 return true;
             }
             for (int v : Sprime) {
@@ -345,10 +346,10 @@ public class KReachAlgorithms {
         boolean Ss = S.contains(s);
         boolean St = S.contains(t);
         if (Ss && St) {
-            return D1.k1.edges().contains(new DirectedEdge(s, t)) && D1.getWeight(s, t)<=k;
+            return D1.getWeight(s, t)!=null && D1.getWeight(s, t)<=k;
 
         } else if (Ss || St) {
-            boolean t1 = D1.k1.edges().contains(new DirectedEdge(s, t)) && D1.getWeight(s, t)<=k;
+            boolean t1 = D1.getWeight(s, t)!=null && D1.getWeight(s, t)<=k;
             if (t1) {
                 return true;
             }
@@ -366,7 +367,7 @@ public class KReachAlgorithms {
         boolean Spt = Sprime.contains(t);
         
         if (Sps && Spt) {
-            if (D1.k1.edges().contains(new DirectedEdge(s, t))&& D2.getWeight(s, t)<=k) {
+            if (D1.getWeight(s, t)!=null&& D2.getWeight(s, t)<=k) {
                 return true;
             }
             for (int u : S) {
@@ -382,7 +383,7 @@ public class KReachAlgorithms {
             return false;
             
         } else if (Sps || Spt) {
-            if (D1.k1.edges().contains(new DirectedEdge(s, t))&& D2.getWeight(s, t)<=k) {
+            if (D1.getWeight(s, t)!=null&& D2.getWeight(s, t)<=k) {
                 return true;
             }
             for (int v : Sprime) {

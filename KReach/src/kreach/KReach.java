@@ -33,7 +33,7 @@ public class KReach {
     public static void main(String[] args) throws FileNotFoundException, IOException {
         Graph g2 = null;
         
-        for(File f:ALL){System.out.println("Loading" + f);
+        /*for(File f:ALL){
             g2 = loadGeneral(f);
         
         System.out.println(g2);
@@ -42,12 +42,10 @@ public class KReach {
         {
             maxdeg = Math.max(maxdeg, g2.in(v).size()+g2.out(v).size());
         }
-        System.out.println(maxdeg);}
+        System.out.println(maxdeg);}//*/
         
         
-        
-        
-        g2 = loadGeneral(ALL[1]);
+        g2 = loadGeneral(ALL[2]);
         int k = 10;
         int b = 100;
         Quintuple<WeightedGraph, WeightedGraph, Graph, HashSet<Integer>, HashSet<Integer>> algorithm3 = KReachAlgorithms.algorithm3(g2, k, b);
@@ -55,15 +53,22 @@ public class KReach {
         List<Integer> vertices = new ArrayList<>();
         vertices.addAll(g2.vertices());
         long startime = System.currentTimeMillis();
+        List<Integer> ss = new ArrayList<>(), ts = new ArrayList<>();
+        int imax = 1000000;
+        for(int i = 0; i < imax;i++)
+        {
+            ss.add(vertices.get((int)Math.floor(Math.random()*vertices.size())));
+            ts.add(vertices.get((int)Math.floor(Math.random()*vertices.size())));
+        }
         for(int i = 0; i < 1000000; i ++)
         {
-            int s = vertices.get((int)Math.floor(Math.random()*vertices.size()));
-            int t = vertices.get((int)Math.floor(Math.random()*vertices.size()));
+            int s = ss.get(i);
+            int t = ts.get(i);
             //System.out.println("querying ("+s+","+t+")");
             boolean res = KReachAlgorithms.algorithm4(algorithm3,k,s,t);
             trues +=res?1:0;
             //System.out.println(i+"=querying ("+s+","+t+"):"+res);
-            if(i%10000==0)System.out.println("Fraction of succesfull queries: " + ((double)trues/i) + ", avarage time per query; " + ((System.currentTimeMillis()-startime)/(i+1)) + " ms");
+            if(i%1000==0)System.out.println("Fraction of succesfull queries: " + ((double)trues/i) + ", avarage time per query; " + ((System.currentTimeMillis()-startime)/(i+1)) + " ms");
         }
 //*/
         
@@ -71,8 +76,8 @@ public class KReach {
     
     private static final File 
             ARXIV = new File("Datasets\\Arxiv"),
-            FAA = new File("Datasets\\Air traffic control (FAA)\\out.maayan-faa"),
-            DBLP = new File("Datasets\\DBLP\\out.dblp-cite"),
+             FAA = new File("Datasets\\Air traffic control (FAA)\\out.maayan-faa"),
+             DBLP = new File("Datasets\\DBLP\\out.dblp-cite"),
             EPINOMS = new File("Datasets\\Epinions\\out.soc-Epinions1"),
             GNUTELLA2 = new File("Datasets\\Gnutella\\out.p2p-Gnutella31"),
             GPLUS = new File("Datasets\\Google plus\\out.ego-gplus"),
@@ -83,6 +88,7 @@ public class KReach {
     
     private static Graph loadGeneral(File f) throws FileNotFoundException, IOException
     {
+        System.out.println("Loading" + f);
         FileReader fr = new FileReader(f);
         BufferedReader br = new BufferedReader(fr);
         StreamGraphParser parser = Graph.parseLineSeparatedEdgeFormat(true);
