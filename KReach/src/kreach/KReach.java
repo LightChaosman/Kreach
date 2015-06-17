@@ -11,6 +11,7 @@ import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.LinkedList;
@@ -48,27 +49,28 @@ public class KReach {
         g2 = loadGeneral(ALL[2]);
         int k = 10;
         int b = 100;
-        Quintuple<WeightedGraph, WeightedGraph, Graph, HashSet<Integer>, HashSet<Integer>> algorithm3 = KReachAlgorithms.algorithm3(g2, k, b);
+        KReachIndex index = new KReachIndexBasic(g2, k);
         int trues = 0;
         List<Integer> vertices = new ArrayList<>();
         vertices.addAll(g2.vertices());
-        long startime = System.currentTimeMillis();
         List<Integer> ss = new ArrayList<>(), ts = new ArrayList<>();
-        int imax = 1000000;
+        int imax = 10000;
         for(int i = 0; i < imax;i++)
         {
             ss.add(vertices.get((int)Math.floor(Math.random()*vertices.size())));
             ts.add(vertices.get((int)Math.floor(Math.random()*vertices.size())));
         }
-        for(int i = 0; i < 1000000; i ++)
+        long startime = System.nanoTime();
+        for(int i = 0; i < imax; i ++)
         {
             int s = ss.get(i);
             int t = ts.get(i);
             //System.out.println("querying ("+s+","+t+")");
-            boolean res = KReachAlgorithms.algorithm4(algorithm3,k,s,t);
+            //boolean res = KReachAlgorithms.algorithm4(algorithm3,k,s,t);
+            boolean res = index.query(s, t);
             trues +=res?1:0;
             //System.out.println(i+"=querying ("+s+","+t+"):"+res);
-            if(i%1000==0)System.out.println("Fraction of succesfull queries: " + ((double)trues/i) + ", avarage time per query; " + ((System.currentTimeMillis()-startime)/(i+1)) + " ms");
+            if(i%1000==0){index.printResults();}
         }
 //*/
         

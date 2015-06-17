@@ -1,124 +1,34 @@
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
 package kreach;
 
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.LinkedList;
 import java.util.List;
-import java.util.Map;
 import java.util.Queue;
-import java.util.Set;
 import temporary.Quintuple;
 import temporary.Triple;
-import temporary.Tuple;
 
 /**
  *
  * @author Helmond
  */
-public class KReachAlgorithms {
+public class KReachIndexTwoLevel extends KReachIndex{
+    
+    private Quintuple<WeightedGraph,WeightedGraph,Graph,HashSet<Integer>,HashSet<Integer>> index;
+    private final int b;
 
-    public static WeightedGraph computeOriginalKReachGraph(Graph g, int k) {
-        Set<Integer> S = VertexCoverAlgorithms.computeBasic2AproxVertexCover(g);
-        Graph I = new Graph();
-        System.out.println("Found vertex cover of size" + S.size());
-        HashMap<DirectedEdge, Integer> wI = new HashMap<>();
-        int i = 0;
-        for (Integer u : S) {
-            if (i++ % 100 == 0) {
-                System.out.println(i);
-            }
-            HashMap<Integer, Integer> Sku = BFSu(g, u, k);
-            for (Map.Entry<Integer, Integer> e : Sku.entrySet()) {
-                int d = e.getValue();
-                int v = e.getKey();
-                I.addEdge(u, v);
-                if (d <= k - 2) {
-                    wI.put(new DirectedEdge(u, v), k - 2);
-                } else if (d < k - 1) {
-                    wI.put(new DirectedEdge(u, v), k - 1);
-                } else {
-                    wI.put(new DirectedEdge(u, v), k);
-                }
-            }
-        }
-        return new WeightedGraph(I, wI);
+    public KReachIndexTwoLevel(Graph g, int k, int b) {
+        super(g, k, 5);
+        this.b = b;
     }
 
-    public static boolean queryKReach1(Graph g, int s, int t, WeightedGraph kreach, int k) {
-        Graph gI = kreach.k1;
-        HashMap<DirectedEdge, Integer> wI = kreach.k2;
-        HashSet<Integer> VI = gI.vertices();
-        HashSet<DirectedEdge> EI = gI.edges();
-        System.out.println("query...");
-        // case 1: both s and t are in the vertex cover
-        if (VI.contains(s) && VI.contains(t)) {
-            System.out.println("case 1");
-            return EI.contains(new DirectedEdge(s, t));
-        }
-        // case 2: only s is in the vertex cover
-        if (VI.contains(s) && !VI.contains(t)) {
-            System.out.println("case 2");
-            for (int v : g.in(t)) {
-                DirectedEdge e = new DirectedEdge(s, v);
-                if (EI.contains(e) && wI.get(e) <= k - 1) {
-                    return true;
-                }
-            }
-            return false;
-        }
-
-        // case 3: only t is in the vertex cover
-        if (!VI.contains(s) && VI.contains(t)) {
-            System.out.println("case 3");
-            for (int v : g.out(s)) {
-                DirectedEdge e = new DirectedEdge(v, t);
-                if (EI.contains(e) && wI.get(e) <= k - 1) {
-                    return true;
-                }
-            }
-            return false;
-        } // case 4: both s and t are not in the vertex cover
-        else//(!VI.contains(s) && !VI.contains(t))
-        {
-            System.out.println("case 4");
-            for (int u : g.out(s)) {
-
-                for (int v : g.in(t)) {
-                    DirectedEdge e = new DirectedEdge(u, v);
-                    if (EI.contains(e) && wI.get(e) <= k - 2) {
-                        return true;
-                    }
-                }
-            }
-            return false;
-        }
-    }
-
-    public static HashMap<Integer, Integer> BFSu(Graph g, int source, int k) {
-        Queue<Integer> Q = new LinkedList<>();
-        HashMap<Integer, Integer> dist = new HashMap<>();
-        Q.add(source);
-        dist.put(source, 0);
-        while (!Q.isEmpty()) {
-
-            int u = Q.poll();
-            int d = dist.get(u);
-            if (d == k) {
-                break;
-            }
-            List<Integer> N = g.out(u);
-            for (Integer v : N) {
-                if (!(dist.containsKey(v))) {
-                    dist.put(v, d + 1);
-                    Q.add(v);
-                }
-            }
-        }
-        return dist;
-
-    }
-
-    public static Quintuple<WeightedGraph, WeightedGraph, Graph, HashSet<Integer>, HashSet<Integer>> algorithm3(Graph g, int k, int b) {
+    @Override
+    protected void construct2(Graph g) {
         HashSet<Integer> S = new HashSet<>();
         Graph D1 = new Graph();
         HashMap<DirectedEdge, Integer> w1 = new HashMap<>();
@@ -152,20 +62,22 @@ public class KReachAlgorithms {
         DegreeStructure dsPrime = new DegreeStructure(Gprime);
         int mvPrime = dsPrime.popMax();
         Runtime runtime = Runtime.getRuntime();
-        boolean enoughmem = (runtime.maxMemory()-runtime.totalMemory())/(1024*1024)>1750;
+        int memreq = 3000;
+        boolean enoughmem = (runtime.maxMemory()-runtime.totalMemory())/(1024*1024)>memreq;
         
-        while (enoughmem && mvPrime !=-1)//TODO
+        while (enoughmem && mvPrime !=-1)
         {
             khopbfs(Gprime, mvPrime, k, SPrime, D2, w2);
             khopbfs2(Gprime, mvPrime, k, SPrime, D2, w2);
             SPrime.add(mvPrime);
             mvPrime = ds.popMax();
             if(Math.random()>0.01)System.out.println((runtime.maxMemory()-runtime.totalMemory())/(1024*1024));
-            enoughmem = (runtime.maxMemory()-runtime.totalMemory())/(1024*1024)>1750;
+            enoughmem = (runtime.maxMemory()-runtime.totalMemory())/(1024*1024)>memreq;
         }
         System.out.println("D2 step 1 done, fine tuning now");
         HashSet<Integer> VD1capSprime = new HashSet<>(SPrime);
         VD1capSprime.retainAll(D1.vertices());
+        System.out.println("Size of intersection; " + VD1capSprime.size());
         for (int u : VD1capSprime) {
             for (int v : VD1capSprime) {
                 if (u == v) {
@@ -241,21 +153,24 @@ public class KReachAlgorithms {
             }
             D3.addEdge(e.u, e.v);
         }
-        return new Quintuple<>(new WeightedGraph(D1, w1), new WeightedGraph(D2, w2), D3, S, SPrime);
+        this.index = new Quintuple<>(new WeightedGraph(D1, w1), new WeightedGraph(D2, w2), D3, S, SPrime);
     }
 
-    public static boolean algorithm4(Quintuple<WeightedGraph, WeightedGraph, Graph, HashSet<Integer>, HashSet<Integer>> scaleIndex, int k, int s, int t) {
-        HashSet<Integer> S = scaleIndex.k4;
-        HashSet<Integer> Sprime = scaleIndex.k5;
-        WeightedGraph D1 = scaleIndex.k1;
-        WeightedGraph D2 = scaleIndex.k2;
-        Graph D3 = scaleIndex.k3;
+    @Override
+    protected boolean query2(int s, int t) {
+        HashSet<Integer> S = index.k4;
+        HashSet<Integer> Sprime = index.k5;
+        WeightedGraph D1 = index.k1;
+        WeightedGraph D2 = index.k2;
+        Graph D3 = index.k3;
         boolean Ss = S.contains(s);
         boolean St = S.contains(t);
         if (Ss && St) {
+            Case(1);
             return D1.getWeight(s, t)!=null;
 
         } else if (Ss || St) {
+            Case(2);
             boolean t1 = D1.getWeight(s, t)!=null;
             if (t1) {
                 return true;
@@ -274,6 +189,7 @@ public class KReachAlgorithms {
         boolean Spt = Sprime.contains(t);
         
         if (Sps && Spt) {
+            Case(3);
             if (D1.getWeight(s, t)!=null) {
                 return true;
             }
@@ -290,6 +206,7 @@ public class KReachAlgorithms {
             return false;
             
         } else if (Sps || Spt) {
+            Case(4);
             if (D1.getWeight(s, t)!=null) {
                 return true;
             }
@@ -313,6 +230,7 @@ public class KReachAlgorithms {
             }
             return false;
         } else {
+            Case(5);
             for (int u : S) {
                 for (int v : S) {
                     Integer w1 = D1.getWeight(s, u);
@@ -430,7 +348,13 @@ public class KReachAlgorithms {
         }
     }
 
-    public static void khopbfs(Graph g, int source, int k, HashSet<Integer> S, Graph d1, HashMap<DirectedEdge, Integer> w1) {
+    @Override
+    protected Object getIndex() {
+        return new Triple<>(index.k1.k1,index.k2.k1,index.k3);
+    }
+    
+    
+    private static void khopbfs(Graph g, int source, int k, HashSet<Integer> S, Graph d1, HashMap<DirectedEdge, Integer> w1) {
         Queue<Integer> Q = new LinkedList<>();
         HashMap<Integer, Integer> dist = new HashMap<>();
         HashMap<Integer, Integer> parents = new HashMap<>();
@@ -475,7 +399,7 @@ public class KReachAlgorithms {
 
     }
 
-    public static void khopbfs2(Graph g, int source, int k, HashSet<Integer> S, Graph d1, HashMap<DirectedEdge, Integer> w1) {
+    private static void khopbfs2(Graph g, int source, int k, HashSet<Integer> S, Graph d1, HashMap<DirectedEdge, Integer> w1) {
         Queue<Integer> Q = new LinkedList<>();
         HashMap<Integer, Integer> dist = new HashMap<>();
         HashMap<Integer, Integer> parents = new HashMap<>();
@@ -564,4 +488,5 @@ public class KReachAlgorithms {
         }
         return false;
     }
+    
 }
