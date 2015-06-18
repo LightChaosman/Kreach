@@ -47,6 +47,8 @@ public abstract class KReachIndex {
         return b;
     }
     
+    protected abstract String extraInfo();
+    
     protected abstract boolean query2(int s, int t);
     
     protected abstract Object getIndex();
@@ -58,8 +60,9 @@ public abstract class KReachIndex {
         System.out.println(getName() +" index on graph G; " +  g + "\n"
                 + "Index size became; " + getIndex() + "\n"
                 + "Index construction time; " + constructionTime + "\n"
-                + "Query amount; " + queries + ", time spent on queries; " + queryTime  + "ns ("+(queryTime/1000000)+"ms), ammount of trues returned; "  + trues + "\n"
-                + "Case partitioning; " + Arrays.toString(caseCounter) );
+                + "Query amount; " + queries + ", time spent on queries; " + queryTime  + "ns ("+(queryTime/1000000)+"ms), ( " +(queryTime/(1000*queries)) +"us/query), ammount of trues returned; "  + trues + "\n"
+                + "Case partitioning; " + Arrays.toString(caseCounter) +"\n" + extraInfo()
+        );
     }
     
 }

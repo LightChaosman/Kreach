@@ -17,6 +17,7 @@ public class KReachIndexTwoLevel extends KReachIndex {
     private Quintuple<WeightedGraph, WeightedGraph, Graph, HashSet<Integer>, HashSet<Integer>> index;
     private final int b;
     private static final int memTreshold = 1000;
+    int maxdeg3 = -1;
 
     public KReachIndexTwoLevel(Graph g, int k, int b) {
         super(g, k, 5);
@@ -66,7 +67,7 @@ public class KReachIndexTwoLevel extends KReachIndex {
             khopbfs2(Gprime, mvPrime, k, SPrime, D2, w2, dsPrime);
             SPrime.add(mvPrime);
             mvPrime = ds.popMax();
-            if (Math.random() > 0.01) {
+            if (Math.random() < 0.01) {
                 System.out.println((runtime.maxMemory() - runtime.totalMemory()) / (1024 * 1024));
             }
             enoughmem = (runtime.maxMemory() - runtime.totalMemory()) / (1024 * 1024) > memTreshold;
@@ -151,6 +152,7 @@ public class KReachIndexTwoLevel extends KReachIndex {
             D3.addEdge(e.u, e.v);
         }
         this.index = new Quintuple<>(new WeightedGraph(D1, w1), new WeightedGraph(D2, w2), D3, S, SPrime);
+        System.out.println("index done");
     }
 
     @Override
@@ -186,6 +188,23 @@ public class KReachIndexTwoLevel extends KReachIndex {
             return DoubleCheck(D1, s, t, S) || DoubleCheck(D2, s, t, Sprime) || paralelBFS(D3, k, s, t);
         }
     }
+
+    @Override
+    protected String extraInfo() {
+        if(maxdeg3==-1)
+        {
+            int d = 0;
+            Graph d3 = index.k3;
+            for(int v:d3.vertices())
+            {
+                d = Math.max(d,d3.in(v).size()+d3.out(v).size());
+            }
+            maxdeg3=d;
+        }
+        return "Maximum degree in residual graph D3; " + maxdeg3 + "\n";
+    }
+    
+    
 
     private boolean singleCheck(WeightedGraph D2, int s, int t, HashSet<Integer> Sprime) {
         if (D2.k1.hasVertex(s) && D2.k1.hasVertex(t)) {
@@ -310,7 +329,6 @@ public class KReachIndexTwoLevel extends KReachIndex {
                 }
             }
         }
-
     }
 
     private static boolean paralelBFS(Graph D3, int k, int s, int t) {
