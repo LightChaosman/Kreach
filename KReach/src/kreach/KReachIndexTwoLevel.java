@@ -168,42 +168,22 @@ public class KReachIndexTwoLevel extends KReachIndex {
 
         } else if (Ss || St) {
             Case(2);
-            if (D1.getWeight(s, t) != null) {
-                return true;
-            }
-            return singleCheck(D1, s, t, S);
+            return D1.getWeight(s, t) != null || singleCheck(D1, s, t, S);
         }
+
         boolean Sps = Sprime.contains(s);
         boolean Spt = Sprime.contains(t);
 
         if (Sps && Spt) {
             Case(3);
-            if (D2.getWeight(s, t) != null) {
-                return true;
-            }
-            return DoubleCheck(D1, s, t, S);
+            return D2.getWeight(s, t) != null || DoubleCheck(D1, s, t, S);
 
         } else if (Sps || Spt) {
             Case(4);
-            if (D2.getWeight(s, t) != null) {
-                return true;
-            }
-            if (singleCheck(D2, s, t, Sprime)) {
-                return true;
-            }
-            if (DoubleCheck(D1, s, t, S)) {
-                return true;
-            }
-            return false;
+            return D2.getWeight(s, t) != null || singleCheck(D2, s, t, Sprime) || DoubleCheck(D1, s, t, S);
         } else {
             Case(5);
-            if (DoubleCheck(D1, s, t, S)) {
-                return true;
-            }
-            if (DoubleCheck(D2, s, t, Sprime)) {
-                return true;
-            }
-            return paralelBFS(D3, k, s, t);
+            return DoubleCheck(D1, s, t, S) || DoubleCheck(D2, s, t, Sprime) || paralelBFS(D3, k, s, t);
         }
     }
 
@@ -220,7 +200,7 @@ public class KReachIndexTwoLevel extends KReachIndex {
         return false;
     }
 
-    private boolean DoubleCheck(WeightedGraph D1, int s, int t, HashSet<Integer> S) {
+    private boolean DoubleCheck(WeightedGraph D1, int s, int t, HashSet<Integer> S) {//improve by first doing single check??
         if (D1.k1.hasVertex(s) && D1.k1.hasVertex(t)) {
             for (int u : S) {
                 for (int v : S) {
