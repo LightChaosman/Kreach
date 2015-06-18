@@ -60,7 +60,7 @@ public abstract class KReachIndex {
         System.out.println(getName() +" index on graph G; " +  g + "\n"
                 + "Index size became; " + getIndex() + "\n"
                 + "Index construction time; " + constructionTime + "\n"
-                + "Query amount; " + queries + ", time spent on queries; " + queryTime  + "ns ("+(queryTime/1000000)+"ms), ( " +(queryTime/(1000*queries)) +"us/query), ammount of trues returned; "  + trues + "\n"
+                + "Query amount; " + queries + ", time spent on queries; " + queryTime  + "ns ("+(queryTime/1000000)+"ms), ( " +(queries==0?0:(queryTime/(1000*queries))) +"us/query), ammount of trues returned; "  + trues + "\n"
                 + "Case partitioning; " + Arrays.toString(caseCounter) + "(" + caseString() + ")" +"\n" + extraInfo()
         );
     }
@@ -71,7 +71,7 @@ public abstract class KReachIndex {
         for(int i = 0; i < cs.length;i++)
         {
             cs[i]=(double)caseCounter[i]/queries;
-            cs[i]= Math.round(cs[i]*10000)/10000d;
+            cs[i]= Math.round(cs[i]*10000d)/10000d;
         }
         return Arrays.toString(cs);
     }

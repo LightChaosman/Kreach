@@ -6,7 +6,6 @@ import java.util.LinkedList;
 import java.util.List;
 import java.util.Queue;
 import temporary.Quintuple;
-import temporary.Triple;
 
 /**
  *
@@ -14,9 +13,10 @@ import temporary.Triple;
  */
 public class KReachIndexTwoLevel extends KReachIndex {
 
+    private final static boolean relax = true;
     private Quintuple<WeightedGraph, WeightedGraph, Graph, HashSet<Integer>, HashSet<Integer>> index;
     private final int b;
-    private static final int memTreshold = 1000;
+    private static final int memTreshold = 500;
     int maxdeg3 = -1;
 
     public KReachIndexTwoLevel(Graph g, int k, int b) {
@@ -34,14 +34,14 @@ public class KReachIndexTwoLevel extends KReachIndex {
         DegreeStructure ds = new DegreeStructure(g);
         int mv = ds.popMax();
         while (i < b && mv != -1) {
-            System.out.println("mv:" + mv);
+           // System.out.println("mv:" + mv);
             khopbfs(g, mv, k, S, D1, w1, ds);
             khopbfs2(g, mv, k, S, D1, w1, ds);
             S.add(mv);
             mv = ds.popMax();
             i++;
         }
-        System.out.println("D1 done, building Gprime");
+        //System.out.println("D1 done, building Gprime");
         Graph Gprime = new Graph();
         for (int v : g.vertices()) {
             if (!S.contains(v)) {
@@ -67,12 +67,9 @@ public class KReachIndexTwoLevel extends KReachIndex {
             khopbfs2(Gprime, mvPrime, k, SPrime, D2, w2, dsPrime);
             SPrime.add(mvPrime);
             mvPrime = ds.popMax();
-            if (Math.random() < 0.01) {
-                System.out.println((runtime.maxMemory() - runtime.totalMemory()) / (1024 * 1024));
-            }
             enoughmem = (runtime.maxMemory() - runtime.totalMemory()) / (1024 * 1024) > memTreshold;
         }
-        System.out.println("D2 step 1 done, fine tuning now");
+        //System.out.println("D2 step 1 done, fine tuning now");
         HashSet<Integer> VD1capSprime = new HashSet<>(SPrime);
         VD1capSprime.retainAll(D1.vertices());
         System.out.println("Size of intersection; " + VD1capSprime.size());
@@ -201,7 +198,8 @@ public class KReachIndexTwoLevel extends KReachIndex {
             }
             maxdeg3=d;
         }
-        return "Maximum degree in residual graph D3; " + maxdeg3 + "\n";
+        return "Maximum degree in residual graph D3; " + maxdeg3 + "\n"
+                + paralsuc +"/"+paral + "\n";
     }
     
     
@@ -279,7 +277,7 @@ public class KReachIndexTwoLevel extends KReachIndex {
                     d1.addVertex(u);
                     d1.addEdge(source, u);
                     w1.put(new DirectedEdge(source, u), d);
-                    ds.removeV(u);
+                    if(relax)ds.removeV(u);
                 }
             }
         }
@@ -325,13 +323,18 @@ public class KReachIndexTwoLevel extends KReachIndex {
                     d1.addVertex(u);
                     d1.addEdge(u, source);
                     w1.put(new DirectedEdge(u, source), d);
-                    ds.removeV(u);
+                    if(relax)ds.removeV(u);
                 }
             }
         }
     }
 
+    public static int paral = 0, paralsuc = 0;
+    
+    
     private static boolean paralelBFS(Graph D3, int k, int s, int t) {
+        paral++;
+        paralsuc++;
         Graph g = D3;
         Graph g2 = Graph.inverseLayer(g);
         Queue<Integer> Q1 = new LinkedList<>();
@@ -375,6 +378,7 @@ public class KReachIndexTwoLevel extends KReachIndex {
                 }
             }
         }
+        paralsuc--;
         return false;
     }
 

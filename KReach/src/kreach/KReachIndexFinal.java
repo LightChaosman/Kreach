@@ -20,7 +20,7 @@ public class KReachIndexFinal extends KReachIndex{
     @Override
     protected void construct2(Graph g) {
        Set<Integer> S = VertexCoverAlgorithms.computeBasic2AproxVertexCover(g);
-       if(S.size()<1500)
+       if(S.size()<10000)
        {
            index = new KReachIndexBasic(g, k);
        }else
@@ -31,7 +31,7 @@ public class KReachIndexFinal extends KReachIndex{
 
     @Override
     protected boolean query2(int s, int t) {
-        return index.query2(s, t);
+        return index.query(s, t);
     }
 
     @Override
@@ -48,6 +48,13 @@ public class KReachIndexFinal extends KReachIndex{
     protected String extraInfo() {
         return index.extraInfo();
     }
+
+    @Override
+    public void printResults() {
+        index.printResults(); //To change body of generated methods, choose Tools | Templates.
+    }
+    
+    
     
     
     

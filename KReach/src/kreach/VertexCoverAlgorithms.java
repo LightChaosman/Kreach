@@ -12,11 +12,11 @@ public class VertexCoverAlgorithms {
     public static final int DEFAULT_BUDGET = 1000;
 
     public static Set<Integer> computeBasic2AproxVertexCover(Graph G) {
-        System.out.println("input for 2aprox vcover: " + G);
-        System.out.println("undirected variant: " + G);
+        //System.out.println("input for 2aprox vcover: " + G);
+        //System.out.println("undirected variant: " + G);
         Set<DirectedEdge> edges = new HashSet<>();
         edges.addAll(G.edges());
-        System.out.println("ammount of edges: " + edges.size());
+        //System.out.println("ammount of edges: " + edges.size());
         Set<Integer> cover = new HashSet<>();
         int i = 0;
         //System.out.println(edges);
@@ -41,9 +41,7 @@ public class VertexCoverAlgorithms {
             }
             edges.removeAll(toRemove);
             //System.out.println("Selected " + e + ", Removing " + toRemove );
-            if ((++i) % 1000 == 0) {
-                System.out.println("i=" + i + ", edges left: " + edges.size() + ", vertices in cover: " + cover.size());
-            }
+            
         }
         return cover;
     }

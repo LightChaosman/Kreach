@@ -6,6 +6,7 @@ import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 import java.util.Random;
 
@@ -30,16 +31,22 @@ public class KReach {
      * @param args the command line arguments
      */
     public static void main(String[] args) throws FileNotFoundException, IOException {
+        
         Graph g2;
-        g2 = load(ALL[2]);
-        int k = 10;
+        g2 = load(GNUTELLA2);
         int b = 500;
-        KReachIndex index = new KReachIndexBasic(g2, k);
+        int k = 10;
+        //KReachIndex index = new KReachIndexBasic(g2, k);
         //KReachIndex index = new KReachIndexTwoLevel(g2, k, b);
+        KReachIndex index = new KReachIndexFinal(g2,k,b);
         List<Integer> vertices = new ArrayList<>();
+        index.printResults();
+        boolean a = false;
+        if(a)return;
         vertices.addAll(g2.vertices());
+        Collections.sort(vertices);
         List<Integer> ss = new ArrayList<>(), ts = new ArrayList<>();
-        int imax = 1000000;
+        int imax = 10000;
         long seed = 28469247374783468l;
         Random r = new Random(seed);
         for (int i = 0; i < imax; i++) {
@@ -50,13 +57,10 @@ public class KReach {
             int s = ss.get(i);
             int t = ts.get(i);
             index.query(s, t);
-            if ((i + 1) % 250 == 0) {
-                index.printResults();
-            }
+            if((i+1)%1000==0)index.printResults();
         }
         System.out.println("\n\n");
         index.printResults();
-
     }
 
     private static Graph load(File f) throws FileNotFoundException, IOException {

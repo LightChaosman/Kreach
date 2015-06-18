@@ -87,9 +87,7 @@ public class KReachIndexBasic extends KReachIndex {
         HashMap<DirectedEdge, Integer> wI = new HashMap<>();
         int i = 0;
         for (Integer u : S) {
-            if (i++ % 100 == 0) {
-                System.out.println(i);
-            }
+            
             HashMap<Integer, Integer> Sku = BFSu(g, u, k);
             for (Map.Entry<Integer, Integer> e : Sku.entrySet()) {
                 int d = e.getValue();
