@@ -25,7 +25,7 @@ public class WeightedGraph extends Tuple<Graph,HashMap<DirectedEdge,Integer>>{
     
     public Integer getWeight(int u, int v)
     {
-        return k2.get(new DirectedEdge(u,v));
+        return u==v?0:k2.get(new DirectedEdge(u,v));
     }
     
 }

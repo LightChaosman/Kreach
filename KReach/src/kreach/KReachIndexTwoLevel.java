@@ -12,12 +12,12 @@ import temporary.Triple;
  *
  * @author Helmond
  */
-public class KReachIndexTwoLevel extends KReachIndex{
-    
-    private Quintuple<WeightedGraph,WeightedGraph,Graph,HashSet<Integer>,HashSet<Integer>> index;
+public class KReachIndexTwoLevel extends KReachIndex {
+
+    private Quintuple<WeightedGraph, WeightedGraph, Graph, HashSet<Integer>, HashSet<Integer>> index;
     private final int b;
     private static final int memTreshold = 1000;
-    
+
     public KReachIndexTwoLevel(Graph g, int k, int b) {
         super(g, k, 5);
         this.b = b;
@@ -33,9 +33,9 @@ public class KReachIndexTwoLevel extends KReachIndex{
         DegreeStructure ds = new DegreeStructure(g);
         int mv = ds.popMax();
         while (i < b && mv != -1) {
-            System.out.println("mv:"+mv);
-            khopbfs(g, mv, k, S, D1, w1,ds);
-            khopbfs2(g, mv, k, S, D1, w1,ds);
+            System.out.println("mv:" + mv);
+            khopbfs(g, mv, k, S, D1, w1, ds);
+            khopbfs2(g, mv, k, S, D1, w1, ds);
             S.add(mv);
             mv = ds.popMax();
             i++;
@@ -59,16 +59,17 @@ public class KReachIndexTwoLevel extends KReachIndex{
         DegreeStructure dsPrime = new DegreeStructure(Gprime);
         int mvPrime = dsPrime.popMax();
         Runtime runtime = Runtime.getRuntime();
-        boolean enoughmem = (runtime.maxMemory()-runtime.totalMemory())/(1024*1024)>memTreshold;
-        
-        while (enoughmem && mvPrime !=-1)
-        {
-            khopbfs(Gprime, mvPrime, k, SPrime, D2, w2,dsPrime);
-            khopbfs2(Gprime, mvPrime, k, SPrime, D2, w2,dsPrime);
+        boolean enoughmem = (runtime.maxMemory() - runtime.totalMemory()) / (1024 * 1024) > memTreshold;
+
+        while (enoughmem && mvPrime != -1) {
+            khopbfs(Gprime, mvPrime, k, SPrime, D2, w2, dsPrime);
+            khopbfs2(Gprime, mvPrime, k, SPrime, D2, w2, dsPrime);
             SPrime.add(mvPrime);
             mvPrime = ds.popMax();
-            if(Math.random()>0.01)System.out.println((runtime.maxMemory()-runtime.totalMemory())/(1024*1024));
-            enoughmem = (runtime.maxMemory()-runtime.totalMemory())/(1024*1024)>memTreshold;
+            if (Math.random() > 0.01) {
+                System.out.println((runtime.maxMemory() - runtime.totalMemory()) / (1024 * 1024));
+            }
+            enoughmem = (runtime.maxMemory() - runtime.totalMemory()) / (1024 * 1024) > memTreshold;
         }
         System.out.println("D2 step 1 done, fine tuning now");
         HashSet<Integer> VD1capSprime = new HashSet<>(SPrime);
@@ -163,194 +164,84 @@ public class KReachIndexTwoLevel extends KReachIndex{
         boolean St = S.contains(t);
         if (Ss && St) {
             Case(1);
-            return D1.getWeight(s, t)!=null;
+            return D1.getWeight(s, t) != null;
 
         } else if (Ss || St) {
             Case(2);
-            boolean t1 = D1.getWeight(s, t)!=null;
-            if (t1) {
+            if (D1.getWeight(s, t) != null) {
                 return true;
             }
-            for (int v : S) {
-                Integer w1 = D1.getWeight(s, v);
-                Integer w2 = D1.getWeight(v, t);
-                if (w1 != null && w2 != null && w1 + w2 <= k) {
-                    return true;
-                }
-
-            }
-            return false;
+            return singleCheck(D1, s, t, S);
         }
         boolean Sps = Sprime.contains(s);
         boolean Spt = Sprime.contains(t);
-        
+
         if (Sps && Spt) {
             Case(3);
-            if (D1.getWeight(s, t)!=null) {
+            if (D2.getWeight(s, t) != null) {
                 return true;
             }
-            for (int u : S) {
-                for (int v : S) {
-                    Integer w1 = D1.getWeight(s, u);
-                    Integer w2 = D1.getWeight(u, v);
-                    Integer w3 = D1.getWeight(v, t);
-                    if (w1 != null && w2 != null && w3 != null && w1 + w2 + w3 <= k) {
-                        return true;
-                    }
-                }
-            }
-            return false;
-            
+            return DoubleCheck(D1, s, t, S);
+
         } else if (Sps || Spt) {
             Case(4);
-            if (D1.getWeight(s, t)!=null) {
+            if (D2.getWeight(s, t) != null) {
                 return true;
             }
-            for (int v : Sprime) {
-
-                Integer w1 = D2.getWeight(s, v);
-                Integer w2 = D2.getWeight(v, t);
-                if (w1 != null && w2 != null && w1 + w2 <= k) {
-                    return true;
-                }
+            if (singleCheck(D2, s, t, Sprime)) {
+                return true;
             }
-            for (int u : S) {
-                for (int v : S) {
-                    Integer w1 = D1.getWeight(s, u);
-                    Integer w2 = D1.getWeight(u, v);
-                    Integer w3 = D1.getWeight(v, t);
-                    if (w1 != null && w2 != null && w3 != null && w1 + w2 + w3 <= k) {
-                        return true;
-                    }
-                }
+            if (DoubleCheck(D1, s, t, S)) {
+                return true;
             }
             return false;
         } else {
             Case(5);
-            for (int u : S) {
-                for (int v : S) {
-                    Integer w1 = D1.getWeight(s, u);
-                    Integer w2 = D1.getWeight(u, v);
-                    Integer w3 = D1.getWeight(v, t);
-                    if (w1 != null && w2 != null && w3 != null && w1 + w2 + w3 <= k) {
-                        return true;
-                    }
-                }
+            if (DoubleCheck(D1, s, t, S)) {
+                return true;
             }
-            for (int u : Sprime) {
-                for (int v : Sprime) {
-                    Integer w1 = D2.getWeight(s, u);
-                    Integer w2 = D2.getWeight(u, v);
-                    Integer w3 = D2.getWeight(v, t);
-                    if (w1 != null && w2 != null && w3 != null && w1 + w2 + w3 <= k) {
-                        return true;
-                    }
-                }
+            if (DoubleCheck(D2, s, t, Sprime)) {
+                return true;
             }
-                return paralelBFS(D3,k,s,t);
+            return paralelBFS(D3, k, s, t);
         }
     }
-    
-        public static boolean algorithm5(Quintuple<WeightedGraph, WeightedGraph, Graph, HashSet<Integer>, HashSet<Integer>> scaleIndex, int k, int s, int t) {
-        HashSet<Integer> S = scaleIndex.k4;
-        HashSet<Integer> Sprime = scaleIndex.k5;
-        WeightedGraph D1 = scaleIndex.k1;
-        WeightedGraph D2 = scaleIndex.k2;
-        Graph D3 = scaleIndex.k3;
-        boolean Ss = S.contains(s);
-        boolean St = S.contains(t);
-        if (Ss && St) {
-            return D1.getWeight(s, t)!=null && D1.getWeight(s, t)<=k;
 
-        } else if (Ss || St) {
-            boolean t1 = D1.getWeight(s, t)!=null && D1.getWeight(s, t)<=k;
-            if (t1) {
-                return true;
-            }
-            for (int v : S) {
-                Integer w1 = D1.getWeight(s, v);
-                Integer w2 = D1.getWeight(v, t);
-                if (w1 != null && w2 != null && w1 + w2 <= k) {
-                    return true;
-                }
-
-            }
-            return false;
-        }
-        boolean Sps = Sprime.contains(s);
-        boolean Spt = Sprime.contains(t);
-        
-        if (Sps && Spt) {
-            if (D1.getWeight(s, t)!=null&& D2.getWeight(s, t)<=k) {
-                return true;
-            }
-            for (int u : S) {
-                for (int v : S) {
-                    Integer w1 = D1.getWeight(s, u);
-                    Integer w2 = D1.getWeight(u, v);
-                    Integer w3 = D1.getWeight(v, t);
-                    if (w1 != null && w2 != null && w3 != null && w1 + w2 + w3 <= k) {
-                        return true;
-                    }
-                }
-            }
-            return false;
-            
-        } else if (Sps || Spt) {
-            if (D1.getWeight(s, t)!=null&& D2.getWeight(s, t)<=k) {
-                return true;
-            }
+    private boolean singleCheck(WeightedGraph D2, int s, int t, HashSet<Integer> Sprime) {
+        if (D2.k1.hasVertex(s) && D2.k1.hasVertex(t)) {
             for (int v : Sprime) {
-
                 Integer w1 = D2.getWeight(s, v);
                 Integer w2 = D2.getWeight(v, t);
                 if (w1 != null && w2 != null && w1 + w2 <= k) {
                     return true;
                 }
             }
-            for (int u : S) {
-                for (int v : S) {
-                    Integer w1 = D1.getWeight(s, u);
-                    Integer w2 = D1.getWeight(u, v);
-                    Integer w3 = D1.getWeight(v, t);
-                    if (w1 != null && w2 != null && w3 != null && w1 + w2 + w3 <= k) {
-                        return true;
-                    }
-                }
-            }
-            return false;
-        } else {
-            for (int u : S) {
-                for (int v : S) {
-                    Integer w1 = D1.getWeight(s, u);
-                    Integer w2 = D1.getWeight(u, v);
-                    Integer w3 = D1.getWeight(v, t);
-                    if (w1 != null && w2 != null && w3 != null && w1 + w2 + w3 <= k) {
-                        return true;
-                    }
-                }
-            }
-            for (int u : Sprime) {
-                for (int v : Sprime) {
-                    Integer w1 = D2.getWeight(s, u);
-                    Integer w2 = D2.getWeight(u, v);
-                    Integer w3 = D2.getWeight(v, t);
-                    if (w1 != null && w2 != null && w3 != null && w1 + w2 + w3 <= k) {
-                        return true;
-                    }
-                }
-            }
-                return paralelBFS(D3,k,s,t);
         }
+        return false;
+    }
+
+    private boolean DoubleCheck(WeightedGraph D1, int s, int t, HashSet<Integer> S) {
+        if (D1.k1.hasVertex(s) && D1.k1.hasVertex(t)) {
+            for (int u : S) {
+                for (int v : S) {
+                    Integer w1 = D1.getWeight(s, u);
+                    Integer w2 = D1.getWeight(u, v);
+                    Integer w3 = D1.getWeight(v, t);
+                    if (w1 != null && w2 != null && w3 != null && w1 + w2 + w3 <= k) {
+                        return true;
+                    }
+                }
+            }
+        }
+        return false;
     }
 
     @Override
     protected Object getIndex() {
-        return new Quintuple<>(index.k1.k1,index.k2.k1,index.k3,index.k4.size(),index.k5.size());
+        return new Quintuple<>(index.k1.k1, index.k2.k1, index.k3, index.k4.size(), index.k5.size());
     }
-    
-    
-    private static void khopbfs(Graph g, int source, int k, HashSet<Integer> S, Graph d1, HashMap<DirectedEdge, Integer> w1,DegreeStructure ds) {
+
+    private static void khopbfs(Graph g, int source, int k, HashSet<Integer> S, Graph d1, HashMap<DirectedEdge, Integer> w1, DegreeStructure ds) {
         Queue<Integer> Q = new LinkedList<>();
         HashMap<Integer, Integer> dist = new HashMap<>();
         HashMap<Integer, Integer> parents = new HashMap<>();
@@ -396,7 +287,7 @@ public class KReachIndexTwoLevel extends KReachIndex{
 
     }
 
-    private static void khopbfs2(Graph g, int source, int k, HashSet<Integer> S, Graph d1, HashMap<DirectedEdge, Integer> w1,DegreeStructure ds) {
+    private static void khopbfs2(Graph g, int source, int k, HashSet<Integer> S, Graph d1, HashMap<DirectedEdge, Integer> w1, DegreeStructure ds) {
         Queue<Integer> Q = new LinkedList<>();
         HashMap<Integer, Integer> dist = new HashMap<>();
         HashMap<Integer, Integer> parents = new HashMap<>();
@@ -449,36 +340,38 @@ public class KReachIndexTwoLevel extends KReachIndex{
         Queue<Integer> Q2 = new LinkedList<>();
         Q1.add(s);
         Q2.add(t);
-        HashMap<Integer,Integer> dist1 = new HashMap<>(), dist2 = new HashMap<>();
+        HashMap<Integer, Integer> dist1 = new HashMap<>(), dist2 = new HashMap<>();
         dist1.put(s, 0);
         dist2.put(t, 0);
-        int halfk = (int)Math.ceil(k/2d);
-        while(!Q1.isEmpty())
-        {
+        int halfk = (int) Math.ceil(k / 2d);
+        while (!Q1.isEmpty()) {
             int u = Q1.poll();
             int d = dist1.get(u);
-            if(d>=halfk)break;
-            for(int v:g.out(u))
-            {
-                if(!dist1.containsKey(v)){
-                dist1.put(v, d+1);
-                Q1.add(v);}
+            if (d >= halfk) {
+                break;
+            }
+            for (int v : g.out(u)) {
+                if (!dist1.containsKey(v)) {
+                    dist1.put(v, d + 1);
+                    Q1.add(v);
+                }
             }
         }
-        while(!Q2.isEmpty())
-        {
+        while (!Q2.isEmpty()) {
             int u = Q2.poll();
             int d = dist2.get(u);
-            if(d>=halfk)break;
-            for(int v:g2.out(u))
-            {if(dist2.containsKey(v))continue;
-                dist2.put(v, d+1);
+            if (d >= halfk) {
+                break;
+            }
+            for (int v : g2.out(u)) {
+                if (dist2.containsKey(v)) {
+                    continue;
+                }
+                dist2.put(v, d + 1);
                 Q2.add(v);
-                if(dist1.keySet().contains(v))
-                {
+                if (dist1.keySet().contains(v)) {
                     int d1 = dist1.get(v);
-                    if(d1+d+1<=k)
-                    {
+                    if (d1 + d + 1 <= k) {
                         return true;
                     }
                 }
@@ -486,11 +379,10 @@ public class KReachIndexTwoLevel extends KReachIndex{
         }
         return false;
     }
-    
+
     @Override
     protected String getName() {
-        return "2 Level relaxed k-reach (k="+k+")";
+        return "2 Level relaxed k-reach (k=" + k + ")";
     }
-    
-    
+
 }
