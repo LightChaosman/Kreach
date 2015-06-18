@@ -3,8 +3,6 @@ package kreach;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.HashSet;
-import java.util.Iterator;
-import java.util.LinkedList;
 import java.util.List;
 import java.util.Set;
 import temporary.Tuple;
@@ -147,12 +145,12 @@ public class Graph {
 
             @Override
             public boolean addEdge(int u, int v) {
-                throw new UnsupportedOperationException();
+                return g.addEdge(v, u);
             }
 
             @Override
             public boolean addVertex(int v) {
-                throw new UnsupportedOperationException();
+                return g.addVertex(v);
             }
 
             @Override
