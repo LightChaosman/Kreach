@@ -86,8 +86,8 @@ public class KReach {
     }
 
     private static void K24681012CheckBigSets() throws IOException {
-        File[] fs = new File[]{EPINOMS};
-        int[] ks = new int[]{4, 2};
+        File[] fs = new File[]{ARXIV};
+        int[] ks = new int[]{12,10,8,6,4, 2};
         int b = 250;
         int reps = 3;
         int imax = 10000;
