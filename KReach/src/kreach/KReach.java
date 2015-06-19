@@ -32,15 +32,16 @@ public class KReach {
      */
     public static void main(String[] args) throws FileNotFoundException, IOException {
         
+        //for(int j = 0; j < 5; j++){
         Graph g2;
-        g2 = load(GNUTELLA2);
-        int b = 500;
+        g2 = load(ARXIV);
+        int b = 250;
         int k = 10;
         //KReachIndex index = new KReachIndexBasic(g2, k);
-        //KReachIndex index = new KReachIndexTwoLevel(g2, k, b);
-        KReachIndex index = new KReachIndexFinal(g2,k,b);
+        KReachIndex index = new KReachIndexTwoLevel(g2, k, b);
+        //KReachIndex index = new KReachIndexFinal(g2,k,b);
         List<Integer> vertices = new ArrayList<>();
-        index.printResults();
+        //index.printResults();
         boolean a = false;
         if(a)return;
         vertices.addAll(g2.vertices());
