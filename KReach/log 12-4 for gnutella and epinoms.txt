@@ -1,0 +1,2498 @@
+run:
+loading Datasets\Gnutella\out.p2p-Gnutella31
+LoadingDatasets\Gnutella\out.p2p-Gnutella31
+Stream done
+Now starting Datasets\Gnutella\out.p2p-Gnutella31 for k=12
+Size of intersection; 1
+Tuning done, staring constrution of D3
+index done
+2 Level relaxed k-reach (k=12) index on graph G; G: n=62586, m=147892, cm=147892
+Index size became; <G: n=59188, m=117268, cm=117268, G: n=59122, m=72508, cm=72508, G: n=62483, m=147083, cm=147083, 102, 1>
+Index construction time; 1539
+Query amount; 1000, time spent on queries; 1169156981ns (1169ms), ( 1169us/query), ammount of trues returned; 211
+Case partitioning; [0, 3, 0, 0, 997]([0.0, 0.003, 0.0, 0.0, 0.997])
+Maximum degree in residual graph D3; 69
+123/909
+
+2 Level relaxed k-reach (k=12) index on graph G; G: n=62586, m=147892, cm=147892
+Index size became; <G: n=59188, m=117268, cm=117268, G: n=59122, m=72508, cm=72508, G: n=62483, m=147083, cm=147083, 102, 1>
+Index construction time; 1539
+Query amount; 2000, time spent on queries; 2085487272ns (2085ms), ( 1042us/query), ammount of trues returned; 414
+Case partitioning; [0, 6, 0, 0, 1994]([0.0, 0.003, 0.0, 0.0, 0.997])
+Maximum degree in residual graph D3; 69
+226/1806
+
+2 Level relaxed k-reach (k=12) index on graph G; G: n=62586, m=147892, cm=147892
+Index size became; <G: n=59188, m=117268, cm=117268, G: n=59122, m=72508, cm=72508, G: n=62483, m=147083, cm=147083, 102, 1>
+Index construction time; 1539
+Query amount; 3000, time spent on queries; 2948580861ns (2948ms), ( 982us/query), ammount of trues returned; 599
+Case partitioning; [0, 10, 0, 0, 2990]([0.0, 0.0033, 0.0, 0.0, 0.9967])
+Maximum degree in residual graph D3; 69
+326/2717
+
+2 Level relaxed k-reach (k=12) index on graph G; G: n=62586, m=147892, cm=147892
+Index size became; <G: n=59188, m=117268, cm=117268, G: n=59122, m=72508, cm=72508, G: n=62483, m=147083, cm=147083, 102, 1>
+Index construction time; 1539
+Query amount; 4000, time spent on queries; 4253209466ns (4253ms), ( 1063us/query), ammount of trues returned; 788
+Case partitioning; [0, 15, 0, 0, 3985]([0.0, 0.0038, 0.0, 0.0, 0.9963])
+Maximum degree in residual graph D3; 69
+428/3625
+
+2 Level relaxed k-reach (k=12) index on graph G; G: n=62586, m=147892, cm=147892
+Index size became; <G: n=59188, m=117268, cm=117268, G: n=59122, m=72508, cm=72508, G: n=62483, m=147083, cm=147083, 102, 1>
+Index construction time; 1539
+Query amount; 5000, time spent on queries; 5130472437ns (5130ms), ( 1026us/query), ammount of trues returned; 989
+Case partitioning; [0, 15, 0, 0, 4985]([0.0, 0.003, 0.0, 0.0, 0.997])
+Maximum degree in residual graph D3; 69
+548/4544
+
+2 Level relaxed k-reach (k=12) index on graph G; G: n=62586, m=147892, cm=147892
+Index size became; <G: n=59188, m=117268, cm=117268, G: n=59122, m=72508, cm=72508, G: n=62483, m=147083, cm=147083, 102, 1>
+Index construction time; 1539
+Query amount; 6000, time spent on queries; 6002045934ns (6002ms), ( 1000us/query), ammount of trues returned; 1200
+Case partitioning; [0, 19, 0, 0, 5981]([0.0, 0.0032, 0.0, 0.0, 0.9968])
+Maximum degree in residual graph D3; 69
+682/5463
+
+2 Level relaxed k-reach (k=12) index on graph G; G: n=62586, m=147892, cm=147892
+Index size became; <G: n=59188, m=117268, cm=117268, G: n=59122, m=72508, cm=72508, G: n=62483, m=147083, cm=147083, 102, 1>
+Index construction time; 1539
+Query amount; 7000, time spent on queries; 7011148077ns (7011ms), ( 1001us/query), ammount of trues returned; 1384
+Case partitioning; [0, 20, 0, 0, 6980]([0.0, 0.0029, 0.0, 0.0, 0.9971])
+Maximum degree in residual graph D3; 69
+786/6382
+
+2 Level relaxed k-reach (k=12) index on graph G; G: n=62586, m=147892, cm=147892
+Index size became; <G: n=59188, m=117268, cm=117268, G: n=59122, m=72508, cm=72508, G: n=62483, m=147083, cm=147083, 102, 1>
+Index construction time; 1539
+Query amount; 8000, time spent on queries; 7905798544ns (7905ms), ( 988us/query), ammount of trues returned; 1601
+Case partitioning; [0, 25, 0, 0, 7975]([0.0, 0.0031, 0.0, 0.0, 0.9969])
+Maximum degree in residual graph D3; 69
+907/7281
+
+2 Level relaxed k-reach (k=12) index on graph G; G: n=62586, m=147892, cm=147892
+Index size became; <G: n=59188, m=117268, cm=117268, G: n=59122, m=72508, cm=72508, G: n=62483, m=147083, cm=147083, 102, 1>
+Index construction time; 1539
+Query amount; 9000, time spent on queries; 8743257791ns (8743ms), ( 971us/query), ammount of trues returned; 1776
+Case partitioning; [0, 29, 0, 0, 8971]([0.0, 0.0032, 0.0, 0.0, 0.9968])
+Maximum degree in residual graph D3; 69
+999/8194
+
+2 Level relaxed k-reach (k=12) index on graph G; G: n=62586, m=147892, cm=147892
+Index size became; <G: n=59188, m=117268, cm=117268, G: n=59122, m=72508, cm=72508, G: n=62483, m=147083, cm=147083, 102, 1>
+Index construction time; 1539
+Query amount; 10000, time spent on queries; 9622885262ns (9622ms), ( 962us/query), ammount of trues returned; 1985
+Case partitioning; [0, 29, 0, 0, 9971]([0.0, 0.0029, 0.0, 0.0, 0.9971])
+Maximum degree in residual graph D3; 69
+1123/9109
+
+
+
+
+!!
+
+2 Level relaxed k-reach (k=12) index on graph G; G: n=62586, m=147892, cm=147892
+Index size became; <G: n=59188, m=117268, cm=117268, G: n=59122, m=72508, cm=72508, G: n=62483, m=147083, cm=147083, 102, 1>
+Index construction time; 1539
+Query amount; 10000, time spent on queries; 9622885262ns (9622ms), ( 962us/query), ammount of trues returned; 1985
+Case partitioning; [0, 29, 0, 0, 9971]([0.0, 0.0029, 0.0, 0.0, 0.9971])
+Maximum degree in residual graph D3; 69
+1123/9109
+
+Now starting Datasets\Gnutella\out.p2p-Gnutella31 for k=12
+Size of intersection; 1
+Tuning done, staring constrution of D3
+index done
+2 Level relaxed k-reach (k=12) index on graph G; G: n=62586, m=147892, cm=147892
+Index size became; <G: n=59188, m=117268, cm=117268, G: n=59122, m=72508, cm=72508, G: n=62483, m=147083, cm=147083, 102, 1>
+Index construction time; 854
+Query amount; 1000, time spent on queries; 1047816211ns (1047ms), ( 1047us/query), ammount of trues returned; 211
+Case partitioning; [0, 3, 0, 0, 997]([0.0, 0.003, 0.0, 0.0, 0.997])
+Maximum degree in residual graph D3; 69
+1246/10018
+
+2 Level relaxed k-reach (k=12) index on graph G; G: n=62586, m=147892, cm=147892
+Index size became; <G: n=59188, m=117268, cm=117268, G: n=59122, m=72508, cm=72508, G: n=62483, m=147083, cm=147083, 102, 1>
+Index construction time; 854
+Query amount; 2000, time spent on queries; 2014618844ns (2014ms), ( 1007us/query), ammount of trues returned; 414
+Case partitioning; [0, 6, 0, 0, 1994]([0.0, 0.003, 0.0, 0.0, 0.997])
+Maximum degree in residual graph D3; 69
+1349/10915
+
+2 Level relaxed k-reach (k=12) index on graph G; G: n=62586, m=147892, cm=147892
+Index size became; <G: n=59188, m=117268, cm=117268, G: n=59122, m=72508, cm=72508, G: n=62483, m=147083, cm=147083, 102, 1>
+Index construction time; 854
+Query amount; 3000, time spent on queries; 2841793056ns (2841ms), ( 947us/query), ammount of trues returned; 599
+Case partitioning; [0, 10, 0, 0, 2990]([0.0, 0.0033, 0.0, 0.0, 0.9967])
+Maximum degree in residual graph D3; 69
+1449/11826
+
+2 Level relaxed k-reach (k=12) index on graph G; G: n=62586, m=147892, cm=147892
+Index size became; <G: n=59188, m=117268, cm=117268, G: n=59122, m=72508, cm=72508, G: n=62483, m=147083, cm=147083, 102, 1>
+Index construction time; 854
+Query amount; 4000, time spent on queries; 3705845429ns (3705ms), ( 926us/query), ammount of trues returned; 788
+Case partitioning; [0, 15, 0, 0, 3985]([0.0, 0.0038, 0.0, 0.0, 0.9963])
+Maximum degree in residual graph D3; 69
+1551/12734
+
+2 Level relaxed k-reach (k=12) index on graph G; G: n=62586, m=147892, cm=147892
+Index size became; <G: n=59188, m=117268, cm=117268, G: n=59122, m=72508, cm=72508, G: n=62483, m=147083, cm=147083, 102, 1>
+Index construction time; 854
+Query amount; 5000, time spent on queries; 4565119645ns (4565ms), ( 913us/query), ammount of trues returned; 989
+Case partitioning; [0, 15, 0, 0, 4985]([0.0, 0.003, 0.0, 0.0, 0.997])
+Maximum degree in residual graph D3; 69
+1671/13653
+
+2 Level relaxed k-reach (k=12) index on graph G; G: n=62586, m=147892, cm=147892
+Index size became; <G: n=59188, m=117268, cm=117268, G: n=59122, m=72508, cm=72508, G: n=62483, m=147083, cm=147083, 102, 1>
+Index construction time; 854
+Query amount; 6000, time spent on queries; 5410203504ns (5410ms), ( 901us/query), ammount of trues returned; 1200
+Case partitioning; [0, 19, 0, 0, 5981]([0.0, 0.0032, 0.0, 0.0, 0.9968])
+Maximum degree in residual graph D3; 69
+1805/14572
+
+2 Level relaxed k-reach (k=12) index on graph G; G: n=62586, m=147892, cm=147892
+Index size became; <G: n=59188, m=117268, cm=117268, G: n=59122, m=72508, cm=72508, G: n=62483, m=147083, cm=147083, 102, 1>
+Index construction time; 854
+Query amount; 7000, time spent on queries; 6237939669ns (6237ms), ( 891us/query), ammount of trues returned; 1384
+Case partitioning; [0, 20, 0, 0, 6980]([0.0, 0.0029, 0.0, 0.0, 0.9971])
+Maximum degree in residual graph D3; 69
+1909/15491
+
+2 Level relaxed k-reach (k=12) index on graph G; G: n=62586, m=147892, cm=147892
+Index size became; <G: n=59188, m=117268, cm=117268, G: n=59122, m=72508, cm=72508, G: n=62483, m=147083, cm=147083, 102, 1>
+Index construction time; 854
+Query amount; 8000, time spent on queries; 7080817269ns (7080ms), ( 885us/query), ammount of trues returned; 1601
+Case partitioning; [0, 25, 0, 0, 7975]([0.0, 0.0031, 0.0, 0.0, 0.9969])
+Maximum degree in residual graph D3; 69
+2030/16390
+
+2 Level relaxed k-reach (k=12) index on graph G; G: n=62586, m=147892, cm=147892
+Index size became; <G: n=59188, m=117268, cm=117268, G: n=59122, m=72508, cm=72508, G: n=62483, m=147083, cm=147083, 102, 1>
+Index construction time; 854
+Query amount; 9000, time spent on queries; 7870464994ns (7870ms), ( 874us/query), ammount of trues returned; 1776
+Case partitioning; [0, 29, 0, 0, 8971]([0.0, 0.0032, 0.0, 0.0, 0.9968])
+Maximum degree in residual graph D3; 69
+2122/17303
+
+2 Level relaxed k-reach (k=12) index on graph G; G: n=62586, m=147892, cm=147892
+Index size became; <G: n=59188, m=117268, cm=117268, G: n=59122, m=72508, cm=72508, G: n=62483, m=147083, cm=147083, 102, 1>
+Index construction time; 854
+Query amount; 10000, time spent on queries; 8705250557ns (8705ms), ( 870us/query), ammount of trues returned; 1985
+Case partitioning; [0, 29, 0, 0, 9971]([0.0, 0.0029, 0.0, 0.0, 0.9971])
+Maximum degree in residual graph D3; 69
+2246/18218
+
+
+
+
+!!
+
+2 Level relaxed k-reach (k=12) index on graph G; G: n=62586, m=147892, cm=147892
+Index size became; <G: n=59188, m=117268, cm=117268, G: n=59122, m=72508, cm=72508, G: n=62483, m=147083, cm=147083, 102, 1>
+Index construction time; 854
+Query amount; 10000, time spent on queries; 8705250557ns (8705ms), ( 870us/query), ammount of trues returned; 1985
+Case partitioning; [0, 29, 0, 0, 9971]([0.0, 0.0029, 0.0, 0.0, 0.9971])
+Maximum degree in residual graph D3; 69
+2246/18218
+
+Now starting Datasets\Gnutella\out.p2p-Gnutella31 for k=12
+Size of intersection; 1
+Tuning done, staring constrution of D3
+index done
+2 Level relaxed k-reach (k=12) index on graph G; G: n=62586, m=147892, cm=147892
+Index size became; <G: n=59188, m=117268, cm=117268, G: n=59122, m=72508, cm=72508, G: n=62483, m=147083, cm=147083, 102, 1>
+Index construction time; 693
+Query amount; 1000, time spent on queries; 993075451ns (993ms), ( 993us/query), ammount of trues returned; 211
+Case partitioning; [0, 3, 0, 0, 997]([0.0, 0.003, 0.0, 0.0, 0.997])
+Maximum degree in residual graph D3; 69
+2369/19127
+
+2 Level relaxed k-reach (k=12) index on graph G; G: n=62586, m=147892, cm=147892
+Index size became; <G: n=59188, m=117268, cm=117268, G: n=59122, m=72508, cm=72508, G: n=62483, m=147083, cm=147083, 102, 1>
+Index construction time; 693
+Query amount; 2000, time spent on queries; 1862660793ns (1862ms), ( 931us/query), ammount of trues returned; 414
+Case partitioning; [0, 6, 0, 0, 1994]([0.0, 0.003, 0.0, 0.0, 0.997])
+Maximum degree in residual graph D3; 69
+2472/20024
+
+2 Level relaxed k-reach (k=12) index on graph G; G: n=62586, m=147892, cm=147892
+Index size became; <G: n=59188, m=117268, cm=117268, G: n=59122, m=72508, cm=72508, G: n=62483, m=147083, cm=147083, 102, 1>
+Index construction time; 693
+Query amount; 3000, time spent on queries; 2737915070ns (2737ms), ( 912us/query), ammount of trues returned; 599
+Case partitioning; [0, 10, 0, 0, 2990]([0.0, 0.0033, 0.0, 0.0, 0.9967])
+Maximum degree in residual graph D3; 69
+2572/20935
+
+2 Level relaxed k-reach (k=12) index on graph G; G: n=62586, m=147892, cm=147892
+Index size became; <G: n=59188, m=117268, cm=117268, G: n=59122, m=72508, cm=72508, G: n=62483, m=147083, cm=147083, 102, 1>
+Index construction time; 693
+Query amount; 4000, time spent on queries; 3574683233ns (3574ms), ( 893us/query), ammount of trues returned; 788
+Case partitioning; [0, 15, 0, 0, 3985]([0.0, 0.0038, 0.0, 0.0, 0.9963])
+Maximum degree in residual graph D3; 69
+2674/21843
+
+2 Level relaxed k-reach (k=12) index on graph G; G: n=62586, m=147892, cm=147892
+Index size became; <G: n=59188, m=117268, cm=117268, G: n=59122, m=72508, cm=72508, G: n=62483, m=147083, cm=147083, 102, 1>
+Index construction time; 693
+Query amount; 5000, time spent on queries; 4449383700ns (4449ms), ( 889us/query), ammount of trues returned; 989
+Case partitioning; [0, 15, 0, 0, 4985]([0.0, 0.003, 0.0, 0.0, 0.997])
+Maximum degree in residual graph D3; 69
+2794/22762
+
+2 Level relaxed k-reach (k=12) index on graph G; G: n=62586, m=147892, cm=147892
+Index size became; <G: n=59188, m=117268, cm=117268, G: n=59122, m=72508, cm=72508, G: n=62483, m=147083, cm=147083, 102, 1>
+Index construction time; 693
+Query amount; 6000, time spent on queries; 5323663803ns (5323ms), ( 887us/query), ammount of trues returned; 1200
+Case partitioning; [0, 19, 0, 0, 5981]([0.0, 0.0032, 0.0, 0.0, 0.9968])
+Maximum degree in residual graph D3; 69
+2928/23681
+
+2 Level relaxed k-reach (k=12) index on graph G; G: n=62586, m=147892, cm=147892
+Index size became; <G: n=59188, m=117268, cm=117268, G: n=59122, m=72508, cm=72508, G: n=62483, m=147083, cm=147083, 102, 1>
+Index construction time; 693
+Query amount; 7000, time spent on queries; 6188306759ns (6188ms), ( 884us/query), ammount of trues returned; 1384
+Case partitioning; [0, 20, 0, 0, 6980]([0.0, 0.0029, 0.0, 0.0, 0.9971])
+Maximum degree in residual graph D3; 69
+3032/24600
+
+2 Level relaxed k-reach (k=12) index on graph G; G: n=62586, m=147892, cm=147892
+Index size became; <G: n=59188, m=117268, cm=117268, G: n=59122, m=72508, cm=72508, G: n=62483, m=147083, cm=147083, 102, 1>
+Index construction time; 693
+Query amount; 8000, time spent on queries; 7051355412ns (7051ms), ( 881us/query), ammount of trues returned; 1601
+Case partitioning; [0, 25, 0, 0, 7975]([0.0, 0.0031, 0.0, 0.0, 0.9969])
+Maximum degree in residual graph D3; 69
+3153/25499
+
+2 Level relaxed k-reach (k=12) index on graph G; G: n=62586, m=147892, cm=147892
+Index size became; <G: n=59188, m=117268, cm=117268, G: n=59122, m=72508, cm=72508, G: n=62483, m=147083, cm=147083, 102, 1>
+Index construction time; 693
+Query amount; 9000, time spent on queries; 7871691474ns (7871ms), ( 874us/query), ammount of trues returned; 1776
+Case partitioning; [0, 29, 0, 0, 8971]([0.0, 0.0032, 0.0, 0.0, 0.9968])
+Maximum degree in residual graph D3; 69
+3245/26412
+
+2 Level relaxed k-reach (k=12) index on graph G; G: n=62586, m=147892, cm=147892
+Index size became; <G: n=59188, m=117268, cm=117268, G: n=59122, m=72508, cm=72508, G: n=62483, m=147083, cm=147083, 102, 1>
+Index construction time; 693
+Query amount; 10000, time spent on queries; 8714593904ns (8714ms), ( 871us/query), ammount of trues returned; 1985
+Case partitioning; [0, 29, 0, 0, 9971]([0.0, 0.0029, 0.0, 0.0, 0.9971])
+Maximum degree in residual graph D3; 69
+3369/27327
+
+
+
+
+!!
+
+2 Level relaxed k-reach (k=12) index on graph G; G: n=62586, m=147892, cm=147892
+Index size became; <G: n=59188, m=117268, cm=117268, G: n=59122, m=72508, cm=72508, G: n=62483, m=147083, cm=147083, 102, 1>
+Index construction time; 693
+Query amount; 10000, time spent on queries; 8714593904ns (8714ms), ( 871us/query), ammount of trues returned; 1985
+Case partitioning; [0, 29, 0, 0, 9971]([0.0, 0.0029, 0.0, 0.0, 0.9971])
+Maximum degree in residual graph D3; 69
+3369/27327
+
+File; Datasets\Gnutella\out.p2p-Gnutella31; k=12, avarage query time for 10000 queries; 9014243241
+loading Datasets\Epinions\out.soc-Epinions1
+LoadingDatasets\Epinions\out.soc-Epinions1
+Stream done
+Now starting Datasets\Epinions\out.soc-Epinions1 for k=12
+Size of intersection; 1
+Tuning done, staring constrution of D3
+index done
+2 Level relaxed k-reach (k=12) index on graph G; G: n=75879, m=508837, cm=508837
+Index size became; <G: n=72653, m=105483, cm=105483, G: n=71954, m=104296, cm=104296, G: n=75535, m=502692, cm=502692, 250, 94>
+Index construction time; 1107
+Query amount; 1000, time spent on queries; 13233699936ns (13233ms), ( 13233us/query), ammount of trues returned; 474
+Case partitioning; [0, 9, 0, 1, 990]([0.0, 0.009, 0.0, 0.001, 0.99])
+Maximum degree in residual graph D3; 1996
+3369/27843
+
+2 Level relaxed k-reach (k=12) index on graph G; G: n=75879, m=508837, cm=508837
+Index size became; <G: n=72653, m=105483, cm=105483, G: n=71954, m=104296, cm=104296, G: n=75535, m=502692, cm=502692, 250, 94>
+Index construction time; 1107
+Query amount; 2000, time spent on queries; 27598851596ns (27598ms), ( 13799us/query), ammount of trues returned; 914
+Case partitioning; [0, 20, 0, 3, 1977]([0.0, 0.01, 0.0, 0.0015, 0.9885])
+Maximum degree in residual graph D3; 1996
+3369/28390
+
+2 Level relaxed k-reach (k=12) index on graph G; G: n=75879, m=508837, cm=508837
+Index size became; <G: n=72653, m=105483, cm=105483, G: n=71954, m=104296, cm=104296, G: n=75535, m=502692, cm=502692, 250, 94>
+Index construction time; 1107
+Query amount; 3000, time spent on queries; 40266382414ns (40266ms), ( 13422us/query), ammount of trues returned; 1383
+Case partitioning; [0, 26, 0, 4, 2970]([0.0, 0.0087, 0.0, 0.0013, 0.99])
+Maximum degree in residual graph D3; 1996
+3369/28914
+
+2 Level relaxed k-reach (k=12) index on graph G; G: n=75879, m=508837, cm=508837
+Index size became; <G: n=72653, m=105483, cm=105483, G: n=71954, m=104296, cm=104296, G: n=75535, m=502692, cm=502692, 250, 94>
+Index construction time; 1107
+Query amount; 4000, time spent on queries; 53253121766ns (53253ms), ( 13313us/query), ammount of trues returned; 1837
+Case partitioning; [0, 30, 0, 7, 3963]([0.0, 0.0075, 0.0, 0.0018, 0.9908])
+Maximum degree in residual graph D3; 1996
+3369/29453
+
+2 Level relaxed k-reach (k=12) index on graph G; G: n=75879, m=508837, cm=508837
+Index size became; <G: n=72653, m=105483, cm=105483, G: n=71954, m=104296, cm=104296, G: n=75535, m=502692, cm=502692, 250, 94>
+Index construction time; 1107
+Query amount; 5000, time spent on queries; 65756945612ns (65756ms), ( 13151us/query), ammount of trues returned; 2300
+Case partitioning; [0, 35, 0, 8, 4957]([0.0, 0.007, 0.0, 0.0016, 0.9914])
+Maximum degree in residual graph D3; 1996
+3369/29984
+
+2 Level relaxed k-reach (k=12) index on graph G; G: n=75879, m=508837, cm=508837
+Index size became; <G: n=72653, m=105483, cm=105483, G: n=71954, m=104296, cm=104296, G: n=75535, m=502692, cm=502692, 250, 94>
+Index construction time; 1107
+Query amount; 6000, time spent on queries; 78569303393ns (78569ms), ( 13094us/query), ammount of trues returned; 2741
+Case partitioning; [0, 41, 0, 11, 5948]([0.0, 0.0068, 0.0, 0.0018, 0.9913])
+Maximum degree in residual graph D3; 1996
+3369/30534
+
+2 Level relaxed k-reach (k=12) index on graph G; G: n=75879, m=508837, cm=508837
+Index size became; <G: n=72653, m=105483, cm=105483, G: n=71954, m=104296, cm=104296, G: n=75535, m=502692, cm=502692, 250, 94>
+Index construction time; 1107
+Query amount; 7000, time spent on queries; 90243854977ns (90243ms), ( 12891us/query), ammount of trues returned; 3237
+Case partitioning; [0, 50, 0, 12, 6938]([0.0, 0.0071, 0.0, 0.0017, 0.9911])
+Maximum degree in residual graph D3; 1996
+3369/31028
+
+2 Level relaxed k-reach (k=12) index on graph G; G: n=75879, m=508837, cm=508837
+Index size became; <G: n=72653, m=105483, cm=105483, G: n=71954, m=104296, cm=104296, G: n=75535, m=502692, cm=502692, 250, 94>
+Index construction time; 1107
+Query amount; 8000, time spent on queries; 102045749405ns (102045ms), ( 12755us/query), ammount of trues returned; 3703
+Case partitioning; [0, 61, 0, 15, 7924]([0.0, 0.0076, 0.0, 0.0019, 0.9905])
+Maximum degree in residual graph D3; 1996
+3369/31548
+
+2 Level relaxed k-reach (k=12) index on graph G; G: n=75879, m=508837, cm=508837
+Index size became; <G: n=72653, m=105483, cm=105483, G: n=71954, m=104296, cm=104296, G: n=75535, m=502692, cm=502692, 250, 94>
+Index construction time; 1107
+Query amount; 9000, time spent on queries; 113888340485ns (113888ms), ( 12654us/query), ammount of trues returned; 4163
+Case partitioning; [0, 68, 0, 19, 8913]([0.0, 0.0076, 0.0, 0.0021, 0.9903])
+Maximum degree in residual graph D3; 1996
+3369/32077
+
+2 Level relaxed k-reach (k=12) index on graph G; G: n=75879, m=508837, cm=508837
+Index size became; <G: n=72653, m=105483, cm=105483, G: n=71954, m=104296, cm=104296, G: n=75535, m=502692, cm=502692, 250, 94>
+Index construction time; 1107
+Query amount; 10000, time spent on queries; 125684759670ns (125684ms), ( 12568us/query), ammount of trues returned; 4642
+Case partitioning; [0, 73, 0, 26, 9901]([0.0, 0.0073, 0.0, 0.0026, 0.9901])
+Maximum degree in residual graph D3; 1996
+3369/32586
+
+
+
+
+!!
+
+2 Level relaxed k-reach (k=12) index on graph G; G: n=75879, m=508837, cm=508837
+Index size became; <G: n=72653, m=105483, cm=105483, G: n=71954, m=104296, cm=104296, G: n=75535, m=502692, cm=502692, 250, 94>
+Index construction time; 1107
+Query amount; 10000, time spent on queries; 125684759670ns (125684ms), ( 12568us/query), ammount of trues returned; 4642
+Case partitioning; [0, 73, 0, 26, 9901]([0.0, 0.0073, 0.0, 0.0026, 0.9901])
+Maximum degree in residual graph D3; 1996
+3369/32586
+
+Now starting Datasets\Epinions\out.soc-Epinions1 for k=12
+Size of intersection; 1
+Tuning done, staring constrution of D3
+index done
+2 Level relaxed k-reach (k=12) index on graph G; G: n=75879, m=508837, cm=508837
+Index size became; <G: n=72653, m=105483, cm=105483, G: n=71954, m=104296, cm=104296, G: n=75535, m=502692, cm=502692, 250, 94>
+Index construction time; 1111
+Query amount; 1000, time spent on queries; 12547999909ns (12547ms), ( 12547us/query), ammount of trues returned; 474
+Case partitioning; [0, 9, 0, 1, 990]([0.0, 0.009, 0.0, 0.001, 0.99])
+Maximum degree in residual graph D3; 1996
+3369/33102
+
+2 Level relaxed k-reach (k=12) index on graph G; G: n=75879, m=508837, cm=508837
+Index size became; <G: n=72653, m=105483, cm=105483, G: n=71954, m=104296, cm=104296, G: n=75535, m=502692, cm=502692, 250, 94>
+Index construction time; 1111
+Query amount; 2000, time spent on queries; 25229878010ns (25229ms), ( 12614us/query), ammount of trues returned; 914
+Case partitioning; [0, 20, 0, 3, 1977]([0.0, 0.01, 0.0, 0.0015, 0.9885])
+Maximum degree in residual graph D3; 1996
+3369/33649
+
+2 Level relaxed k-reach (k=12) index on graph G; G: n=75879, m=508837, cm=508837
+Index size became; <G: n=72653, m=105483, cm=105483, G: n=71954, m=104296, cm=104296, G: n=75535, m=502692, cm=502692, 250, 94>
+Index construction time; 1111
+Query amount; 3000, time spent on queries; 37830182746ns (37830ms), ( 12610us/query), ammount of trues returned; 1383
+Case partitioning; [0, 26, 0, 4, 2970]([0.0, 0.0087, 0.0, 0.0013, 0.99])
+Maximum degree in residual graph D3; 1996
+3369/34173
+
+2 Level relaxed k-reach (k=12) index on graph G; G: n=75879, m=508837, cm=508837
+Index size became; <G: n=72653, m=105483, cm=105483, G: n=71954, m=104296, cm=104296, G: n=75535, m=502692, cm=502692, 250, 94>
+Index construction time; 1111
+Query amount; 4000, time spent on queries; 50893966199ns (50893ms), ( 12723us/query), ammount of trues returned; 1837
+Case partitioning; [0, 30, 0, 7, 3963]([0.0, 0.0075, 0.0, 0.0018, 0.9908])
+Maximum degree in residual graph D3; 1996
+3369/34712
+
+2 Level relaxed k-reach (k=12) index on graph G; G: n=75879, m=508837, cm=508837
+Index size became; <G: n=72653, m=105483, cm=105483, G: n=71954, m=104296, cm=104296, G: n=75535, m=502692, cm=502692, 250, 94>
+Index construction time; 1111
+Query amount; 5000, time spent on queries; 63644826750ns (63644ms), ( 12728us/query), ammount of trues returned; 2300
+Case partitioning; [0, 35, 0, 8, 4957]([0.0, 0.007, 0.0, 0.0016, 0.9914])
+Maximum degree in residual graph D3; 1996
+3369/35243
+
+2 Level relaxed k-reach (k=12) index on graph G; G: n=75879, m=508837, cm=508837
+Index size became; <G: n=72653, m=105483, cm=105483, G: n=71954, m=104296, cm=104296, G: n=75535, m=502692, cm=502692, 250, 94>
+Index construction time; 1111
+Query amount; 6000, time spent on queries; 76712170406ns (76712ms), ( 12785us/query), ammount of trues returned; 2741
+Case partitioning; [0, 41, 0, 11, 5948]([0.0, 0.0068, 0.0, 0.0018, 0.9913])
+Maximum degree in residual graph D3; 1996
+3369/35793
+
+2 Level relaxed k-reach (k=12) index on graph G; G: n=75879, m=508837, cm=508837
+Index size became; <G: n=72653, m=105483, cm=105483, G: n=71954, m=104296, cm=104296, G: n=75535, m=502692, cm=502692, 250, 94>
+Index construction time; 1111
+Query amount; 7000, time spent on queries; 88608258624ns (88608ms), ( 12658us/query), ammount of trues returned; 3237
+Case partitioning; [0, 50, 0, 12, 6938]([0.0, 0.0071, 0.0, 0.0017, 0.9911])
+Maximum degree in residual graph D3; 1996
+3369/36287
+
+2 Level relaxed k-reach (k=12) index on graph G; G: n=75879, m=508837, cm=508837
+Index size became; <G: n=72653, m=105483, cm=105483, G: n=71954, m=104296, cm=104296, G: n=75535, m=502692, cm=502692, 250, 94>
+Index construction time; 1111
+Query amount; 8000, time spent on queries; 100447047449ns (100447ms), ( 12555us/query), ammount of trues returned; 3703
+Case partitioning; [0, 61, 0, 15, 7924]([0.0, 0.0076, 0.0, 0.0019, 0.9905])
+Maximum degree in residual graph D3; 1996
+3369/36807
+
+2 Level relaxed k-reach (k=12) index on graph G; G: n=75879, m=508837, cm=508837
+Index size became; <G: n=72653, m=105483, cm=105483, G: n=71954, m=104296, cm=104296, G: n=75535, m=502692, cm=502692, 250, 94>
+Index construction time; 1111
+Query amount; 9000, time spent on queries; 112389527376ns (112389ms), ( 12487us/query), ammount of trues returned; 4163
+Case partitioning; [0, 68, 0, 19, 8913]([0.0, 0.0076, 0.0, 0.0021, 0.9903])
+Maximum degree in residual graph D3; 1996
+3369/37336
+
+2 Level relaxed k-reach (k=12) index on graph G; G: n=75879, m=508837, cm=508837
+Index size became; <G: n=72653, m=105483, cm=105483, G: n=71954, m=104296, cm=104296, G: n=75535, m=502692, cm=502692, 250, 94>
+Index construction time; 1111
+Query amount; 10000, time spent on queries; 124277222922ns (124277ms), ( 12427us/query), ammount of trues returned; 4642
+Case partitioning; [0, 73, 0, 26, 9901]([0.0, 0.0073, 0.0, 0.0026, 0.9901])
+Maximum degree in residual graph D3; 1996
+3369/37845
+
+
+
+
+!!
+
+2 Level relaxed k-reach (k=12) index on graph G; G: n=75879, m=508837, cm=508837
+Index size became; <G: n=72653, m=105483, cm=105483, G: n=71954, m=104296, cm=104296, G: n=75535, m=502692, cm=502692, 250, 94>
+Index construction time; 1111
+Query amount; 10000, time spent on queries; 124277222922ns (124277ms), ( 12427us/query), ammount of trues returned; 4642
+Case partitioning; [0, 73, 0, 26, 9901]([0.0, 0.0073, 0.0, 0.0026, 0.9901])
+Maximum degree in residual graph D3; 1996
+3369/37845
+
+Now starting Datasets\Epinions\out.soc-Epinions1 for k=12
+Size of intersection; 1
+Tuning done, staring constrution of D3
+index done
+2 Level relaxed k-reach (k=12) index on graph G; G: n=75879, m=508837, cm=508837
+Index size became; <G: n=72653, m=105483, cm=105483, G: n=71954, m=104296, cm=104296, G: n=75535, m=502692, cm=502692, 250, 94>
+Index construction time; 1104
+Query amount; 1000, time spent on queries; 12573098376ns (12573ms), ( 12573us/query), ammount of trues returned; 474
+Case partitioning; [0, 9, 0, 1, 990]([0.0, 0.009, 0.0, 0.001, 0.99])
+Maximum degree in residual graph D3; 1996
+3369/38361
+
+2 Level relaxed k-reach (k=12) index on graph G; G: n=75879, m=508837, cm=508837
+Index size became; <G: n=72653, m=105483, cm=105483, G: n=71954, m=104296, cm=104296, G: n=75535, m=502692, cm=502692, 250, 94>
+Index construction time; 1104
+Query amount; 2000, time spent on queries; 25099626282ns (25099ms), ( 12549us/query), ammount of trues returned; 914
+Case partitioning; [0, 20, 0, 3, 1977]([0.0, 0.01, 0.0, 0.0015, 0.9885])
+Maximum degree in residual graph D3; 1996
+3369/38908
+
+2 Level relaxed k-reach (k=12) index on graph G; G: n=75879, m=508837, cm=508837
+Index size became; <G: n=72653, m=105483, cm=105483, G: n=71954, m=104296, cm=104296, G: n=75535, m=502692, cm=502692, 250, 94>
+Index construction time; 1104
+Query amount; 3000, time spent on queries; 37531168382ns (37531ms), ( 12510us/query), ammount of trues returned; 1383
+Case partitioning; [0, 26, 0, 4, 2970]([0.0, 0.0087, 0.0, 0.0013, 0.99])
+Maximum degree in residual graph D3; 1996
+3369/39432
+
+2 Level relaxed k-reach (k=12) index on graph G; G: n=75879, m=508837, cm=508837
+Index size became; <G: n=72653, m=105483, cm=105483, G: n=71954, m=104296, cm=104296, G: n=75535, m=502692, cm=502692, 250, 94>
+Index construction time; 1104
+Query amount; 4000, time spent on queries; 50060520514ns (50060ms), ( 12515us/query), ammount of trues returned; 1837
+Case partitioning; [0, 30, 0, 7, 3963]([0.0, 0.0075, 0.0, 0.0018, 0.9908])
+Maximum degree in residual graph D3; 1996
+3369/39971
+
+2 Level relaxed k-reach (k=12) index on graph G; G: n=75879, m=508837, cm=508837
+Index size became; <G: n=72653, m=105483, cm=105483, G: n=71954, m=104296, cm=104296, G: n=75535, m=502692, cm=502692, 250, 94>
+Index construction time; 1104
+Query amount; 5000, time spent on queries; 62430056443ns (62430ms), ( 12486us/query), ammount of trues returned; 2300
+Case partitioning; [0, 35, 0, 8, 4957]([0.0, 0.007, 0.0, 0.0016, 0.9914])
+Maximum degree in residual graph D3; 1996
+3369/40502
+
+2 Level relaxed k-reach (k=12) index on graph G; G: n=75879, m=508837, cm=508837
+Index size became; <G: n=72653, m=105483, cm=105483, G: n=71954, m=104296, cm=104296, G: n=75535, m=502692, cm=502692, 250, 94>
+Index construction time; 1104
+Query amount; 6000, time spent on queries; 75089651747ns (75089ms), ( 12514us/query), ammount of trues returned; 2741
+Case partitioning; [0, 41, 0, 11, 5948]([0.0, 0.0068, 0.0, 0.0018, 0.9913])
+Maximum degree in residual graph D3; 1996
+3369/41052
+
+2 Level relaxed k-reach (k=12) index on graph G; G: n=75879, m=508837, cm=508837
+Index size became; <G: n=72653, m=105483, cm=105483, G: n=71954, m=104296, cm=104296, G: n=75535, m=502692, cm=502692, 250, 94>
+Index construction time; 1104
+Query amount; 7000, time spent on queries; 86698522798ns (86698ms), ( 12385us/query), ammount of trues returned; 3237
+Case partitioning; [0, 50, 0, 12, 6938]([0.0, 0.0071, 0.0, 0.0017, 0.9911])
+Maximum degree in residual graph D3; 1996
+3369/41546
+
+2 Level relaxed k-reach (k=12) index on graph G; G: n=75879, m=508837, cm=508837
+Index size became; <G: n=72653, m=105483, cm=105483, G: n=71954, m=104296, cm=104296, G: n=75535, m=502692, cm=502692, 250, 94>
+Index construction time; 1104
+Query amount; 8000, time spent on queries; 98332178843ns (98332ms), ( 12291us/query), ammount of trues returned; 3703
+Case partitioning; [0, 61, 0, 15, 7924]([0.0, 0.0076, 0.0, 0.0019, 0.9905])
+Maximum degree in residual graph D3; 1996
+3369/42066
+
+2 Level relaxed k-reach (k=12) index on graph G; G: n=75879, m=508837, cm=508837
+Index size became; <G: n=72653, m=105483, cm=105483, G: n=71954, m=104296, cm=104296, G: n=75535, m=502692, cm=502692, 250, 94>
+Index construction time; 1104
+Query amount; 9000, time spent on queries; 110063473867ns (110063ms), ( 12229us/query), ammount of trues returned; 4163
+Case partitioning; [0, 68, 0, 19, 8913]([0.0, 0.0076, 0.0, 0.0021, 0.9903])
+Maximum degree in residual graph D3; 1996
+3369/42595
+
+2 Level relaxed k-reach (k=12) index on graph G; G: n=75879, m=508837, cm=508837
+Index size became; <G: n=72653, m=105483, cm=105483, G: n=71954, m=104296, cm=104296, G: n=75535, m=502692, cm=502692, 250, 94>
+Index construction time; 1104
+Query amount; 10000, time spent on queries; 121757212510ns (121757ms), ( 12175us/query), ammount of trues returned; 4642
+Case partitioning; [0, 73, 0, 26, 9901]([0.0, 0.0073, 0.0, 0.0026, 0.9901])
+Maximum degree in residual graph D3; 1996
+3369/43104
+
+
+
+
+!!
+
+2 Level relaxed k-reach (k=12) index on graph G; G: n=75879, m=508837, cm=508837
+Index size became; <G: n=72653, m=105483, cm=105483, G: n=71954, m=104296, cm=104296, G: n=75535, m=502692, cm=502692, 250, 94>
+Index construction time; 1104
+Query amount; 10000, time spent on queries; 121757212510ns (121757ms), ( 12175us/query), ammount of trues returned; 4642
+Case partitioning; [0, 73, 0, 26, 9901]([0.0, 0.0073, 0.0, 0.0026, 0.9901])
+Maximum degree in residual graph D3; 1996
+3369/43104
+
+File; Datasets\Epinions\out.soc-Epinions1; k=12, avarage query time for 10000 queries; 123906398367
+loading Datasets\Gnutella\out.p2p-Gnutella31
+LoadingDatasets\Gnutella\out.p2p-Gnutella31
+Stream done
+Now starting Datasets\Gnutella\out.p2p-Gnutella31 for k=10
+Size of intersection; 1
+Tuning done, staring constrution of D3
+index done
+2 Level relaxed k-reach (k=10) index on graph G; G: n=62586, m=147892, cm=147892
+Index size became; <G: n=55022, m=684335, cm=684335, G: n=55076, m=67116, cm=67116, G: n=62335, m=146054, cm=146054, 250, 1>
+Index construction time; 1369
+Query amount; 1000, time spent on queries; 7552230227ns (7552ms), ( 7552us/query), ammount of trues returned; 177
+Case partitioning; [0, 11, 0, 0, 989]([0.0, 0.011, 0.0, 0.0, 0.989])
+Maximum degree in residual graph D3; 68
+3516/44065
+
+2 Level relaxed k-reach (k=10) index on graph G; G: n=62586, m=147892, cm=147892
+Index size became; <G: n=55022, m=684335, cm=684335, G: n=55076, m=67116, cm=67116, G: n=62335, m=146054, cm=146054, 250, 1>
+Index construction time; 1369
+Query amount; 2000, time spent on queries; 15475037303ns (15475ms), ( 7737us/query), ammount of trues returned; 338
+Case partitioning; [0, 18, 0, 0, 1982]([0.0, 0.009, 0.0, 0.0, 0.991])
+Maximum degree in residual graph D3; 68
+3646/45027
+
+2 Level relaxed k-reach (k=10) index on graph G; G: n=62586, m=147892, cm=147892
+Index size became; <G: n=55022, m=684335, cm=684335, G: n=55076, m=67116, cm=67116, G: n=62335, m=146054, cm=146054, 250, 1>
+Index construction time; 1369
+Query amount; 3000, time spent on queries; 22940814669ns (22940ms), ( 7646us/query), ammount of trues returned; 494
+Case partitioning; [0, 26, 0, 0, 2974]([0.0, 0.0087, 0.0, 0.0, 0.9913])
+Maximum degree in residual graph D3; 68
+3778/45995
+
+2 Level relaxed k-reach (k=10) index on graph G; G: n=62586, m=147892, cm=147892
+Index size became; <G: n=55022, m=684335, cm=684335, G: n=55076, m=67116, cm=67116, G: n=62335, m=146054, cm=146054, 250, 1>
+Index construction time; 1369
+Query amount; 4000, time spent on queries; 30511656740ns (30511ms), ( 7627us/query), ammount of trues returned; 647
+Case partitioning; [0, 35, 0, 0, 3965]([0.0, 0.0088, 0.0, 0.0, 0.9913])
+Maximum degree in residual graph D3; 68
+3902/46957
+
+2 Level relaxed k-reach (k=10) index on graph G; G: n=62586, m=147892, cm=147892
+Index size became; <G: n=55022, m=684335, cm=684335, G: n=55076, m=67116, cm=67116, G: n=62335, m=146054, cm=146054, 250, 1>
+Index construction time; 1369
+Query amount; 5000, time spent on queries; 37915953097ns (37915ms), ( 7583us/query), ammount of trues returned; 817
+Case partitioning; [0, 45, 0, 0, 4955]([0.0, 0.009, 0.0, 0.0, 0.991])
+Maximum degree in residual graph D3; 68
+4047/47922
+
+2 Level relaxed k-reach (k=10) index on graph G; G: n=62586, m=147892, cm=147892
+Index size became; <G: n=55022, m=684335, cm=684335, G: n=55076, m=67116, cm=67116, G: n=62335, m=146054, cm=146054, 250, 1>
+Index construction time; 1369
+Query amount; 6000, time spent on queries; 45225968408ns (45225ms), ( 7537us/query), ammount of trues returned; 985
+Case partitioning; [0, 49, 0, 0, 5951]([0.0, 0.0082, 0.0, 0.0, 0.9918])
+Maximum degree in residual graph D3; 68
+4192/48895
+
+2 Level relaxed k-reach (k=10) index on graph G; G: n=62586, m=147892, cm=147892
+Index size became; <G: n=55022, m=684335, cm=684335, G: n=55076, m=67116, cm=67116, G: n=62335, m=146054, cm=146054, 250, 1>
+Index construction time; 1369
+Query amount; 7000, time spent on queries; 52448514747ns (52448ms), ( 7492us/query), ammount of trues returned; 1147
+Case partitioning; [0, 55, 0, 0, 6945]([0.0, 0.0079, 0.0, 0.0, 0.9921])
+Maximum degree in residual graph D3; 68
+4330/49865
+
+2 Level relaxed k-reach (k=10) index on graph G; G: n=62586, m=147892, cm=147892
+Index size became; <G: n=55022, m=684335, cm=684335, G: n=55076, m=67116, cm=67116, G: n=62335, m=146054, cm=146054, 250, 1>
+Index construction time; 1369
+Query amount; 8000, time spent on queries; 59823464337ns (59823ms), ( 7477us/query), ammount of trues returned; 1327
+Case partitioning; [0, 67, 0, 0, 7933]([0.0, 0.0084, 0.0, 0.0, 0.9916])
+Maximum degree in residual graph D3; 68
+4478/50821
+
+2 Level relaxed k-reach (k=10) index on graph G; G: n=62586, m=147892, cm=147892
+Index size became; <G: n=55022, m=684335, cm=684335, G: n=55076, m=67116, cm=67116, G: n=62335, m=146054, cm=146054, 250, 1>
+Index construction time; 1369
+Query amount; 9000, time spent on queries; 66921938089ns (66921ms), ( 7435us/query), ammount of trues returned; 1471
+Case partitioning; [0, 76, 0, 0, 8924]([0.0, 0.0084, 0.0, 0.0, 0.9916])
+Maximum degree in residual graph D3; 68
+4602/51792
+
+2 Level relaxed k-reach (k=10) index on graph G; G: n=62586, m=147892, cm=147892
+Index size became; <G: n=55022, m=684335, cm=684335, G: n=55076, m=67116, cm=67116, G: n=62335, m=146054, cm=146054, 250, 1>
+Index construction time; 1369
+Query amount; 10000, time spent on queries; 74347070942ns (74347ms), ( 7434us/query), ammount of trues returned; 1638
+Case partitioning; [0, 80, 0, 0, 9920]([0.0, 0.008, 0.0, 0.0, 0.992])
+Maximum degree in residual graph D3; 68
+4738/52758
+
+
+
+
+!!
+
+2 Level relaxed k-reach (k=10) index on graph G; G: n=62586, m=147892, cm=147892
+Index size became; <G: n=55022, m=684335, cm=684335, G: n=55076, m=67116, cm=67116, G: n=62335, m=146054, cm=146054, 250, 1>
+Index construction time; 1369
+Query amount; 10000, time spent on queries; 74347070942ns (74347ms), ( 7434us/query), ammount of trues returned; 1638
+Case partitioning; [0, 80, 0, 0, 9920]([0.0, 0.008, 0.0, 0.0, 0.992])
+Maximum degree in residual graph D3; 68
+4738/52758
+
+Now starting Datasets\Gnutella\out.p2p-Gnutella31 for k=10
+Size of intersection; 1
+Tuning done, staring constrution of D3
+index done
+2 Level relaxed k-reach (k=10) index on graph G; G: n=62586, m=147892, cm=147892
+Index size became; <G: n=55022, m=684335, cm=684335, G: n=55076, m=67116, cm=67116, G: n=62335, m=146054, cm=146054, 250, 1>
+Index construction time; 1356
+Query amount; 1000, time spent on queries; 7482915928ns (7482ms), ( 7482us/query), ammount of trues returned; 177
+Case partitioning; [0, 11, 0, 0, 989]([0.0, 0.011, 0.0, 0.0, 0.989])
+Maximum degree in residual graph D3; 68
+4885/53719
+
+2 Level relaxed k-reach (k=10) index on graph G; G: n=62586, m=147892, cm=147892
+Index size became; <G: n=55022, m=684335, cm=684335, G: n=55076, m=67116, cm=67116, G: n=62335, m=146054, cm=146054, 250, 1>
+Index construction time; 1356
+Query amount; 2000, time spent on queries; 14942866940ns (14942ms), ( 7471us/query), ammount of trues returned; 338
+Case partitioning; [0, 18, 0, 0, 1982]([0.0, 0.009, 0.0, 0.0, 0.991])
+Maximum degree in residual graph D3; 68
+5015/54681
+
+2 Level relaxed k-reach (k=10) index on graph G; G: n=62586, m=147892, cm=147892
+Index size became; <G: n=55022, m=684335, cm=684335, G: n=55076, m=67116, cm=67116, G: n=62335, m=146054, cm=146054, 250, 1>
+Index construction time; 1356
+Query amount; 3000, time spent on queries; 22486373058ns (22486ms), ( 7495us/query), ammount of trues returned; 494
+Case partitioning; [0, 26, 0, 0, 2974]([0.0, 0.0087, 0.0, 0.0, 0.9913])
+Maximum degree in residual graph D3; 68
+5147/55649
+
+2 Level relaxed k-reach (k=10) index on graph G; G: n=62586, m=147892, cm=147892
+Index size became; <G: n=55022, m=684335, cm=684335, G: n=55076, m=67116, cm=67116, G: n=62335, m=146054, cm=146054, 250, 1>
+Index construction time; 1356
+Query amount; 4000, time spent on queries; 30069163310ns (30069ms), ( 7517us/query), ammount of trues returned; 647
+Case partitioning; [0, 35, 0, 0, 3965]([0.0, 0.0088, 0.0, 0.0, 0.9913])
+Maximum degree in residual graph D3; 68
+5271/56611
+
+2 Level relaxed k-reach (k=10) index on graph G; G: n=62586, m=147892, cm=147892
+Index size became; <G: n=55022, m=684335, cm=684335, G: n=55076, m=67116, cm=67116, G: n=62335, m=146054, cm=146054, 250, 1>
+Index construction time; 1356
+Query amount; 5000, time spent on queries; 37525565663ns (37525ms), ( 7505us/query), ammount of trues returned; 817
+Case partitioning; [0, 45, 0, 0, 4955]([0.0, 0.009, 0.0, 0.0, 0.991])
+Maximum degree in residual graph D3; 68
+5416/57576
+
+2 Level relaxed k-reach (k=10) index on graph G; G: n=62586, m=147892, cm=147892
+Index size became; <G: n=55022, m=684335, cm=684335, G: n=55076, m=67116, cm=67116, G: n=62335, m=146054, cm=146054, 250, 1>
+Index construction time; 1356
+Query amount; 6000, time spent on queries; 44792485190ns (44792ms), ( 7465us/query), ammount of trues returned; 985
+Case partitioning; [0, 49, 0, 0, 5951]([0.0, 0.0082, 0.0, 0.0, 0.9918])
+Maximum degree in residual graph D3; 68
+5561/58549
+
+2 Level relaxed k-reach (k=10) index on graph G; G: n=62586, m=147892, cm=147892
+Index size became; <G: n=55022, m=684335, cm=684335, G: n=55076, m=67116, cm=67116, G: n=62335, m=146054, cm=146054, 250, 1>
+Index construction time; 1356
+Query amount; 7000, time spent on queries; 52080014550ns (52080ms), ( 7440us/query), ammount of trues returned; 1147
+Case partitioning; [0, 55, 0, 0, 6945]([0.0, 0.0079, 0.0, 0.0, 0.9921])
+Maximum degree in residual graph D3; 68
+5699/59519
+
+2 Level relaxed k-reach (k=10) index on graph G; G: n=62586, m=147892, cm=147892
+Index size became; <G: n=55022, m=684335, cm=684335, G: n=55076, m=67116, cm=67116, G: n=62335, m=146054, cm=146054, 250, 1>
+Index construction time; 1356
+Query amount; 8000, time spent on queries; 59944655375ns (59944ms), ( 7493us/query), ammount of trues returned; 1327
+Case partitioning; [0, 67, 0, 0, 7933]([0.0, 0.0084, 0.0, 0.0, 0.9916])
+Maximum degree in residual graph D3; 68
+5847/60475
+
+2 Level relaxed k-reach (k=10) index on graph G; G: n=62586, m=147892, cm=147892
+Index size became; <G: n=55022, m=684335, cm=684335, G: n=55076, m=67116, cm=67116, G: n=62335, m=146054, cm=146054, 250, 1>
+Index construction time; 1356
+Query amount; 9000, time spent on queries; 67446864401ns (67446ms), ( 7494us/query), ammount of trues returned; 1471
+Case partitioning; [0, 76, 0, 0, 8924]([0.0, 0.0084, 0.0, 0.0, 0.9916])
+Maximum degree in residual graph D3; 68
+5971/61446
+
+2 Level relaxed k-reach (k=10) index on graph G; G: n=62586, m=147892, cm=147892
+Index size became; <G: n=55022, m=684335, cm=684335, G: n=55076, m=67116, cm=67116, G: n=62335, m=146054, cm=146054, 250, 1>
+Index construction time; 1356
+Query amount; 10000, time spent on queries; 75011688544ns (75011ms), ( 7501us/query), ammount of trues returned; 1638
+Case partitioning; [0, 80, 0, 0, 9920]([0.0, 0.008, 0.0, 0.0, 0.992])
+Maximum degree in residual graph D3; 68
+6107/62412
+
+
+
+
+!!
+
+2 Level relaxed k-reach (k=10) index on graph G; G: n=62586, m=147892, cm=147892
+Index size became; <G: n=55022, m=684335, cm=684335, G: n=55076, m=67116, cm=67116, G: n=62335, m=146054, cm=146054, 250, 1>
+Index construction time; 1356
+Query amount; 10000, time spent on queries; 75011688544ns (75011ms), ( 7501us/query), ammount of trues returned; 1638
+Case partitioning; [0, 80, 0, 0, 9920]([0.0, 0.008, 0.0, 0.0, 0.992])
+Maximum degree in residual graph D3; 68
+6107/62412
+
+Now starting Datasets\Gnutella\out.p2p-Gnutella31 for k=10
+Size of intersection; 1
+Tuning done, staring constrution of D3
+index done
+2 Level relaxed k-reach (k=10) index on graph G; G: n=62586, m=147892, cm=147892
+Index size became; <G: n=55022, m=684335, cm=684335, G: n=55076, m=67116, cm=67116, G: n=62335, m=146054, cm=146054, 250, 1>
+Index construction time; 1356
+Query amount; 1000, time spent on queries; 7710275925ns (7710ms), ( 7710us/query), ammount of trues returned; 177
+Case partitioning; [0, 11, 0, 0, 989]([0.0, 0.011, 0.0, 0.0, 0.989])
+Maximum degree in residual graph D3; 68
+6254/63373
+
+2 Level relaxed k-reach (k=10) index on graph G; G: n=62586, m=147892, cm=147892
+Index size became; <G: n=55022, m=684335, cm=684335, G: n=55076, m=67116, cm=67116, G: n=62335, m=146054, cm=146054, 250, 1>
+Index construction time; 1356
+Query amount; 2000, time spent on queries; 15262556628ns (15262ms), ( 7631us/query), ammount of trues returned; 338
+Case partitioning; [0, 18, 0, 0, 1982]([0.0, 0.009, 0.0, 0.0, 0.991])
+Maximum degree in residual graph D3; 68
+6384/64335
+
+2 Level relaxed k-reach (k=10) index on graph G; G: n=62586, m=147892, cm=147892
+Index size became; <G: n=55022, m=684335, cm=684335, G: n=55076, m=67116, cm=67116, G: n=62335, m=146054, cm=146054, 250, 1>
+Index construction time; 1356
+Query amount; 3000, time spent on queries; 22924169591ns (22924ms), ( 7641us/query), ammount of trues returned; 494
+Case partitioning; [0, 26, 0, 0, 2974]([0.0, 0.0087, 0.0, 0.0, 0.9913])
+Maximum degree in residual graph D3; 68
+6516/65303
+
+2 Level relaxed k-reach (k=10) index on graph G; G: n=62586, m=147892, cm=147892
+Index size became; <G: n=55022, m=684335, cm=684335, G: n=55076, m=67116, cm=67116, G: n=62335, m=146054, cm=146054, 250, 1>
+Index construction time; 1356
+Query amount; 4000, time spent on queries; 30639884843ns (30639ms), ( 7659us/query), ammount of trues returned; 647
+Case partitioning; [0, 35, 0, 0, 3965]([0.0, 0.0088, 0.0, 0.0, 0.9913])
+Maximum degree in residual graph D3; 68
+6640/66265
+
+2 Level relaxed k-reach (k=10) index on graph G; G: n=62586, m=147892, cm=147892
+Index size became; <G: n=55022, m=684335, cm=684335, G: n=55076, m=67116, cm=67116, G: n=62335, m=146054, cm=146054, 250, 1>
+Index construction time; 1356
+Query amount; 5000, time spent on queries; 38398380669ns (38398ms), ( 7679us/query), ammount of trues returned; 817
+Case partitioning; [0, 45, 0, 0, 4955]([0.0, 0.009, 0.0, 0.0, 0.991])
+Maximum degree in residual graph D3; 68
+6785/67230
+
+2 Level relaxed k-reach (k=10) index on graph G; G: n=62586, m=147892, cm=147892
+Index size became; <G: n=55022, m=684335, cm=684335, G: n=55076, m=67116, cm=67116, G: n=62335, m=146054, cm=146054, 250, 1>
+Index construction time; 1356
+Query amount; 6000, time spent on queries; 46545230009ns (46545ms), ( 7757us/query), ammount of trues returned; 985
+Case partitioning; [0, 49, 0, 0, 5951]([0.0, 0.0082, 0.0, 0.0, 0.9918])
+Maximum degree in residual graph D3; 68
+6930/68203
+
+2 Level relaxed k-reach (k=10) index on graph G; G: n=62586, m=147892, cm=147892
+Index size became; <G: n=55022, m=684335, cm=684335, G: n=55076, m=67116, cm=67116, G: n=62335, m=146054, cm=146054, 250, 1>
+Index construction time; 1356
+Query amount; 7000, time spent on queries; 54498498749ns (54498ms), ( 7785us/query), ammount of trues returned; 1147
+Case partitioning; [0, 55, 0, 0, 6945]([0.0, 0.0079, 0.0, 0.0, 0.9921])
+Maximum degree in residual graph D3; 68
+7068/69173
+
+2 Level relaxed k-reach (k=10) index on graph G; G: n=62586, m=147892, cm=147892
+Index size became; <G: n=55022, m=684335, cm=684335, G: n=55076, m=67116, cm=67116, G: n=62335, m=146054, cm=146054, 250, 1>
+Index construction time; 1356
+Query amount; 8000, time spent on queries; 62426697663ns (62426ms), ( 7803us/query), ammount of trues returned; 1327
+Case partitioning; [0, 67, 0, 0, 7933]([0.0, 0.0084, 0.0, 0.0, 0.9916])
+Maximum degree in residual graph D3; 68
+7216/70129
+
+2 Level relaxed k-reach (k=10) index on graph G; G: n=62586, m=147892, cm=147892
+Index size became; <G: n=55022, m=684335, cm=684335, G: n=55076, m=67116, cm=67116, G: n=62335, m=146054, cm=146054, 250, 1>
+Index construction time; 1356
+Query amount; 9000, time spent on queries; 69789018685ns (69789ms), ( 7754us/query), ammount of trues returned; 1471
+Case partitioning; [0, 76, 0, 0, 8924]([0.0, 0.0084, 0.0, 0.0, 0.9916])
+Maximum degree in residual graph D3; 68
+7340/71100
+
+2 Level relaxed k-reach (k=10) index on graph G; G: n=62586, m=147892, cm=147892
+Index size became; <G: n=55022, m=684335, cm=684335, G: n=55076, m=67116, cm=67116, G: n=62335, m=146054, cm=146054, 250, 1>
+Index construction time; 1356
+Query amount; 10000, time spent on queries; 77462071348ns (77462ms), ( 7746us/query), ammount of trues returned; 1638
+Case partitioning; [0, 80, 0, 0, 9920]([0.0, 0.008, 0.0, 0.0, 0.992])
+Maximum degree in residual graph D3; 68
+7476/72066
+
+
+
+
+!!
+
+2 Level relaxed k-reach (k=10) index on graph G; G: n=62586, m=147892, cm=147892
+Index size became; <G: n=55022, m=684335, cm=684335, G: n=55076, m=67116, cm=67116, G: n=62335, m=146054, cm=146054, 250, 1>
+Index construction time; 1356
+Query amount; 10000, time spent on queries; 77462071348ns (77462ms), ( 7746us/query), ammount of trues returned; 1638
+Case partitioning; [0, 80, 0, 0, 9920]([0.0, 0.008, 0.0, 0.0, 0.992])
+Maximum degree in residual graph D3; 68
+7476/72066
+
+File; Datasets\Gnutella\out.p2p-Gnutella31; k=10, avarage query time for 10000 queries; 75606943611
+loading Datasets\Epinions\out.soc-Epinions1
+LoadingDatasets\Epinions\out.soc-Epinions1
+Stream done
+Now starting Datasets\Epinions\out.soc-Epinions1 for k=10
+Size of intersection; 1
+Tuning done, staring constrution of D3
+index done
+2 Level relaxed k-reach (k=10) index on graph G; G: n=75879, m=508837, cm=508837
+Index size became; <G: n=72653, m=105482, cm=105482, G: n=71954, m=104296, cm=104296, G: n=75535, m=502692, cm=502692, 250, 94>
+Index construction time; 1188
+Query amount; 1000, time spent on queries; 10431213647ns (10431ms), ( 10431us/query), ammount of trues returned; 474
+Case partitioning; [0, 9, 0, 1, 990]([0.0, 0.009, 0.0, 0.001, 0.99])
+Maximum degree in residual graph D3; 1996
+7476/72582
+
+2 Level relaxed k-reach (k=10) index on graph G; G: n=75879, m=508837, cm=508837
+Index size became; <G: n=72653, m=105482, cm=105482, G: n=71954, m=104296, cm=104296, G: n=75535, m=502692, cm=502692, 250, 94>
+Index construction time; 1188
+Query amount; 2000, time spent on queries; 20349297315ns (20349ms), ( 10174us/query), ammount of trues returned; 914
+Case partitioning; [0, 20, 0, 3, 1977]([0.0, 0.01, 0.0, 0.0015, 0.9885])
+Maximum degree in residual graph D3; 1996
+7476/73129
+
+2 Level relaxed k-reach (k=10) index on graph G; G: n=75879, m=508837, cm=508837
+Index size became; <G: n=72653, m=105482, cm=105482, G: n=71954, m=104296, cm=104296, G: n=75535, m=502692, cm=502692, 250, 94>
+Index construction time; 1188
+Query amount; 3000, time spent on queries; 30098265519ns (30098ms), ( 10032us/query), ammount of trues returned; 1383
+Case partitioning; [0, 26, 0, 4, 2970]([0.0, 0.0087, 0.0, 0.0013, 0.99])
+Maximum degree in residual graph D3; 1996
+7476/73653
+
+2 Level relaxed k-reach (k=10) index on graph G; G: n=75879, m=508837, cm=508837
+Index size became; <G: n=72653, m=105482, cm=105482, G: n=71954, m=104296, cm=104296, G: n=75535, m=502692, cm=502692, 250, 94>
+Index construction time; 1188
+Query amount; 4000, time spent on queries; 39979409420ns (39979ms), ( 9994us/query), ammount of trues returned; 1837
+Case partitioning; [0, 30, 0, 7, 3963]([0.0, 0.0075, 0.0, 0.0018, 0.9908])
+Maximum degree in residual graph D3; 1996
+7476/74192
+
+2 Level relaxed k-reach (k=10) index on graph G; G: n=75879, m=508837, cm=508837
+Index size became; <G: n=72653, m=105482, cm=105482, G: n=71954, m=104296, cm=104296, G: n=75535, m=502692, cm=502692, 250, 94>
+Index construction time; 1188
+Query amount; 5000, time spent on queries; 49831886545ns (49831ms), ( 9966us/query), ammount of trues returned; 2300
+Case partitioning; [0, 35, 0, 8, 4957]([0.0, 0.007, 0.0, 0.0016, 0.9914])
+Maximum degree in residual graph D3; 1996
+7476/74723
+
+2 Level relaxed k-reach (k=10) index on graph G; G: n=75879, m=508837, cm=508837
+Index size became; <G: n=72653, m=105482, cm=105482, G: n=71954, m=104296, cm=104296, G: n=75535, m=502692, cm=502692, 250, 94>
+Index construction time; 1188
+Query amount; 6000, time spent on queries; 59887951311ns (59887ms), ( 9981us/query), ammount of trues returned; 2741
+Case partitioning; [0, 41, 0, 11, 5948]([0.0, 0.0068, 0.0, 0.0018, 0.9913])
+Maximum degree in residual graph D3; 1996
+7476/75273
+
+2 Level relaxed k-reach (k=10) index on graph G; G: n=75879, m=508837, cm=508837
+Index size became; <G: n=72653, m=105482, cm=105482, G: n=71954, m=104296, cm=104296, G: n=75535, m=502692, cm=502692, 250, 94>
+Index construction time; 1188
+Query amount; 7000, time spent on queries; 69114096791ns (69114ms), ( 9873us/query), ammount of trues returned; 3237
+Case partitioning; [0, 50, 0, 12, 6938]([0.0, 0.0071, 0.0, 0.0017, 0.9911])
+Maximum degree in residual graph D3; 1996
+7476/75767
+
+2 Level relaxed k-reach (k=10) index on graph G; G: n=75879, m=508837, cm=508837
+Index size became; <G: n=72653, m=105482, cm=105482, G: n=71954, m=104296, cm=104296, G: n=75535, m=502692, cm=502692, 250, 94>
+Index construction time; 1188
+Query amount; 8000, time spent on queries; 78466217022ns (78466ms), ( 9808us/query), ammount of trues returned; 3703
+Case partitioning; [0, 61, 0, 15, 7924]([0.0, 0.0076, 0.0, 0.0019, 0.9905])
+Maximum degree in residual graph D3; 1996
+7476/76287
+
+2 Level relaxed k-reach (k=10) index on graph G; G: n=75879, m=508837, cm=508837
+Index size became; <G: n=72653, m=105482, cm=105482, G: n=71954, m=104296, cm=104296, G: n=75535, m=502692, cm=502692, 250, 94>
+Index construction time; 1188
+Query amount; 9000, time spent on queries; 87616006879ns (87616ms), ( 9735us/query), ammount of trues returned; 4163
+Case partitioning; [0, 68, 0, 19, 8913]([0.0, 0.0076, 0.0, 0.0021, 0.9903])
+Maximum degree in residual graph D3; 1996
+7476/76816
+
+2 Level relaxed k-reach (k=10) index on graph G; G: n=75879, m=508837, cm=508837
+Index size became; <G: n=72653, m=105482, cm=105482, G: n=71954, m=104296, cm=104296, G: n=75535, m=502692, cm=502692, 250, 94>
+Index construction time; 1188
+Query amount; 10000, time spent on queries; 97086897656ns (97086ms), ( 9708us/query), ammount of trues returned; 4642
+Case partitioning; [0, 73, 0, 26, 9901]([0.0, 0.0073, 0.0, 0.0026, 0.9901])
+Maximum degree in residual graph D3; 1996
+7476/77325
+
+
+
+
+!!
+
+2 Level relaxed k-reach (k=10) index on graph G; G: n=75879, m=508837, cm=508837
+Index size became; <G: n=72653, m=105482, cm=105482, G: n=71954, m=104296, cm=104296, G: n=75535, m=502692, cm=502692, 250, 94>
+Index construction time; 1188
+Query amount; 10000, time spent on queries; 97086897656ns (97086ms), ( 9708us/query), ammount of trues returned; 4642
+Case partitioning; [0, 73, 0, 26, 9901]([0.0, 0.0073, 0.0, 0.0026, 0.9901])
+Maximum degree in residual graph D3; 1996
+7476/77325
+
+Now starting Datasets\Epinions\out.soc-Epinions1 for k=10
+Size of intersection; 1
+Tuning done, staring constrution of D3
+index done
+2 Level relaxed k-reach (k=10) index on graph G; G: n=75879, m=508837, cm=508837
+Index size became; <G: n=72653, m=105482, cm=105482, G: n=71954, m=104296, cm=104296, G: n=75535, m=502692, cm=502692, 250, 94>
+Index construction time; 1167
+Query amount; 1000, time spent on queries; 10508637925ns (10508ms), ( 10508us/query), ammount of trues returned; 474
+Case partitioning; [0, 9, 0, 1, 990]([0.0, 0.009, 0.0, 0.001, 0.99])
+Maximum degree in residual graph D3; 1996
+7476/77841
+
+2 Level relaxed k-reach (k=10) index on graph G; G: n=75879, m=508837, cm=508837
+Index size became; <G: n=72653, m=105482, cm=105482, G: n=71954, m=104296, cm=104296, G: n=75535, m=502692, cm=502692, 250, 94>
+Index construction time; 1167
+Query amount; 2000, time spent on queries; 20319896215ns (20319ms), ( 10159us/query), ammount of trues returned; 914
+Case partitioning; [0, 20, 0, 3, 1977]([0.0, 0.01, 0.0, 0.0015, 0.9885])
+Maximum degree in residual graph D3; 1996
+7476/78388
+
+2 Level relaxed k-reach (k=10) index on graph G; G: n=75879, m=508837, cm=508837
+Index size became; <G: n=72653, m=105482, cm=105482, G: n=71954, m=104296, cm=104296, G: n=75535, m=502692, cm=502692, 250, 94>
+Index construction time; 1167
+Query amount; 3000, time spent on queries; 29852116604ns (29852ms), ( 9950us/query), ammount of trues returned; 1383
+Case partitioning; [0, 26, 0, 4, 2970]([0.0, 0.0087, 0.0, 0.0013, 0.99])
+Maximum degree in residual graph D3; 1996
+7476/78912
+
+2 Level relaxed k-reach (k=10) index on graph G; G: n=75879, m=508837, cm=508837
+Index size became; <G: n=72653, m=105482, cm=105482, G: n=71954, m=104296, cm=104296, G: n=75535, m=502692, cm=502692, 250, 94>
+Index construction time; 1167
+Query amount; 4000, time spent on queries; 39490978460ns (39490ms), ( 9872us/query), ammount of trues returned; 1837
+Case partitioning; [0, 30, 0, 7, 3963]([0.0, 0.0075, 0.0, 0.0018, 0.9908])
+Maximum degree in residual graph D3; 1996
+7476/79451
+
+2 Level relaxed k-reach (k=10) index on graph G; G: n=75879, m=508837, cm=508837
+Index size became; <G: n=72653, m=105482, cm=105482, G: n=71954, m=104296, cm=104296, G: n=75535, m=502692, cm=502692, 250, 94>
+Index construction time; 1167
+Query amount; 5000, time spent on queries; 49169125301ns (49169ms), ( 9833us/query), ammount of trues returned; 2300
+Case partitioning; [0, 35, 0, 8, 4957]([0.0, 0.007, 0.0, 0.0016, 0.9914])
+Maximum degree in residual graph D3; 1996
+7476/79982
+
+2 Level relaxed k-reach (k=10) index on graph G; G: n=75879, m=508837, cm=508837
+Index size became; <G: n=72653, m=105482, cm=105482, G: n=71954, m=104296, cm=104296, G: n=75535, m=502692, cm=502692, 250, 94>
+Index construction time; 1167
+Query amount; 6000, time spent on queries; 59020626501ns (59020ms), ( 9836us/query), ammount of trues returned; 2741
+Case partitioning; [0, 41, 0, 11, 5948]([0.0, 0.0068, 0.0, 0.0018, 0.9913])
+Maximum degree in residual graph D3; 1996
+7476/80532
+
+2 Level relaxed k-reach (k=10) index on graph G; G: n=75879, m=508837, cm=508837
+Index size became; <G: n=72653, m=105482, cm=105482, G: n=71954, m=104296, cm=104296, G: n=75535, m=502692, cm=502692, 250, 94>
+Index construction time; 1167
+Query amount; 7000, time spent on queries; 69492544083ns (69492ms), ( 9927us/query), ammount of trues returned; 3237
+Case partitioning; [0, 50, 0, 12, 6938]([0.0, 0.0071, 0.0, 0.0017, 0.9911])
+Maximum degree in residual graph D3; 1996
+7476/81026
+
+2 Level relaxed k-reach (k=10) index on graph G; G: n=75879, m=508837, cm=508837
+Index size became; <G: n=72653, m=105482, cm=105482, G: n=71954, m=104296, cm=104296, G: n=75535, m=502692, cm=502692, 250, 94>
+Index construction time; 1167
+Query amount; 8000, time spent on queries; 79324614902ns (79324ms), ( 9915us/query), ammount of trues returned; 3703
+Case partitioning; [0, 61, 0, 15, 7924]([0.0, 0.0076, 0.0, 0.0019, 0.9905])
+Maximum degree in residual graph D3; 1996
+7476/81546
+
+2 Level relaxed k-reach (k=10) index on graph G; G: n=75879, m=508837, cm=508837
+Index size became; <G: n=72653, m=105482, cm=105482, G: n=71954, m=104296, cm=104296, G: n=75535, m=502692, cm=502692, 250, 94>
+Index construction time; 1167
+Query amount; 9000, time spent on queries; 88645440421ns (88645ms), ( 9849us/query), ammount of trues returned; 4163
+Case partitioning; [0, 68, 0, 19, 8913]([0.0, 0.0076, 0.0, 0.0021, 0.9903])
+Maximum degree in residual graph D3; 1996
+7476/82075
+
+2 Level relaxed k-reach (k=10) index on graph G; G: n=75879, m=508837, cm=508837
+Index size became; <G: n=72653, m=105482, cm=105482, G: n=71954, m=104296, cm=104296, G: n=75535, m=502692, cm=502692, 250, 94>
+Index construction time; 1167
+Query amount; 10000, time spent on queries; 97624159603ns (97624ms), ( 9762us/query), ammount of trues returned; 4642
+Case partitioning; [0, 73, 0, 26, 9901]([0.0, 0.0073, 0.0, 0.0026, 0.9901])
+Maximum degree in residual graph D3; 1996
+7476/82584
+
+
+
+
+!!
+
+2 Level relaxed k-reach (k=10) index on graph G; G: n=75879, m=508837, cm=508837
+Index size became; <G: n=72653, m=105482, cm=105482, G: n=71954, m=104296, cm=104296, G: n=75535, m=502692, cm=502692, 250, 94>
+Index construction time; 1167
+Query amount; 10000, time spent on queries; 97624159603ns (97624ms), ( 9762us/query), ammount of trues returned; 4642
+Case partitioning; [0, 73, 0, 26, 9901]([0.0, 0.0073, 0.0, 0.0026, 0.9901])
+Maximum degree in residual graph D3; 1996
+7476/82584
+
+Now starting Datasets\Epinions\out.soc-Epinions1 for k=10
+Size of intersection; 1
+Tuning done, staring constrution of D3
+index done
+2 Level relaxed k-reach (k=10) index on graph G; G: n=75879, m=508837, cm=508837
+Index size became; <G: n=72653, m=105482, cm=105482, G: n=71954, m=104296, cm=104296, G: n=75535, m=502692, cm=502692, 250, 94>
+Index construction time; 1089
+Query amount; 1000, time spent on queries; 10238628628ns (10238ms), ( 10238us/query), ammount of trues returned; 474
+Case partitioning; [0, 9, 0, 1, 990]([0.0, 0.009, 0.0, 0.001, 0.99])
+Maximum degree in residual graph D3; 1996
+7476/83100
+
+2 Level relaxed k-reach (k=10) index on graph G; G: n=75879, m=508837, cm=508837
+Index size became; <G: n=72653, m=105482, cm=105482, G: n=71954, m=104296, cm=104296, G: n=75535, m=502692, cm=502692, 250, 94>
+Index construction time; 1089
+Query amount; 2000, time spent on queries; 19709055408ns (19709ms), ( 9854us/query), ammount of trues returned; 914
+Case partitioning; [0, 20, 0, 3, 1977]([0.0, 0.01, 0.0, 0.0015, 0.9885])
+Maximum degree in residual graph D3; 1996
+7476/83647
+
+2 Level relaxed k-reach (k=10) index on graph G; G: n=75879, m=508837, cm=508837
+Index size became; <G: n=72653, m=105482, cm=105482, G: n=71954, m=104296, cm=104296, G: n=75535, m=502692, cm=502692, 250, 94>
+Index construction time; 1089
+Query amount; 3000, time spent on queries; 28980082954ns (28980ms), ( 9660us/query), ammount of trues returned; 1383
+Case partitioning; [0, 26, 0, 4, 2970]([0.0, 0.0087, 0.0, 0.0013, 0.99])
+Maximum degree in residual graph D3; 1996
+7476/84171
+
+2 Level relaxed k-reach (k=10) index on graph G; G: n=75879, m=508837, cm=508837
+Index size became; <G: n=72653, m=105482, cm=105482, G: n=71954, m=104296, cm=104296, G: n=75535, m=502692, cm=502692, 250, 94>
+Index construction time; 1089
+Query amount; 4000, time spent on queries; 38483591182ns (38483ms), ( 9620us/query), ammount of trues returned; 1837
+Case partitioning; [0, 30, 0, 7, 3963]([0.0, 0.0075, 0.0, 0.0018, 0.9908])
+Maximum degree in residual graph D3; 1996
+7476/84710
+
+2 Level relaxed k-reach (k=10) index on graph G; G: n=75879, m=508837, cm=508837
+Index size became; <G: n=72653, m=105482, cm=105482, G: n=71954, m=104296, cm=104296, G: n=75535, m=502692, cm=502692, 250, 94>
+Index construction time; 1089
+Query amount; 5000, time spent on queries; 48016930716ns (48016ms), ( 9603us/query), ammount of trues returned; 2300
+Case partitioning; [0, 35, 0, 8, 4957]([0.0, 0.007, 0.0, 0.0016, 0.9914])
+Maximum degree in residual graph D3; 1996
+7476/85241
+
+2 Level relaxed k-reach (k=10) index on graph G; G: n=75879, m=508837, cm=508837
+Index size became; <G: n=72653, m=105482, cm=105482, G: n=71954, m=104296, cm=104296, G: n=75535, m=502692, cm=502692, 250, 94>
+Index construction time; 1089
+Query amount; 6000, time spent on queries; 57551613964ns (57551ms), ( 9591us/query), ammount of trues returned; 2741
+Case partitioning; [0, 41, 0, 11, 5948]([0.0, 0.0068, 0.0, 0.0018, 0.9913])
+Maximum degree in residual graph D3; 1996
+7476/85791
+
+2 Level relaxed k-reach (k=10) index on graph G; G: n=75879, m=508837, cm=508837
+Index size became; <G: n=72653, m=105482, cm=105482, G: n=71954, m=104296, cm=104296, G: n=75535, m=502692, cm=502692, 250, 94>
+Index construction time; 1089
+Query amount; 7000, time spent on queries; 66336427523ns (66336ms), ( 9476us/query), ammount of trues returned; 3237
+Case partitioning; [0, 50, 0, 12, 6938]([0.0, 0.0071, 0.0, 0.0017, 0.9911])
+Maximum degree in residual graph D3; 1996
+7476/86285
+
+2 Level relaxed k-reach (k=10) index on graph G; G: n=75879, m=508837, cm=508837
+Index size became; <G: n=72653, m=105482, cm=105482, G: n=71954, m=104296, cm=104296, G: n=75535, m=502692, cm=502692, 250, 94>
+Index construction time; 1089
+Query amount; 8000, time spent on queries; 75320005675ns (75320ms), ( 9415us/query), ammount of trues returned; 3703
+Case partitioning; [0, 61, 0, 15, 7924]([0.0, 0.0076, 0.0, 0.0019, 0.9905])
+Maximum degree in residual graph D3; 1996
+7476/86805
+
+2 Level relaxed k-reach (k=10) index on graph G; G: n=75879, m=508837, cm=508837
+Index size became; <G: n=72653, m=105482, cm=105482, G: n=71954, m=104296, cm=104296, G: n=75535, m=502692, cm=502692, 250, 94>
+Index construction time; 1089
+Query amount; 9000, time spent on queries; 84522665765ns (84522ms), ( 9391us/query), ammount of trues returned; 4163
+Case partitioning; [0, 68, 0, 19, 8913]([0.0, 0.0076, 0.0, 0.0021, 0.9903])
+Maximum degree in residual graph D3; 1996
+7476/87334
+
+2 Level relaxed k-reach (k=10) index on graph G; G: n=75879, m=508837, cm=508837
+Index size became; <G: n=72653, m=105482, cm=105482, G: n=71954, m=104296, cm=104296, G: n=75535, m=502692, cm=502692, 250, 94>
+Index construction time; 1089
+Query amount; 10000, time spent on queries; 93430694901ns (93430ms), ( 9343us/query), ammount of trues returned; 4642
+Case partitioning; [0, 73, 0, 26, 9901]([0.0, 0.0073, 0.0, 0.0026, 0.9901])
+Maximum degree in residual graph D3; 1996
+7476/87843
+
+
+
+
+!!
+
+2 Level relaxed k-reach (k=10) index on graph G; G: n=75879, m=508837, cm=508837
+Index size became; <G: n=72653, m=105482, cm=105482, G: n=71954, m=104296, cm=104296, G: n=75535, m=502692, cm=502692, 250, 94>
+Index construction time; 1089
+Query amount; 10000, time spent on queries; 93430694901ns (93430ms), ( 9343us/query), ammount of trues returned; 4642
+Case partitioning; [0, 73, 0, 26, 9901]([0.0, 0.0073, 0.0, 0.0026, 0.9901])
+Maximum degree in residual graph D3; 1996
+7476/87843
+
+File; Datasets\Epinions\out.soc-Epinions1; k=10, avarage query time for 10000 queries; 96047250720
+loading Datasets\Gnutella\out.p2p-Gnutella31
+LoadingDatasets\Gnutella\out.p2p-Gnutella31
+Stream done
+Now starting Datasets\Gnutella\out.p2p-Gnutella31 for k=8
+Size of intersection; 1
+Tuning done, staring constrution of D3
+index done
+2 Level relaxed k-reach (k=8) index on graph G; G: n=62586, m=147892, cm=147892
+Index size became; <G: n=52678, m=942887, cm=942887, G: n=49308, m=553770, cm=553770, G: n=62065, m=143361, cm=143361, 250, 271>
+Index construction time; 2723
+Query amount; 1000, time spent on queries; 17076419732ns (17076ms), ( 17076us/query), ammount of trues returned; 97
+Case partitioning; [0, 9, 0, 7, 984]([0.0, 0.009, 0.0, 0.007, 0.984])
+Maximum degree in residual graph D3; 66
+7568/88823
+
+2 Level relaxed k-reach (k=8) index on graph G; G: n=62586, m=147892, cm=147892
+Index size became; <G: n=52678, m=942887, cm=942887, G: n=49308, m=553770, cm=553770, G: n=62065, m=143361, cm=143361, 250, 271>
+Index construction time; 2723
+Query amount; 2000, time spent on queries; 30965304574ns (30965ms), ( 15482us/query), ammount of trues returned; 195
+Case partitioning; [0, 15, 0, 13, 1972]([0.0, 0.0075, 0.0, 0.0065, 0.986])
+Maximum degree in residual graph D3; 66
+7658/89804
+
+2 Level relaxed k-reach (k=8) index on graph G; G: n=62586, m=147892, cm=147892
+Index size became; <G: n=52678, m=942887, cm=942887, G: n=49308, m=553770, cm=553770, G: n=62065, m=143361, cm=143361, 250, 271>
+Index construction time; 2723
+Query amount; 3000, time spent on queries; 45087405693ns (45087ms), ( 15029us/query), ammount of trues returned; 286
+Case partitioning; [0, 22, 0, 18, 2960]([0.0, 0.0073, 0.0, 0.006, 0.9867])
+Maximum degree in residual graph D3; 66
+7745/90788
+
+2 Level relaxed k-reach (k=8) index on graph G; G: n=62586, m=147892, cm=147892
+Index size became; <G: n=52678, m=942887, cm=942887, G: n=49308, m=553770, cm=553770, G: n=62065, m=143361, cm=143361, 250, 271>
+Index construction time; 2723
+Query amount; 4000, time spent on queries; 58985873815ns (58985ms), ( 14746us/query), ammount of trues returned; 367
+Case partitioning; [0, 27, 0, 31, 3942]([0.0, 0.0068, 0.0, 0.0078, 0.9855])
+Maximum degree in residual graph D3; 66
+7820/91764
+
+2 Level relaxed k-reach (k=8) index on graph G; G: n=62586, m=147892, cm=147892
+Index size became; <G: n=52678, m=942887, cm=942887, G: n=49308, m=553770, cm=553770, G: n=62065, m=143361, cm=143361, 250, 271>
+Index construction time; 2723
+Query amount; 5000, time spent on queries; 72608002514ns (72608ms), ( 14521us/query), ammount of trues returned; 444
+Case partitioning; [0, 37, 0, 42, 4921]([0.0, 0.0074, 0.0, 0.0084, 0.9842])
+Maximum degree in residual graph D3; 66
+7893/92739
+
+2 Level relaxed k-reach (k=8) index on graph G; G: n=62586, m=147892, cm=147892
+Index size became; <G: n=52678, m=942887, cm=942887, G: n=49308, m=553770, cm=553770, G: n=62065, m=143361, cm=143361, 250, 271>
+Index construction time; 2723
+Query amount; 6000, time spent on queries; 86667133122ns (86667ms), ( 14444us/query), ammount of trues returned; 539
+Case partitioning; [0, 41, 0, 45, 5914]([0.0, 0.0068, 0.0, 0.0075, 0.9857])
+Maximum degree in residual graph D3; 66
+7981/93725
+
+2 Level relaxed k-reach (k=8) index on graph G; G: n=62586, m=147892, cm=147892
+Index size became; <G: n=52678, m=942887, cm=942887, G: n=49308, m=553770, cm=553770, G: n=62065, m=143361, cm=143361, 250, 271>
+Index construction time; 2723
+Query amount; 7000, time spent on queries; 100452172477ns (100452ms), ( 14350us/query), ammount of trues returned; 628
+Case partitioning; [0, 44, 0, 52, 6904]([0.0, 0.0063, 0.0, 0.0074, 0.9863])
+Maximum degree in residual graph D3; 66
+8065/94711
+
+2 Level relaxed k-reach (k=8) index on graph G; G: n=62586, m=147892, cm=147892
+Index size became; <G: n=52678, m=942887, cm=942887, G: n=49308, m=553770, cm=553770, G: n=62065, m=143361, cm=143361, 250, 271>
+Index construction time; 2723
+Query amount; 8000, time spent on queries; 114779594960ns (114779ms), ( 14347us/query), ammount of trues returned; 728
+Case partitioning; [0, 51, 0, 67, 7882]([0.0, 0.0064, 0.0, 0.0084, 0.9853])
+Maximum degree in residual graph D3; 66
+8165/95689
+
+2 Level relaxed k-reach (k=8) index on graph G; G: n=62586, m=147892, cm=147892
+Index size became; <G: n=52678, m=942887, cm=942887, G: n=49308, m=553770, cm=553770, G: n=62065, m=143361, cm=143361, 250, 271>
+Index construction time; 2723
+Query amount; 9000, time spent on queries; 128385682828ns (128385ms), ( 14265us/query), ammount of trues returned; 814
+Case partitioning; [0, 57, 1, 75, 8867]([0.0, 0.0063, 1.0E-4, 0.0083, 0.9852])
+Maximum degree in residual graph D3; 66
+8243/96666
+
+2 Level relaxed k-reach (k=8) index on graph G; G: n=62586, m=147892, cm=147892
+Index size became; <G: n=52678, m=942887, cm=942887, G: n=49308, m=553770, cm=553770, G: n=62065, m=143361, cm=143361, 250, 271>
+Index construction time; 2723
+Query amount; 10000, time spent on queries; 142530074021ns (142530ms), ( 14253us/query), ammount of trues returned; 905
+Case partitioning; [0, 63, 1, 80, 9856]([0.0, 0.0063, 1.0E-4, 0.008, 0.9856])
+Maximum degree in residual graph D3; 66
+8325/97646
+
+
+
+
+!!
+
+2 Level relaxed k-reach (k=8) index on graph G; G: n=62586, m=147892, cm=147892
+Index size became; <G: n=52678, m=942887, cm=942887, G: n=49308, m=553770, cm=553770, G: n=62065, m=143361, cm=143361, 250, 271>
+Index construction time; 2723
+Query amount; 10000, time spent on queries; 142530074021ns (142530ms), ( 14253us/query), ammount of trues returned; 905
+Case partitioning; [0, 63, 1, 80, 9856]([0.0, 0.0063, 1.0E-4, 0.008, 0.9856])
+Maximum degree in residual graph D3; 66
+8325/97646
+
+Now starting Datasets\Gnutella\out.p2p-Gnutella31 for k=8
+Size of intersection; 1
+Tuning done, staring constrution of D3
+index done
+2 Level relaxed k-reach (k=8) index on graph G; G: n=62586, m=147892, cm=147892
+Index size became; <G: n=52678, m=942887, cm=942887, G: n=49308, m=553770, cm=553770, G: n=62065, m=143361, cm=143361, 250, 271>
+Index construction time; 2816
+Query amount; 1000, time spent on queries; 13767483813ns (13767ms), ( 13767us/query), ammount of trues returned; 97
+Case partitioning; [0, 9, 0, 7, 984]([0.0, 0.009, 0.0, 0.007, 0.984])
+Maximum degree in residual graph D3; 66
+8417/98626
+
+2 Level relaxed k-reach (k=8) index on graph G; G: n=62586, m=147892, cm=147892
+Index size became; <G: n=52678, m=942887, cm=942887, G: n=49308, m=553770, cm=553770, G: n=62065, m=143361, cm=143361, 250, 271>
+Index construction time; 2816
+Query amount; 2000, time spent on queries; 27712704982ns (27712ms), ( 13856us/query), ammount of trues returned; 195
+Case partitioning; [0, 15, 0, 13, 1972]([0.0, 0.0075, 0.0, 0.0065, 0.986])
+Maximum degree in residual graph D3; 66
+8507/99607
+
+2 Level relaxed k-reach (k=8) index on graph G; G: n=62586, m=147892, cm=147892
+Index size became; <G: n=52678, m=942887, cm=942887, G: n=49308, m=553770, cm=553770, G: n=62065, m=143361, cm=143361, 250, 271>
+Index construction time; 2816
+Query amount; 3000, time spent on queries; 41762477704ns (41762ms), ( 13920us/query), ammount of trues returned; 286
+Case partitioning; [0, 22, 0, 18, 2960]([0.0, 0.0073, 0.0, 0.006, 0.9867])
+Maximum degree in residual graph D3; 66
+8594/100591
+
+2 Level relaxed k-reach (k=8) index on graph G; G: n=62586, m=147892, cm=147892
+Index size became; <G: n=52678, m=942887, cm=942887, G: n=49308, m=553770, cm=553770, G: n=62065, m=143361, cm=143361, 250, 271>
+Index construction time; 2816
+Query amount; 4000, time spent on queries; 55695063921ns (55695ms), ( 13923us/query), ammount of trues returned; 367
+Case partitioning; [0, 27, 0, 31, 3942]([0.0, 0.0068, 0.0, 0.0078, 0.9855])
+Maximum degree in residual graph D3; 66
+8669/101567
+
+2 Level relaxed k-reach (k=8) index on graph G; G: n=62586, m=147892, cm=147892
+Index size became; <G: n=52678, m=942887, cm=942887, G: n=49308, m=553770, cm=553770, G: n=62065, m=143361, cm=143361, 250, 271>
+Index construction time; 2816
+Query amount; 5000, time spent on queries; 69333579403ns (69333ms), ( 13866us/query), ammount of trues returned; 444
+Case partitioning; [0, 37, 0, 42, 4921]([0.0, 0.0074, 0.0, 0.0084, 0.9842])
+Maximum degree in residual graph D3; 66
+8742/102542
+
+2 Level relaxed k-reach (k=8) index on graph G; G: n=62586, m=147892, cm=147892
+Index size became; <G: n=52678, m=942887, cm=942887, G: n=49308, m=553770, cm=553770, G: n=62065, m=143361, cm=143361, 250, 271>
+Index construction time; 2816
+Query amount; 6000, time spent on queries; 83282112728ns (83282ms), ( 13880us/query), ammount of trues returned; 539
+Case partitioning; [0, 41, 0, 45, 5914]([0.0, 0.0068, 0.0, 0.0075, 0.9857])
+Maximum degree in residual graph D3; 66
+8830/103528
+
+2 Level relaxed k-reach (k=8) index on graph G; G: n=62586, m=147892, cm=147892
+Index size became; <G: n=52678, m=942887, cm=942887, G: n=49308, m=553770, cm=553770, G: n=62065, m=143361, cm=143361, 250, 271>
+Index construction time; 2816
+Query amount; 7000, time spent on queries; 96997919054ns (96997ms), ( 13856us/query), ammount of trues returned; 628
+Case partitioning; [0, 44, 0, 52, 6904]([0.0, 0.0063, 0.0, 0.0074, 0.9863])
+Maximum degree in residual graph D3; 66
+8914/104514
+
+2 Level relaxed k-reach (k=8) index on graph G; G: n=62586, m=147892, cm=147892
+Index size became; <G: n=52678, m=942887, cm=942887, G: n=49308, m=553770, cm=553770, G: n=62065, m=143361, cm=143361, 250, 271>
+Index construction time; 2816
+Query amount; 8000, time spent on queries; 111319476259ns (111319ms), ( 13914us/query), ammount of trues returned; 728
+Case partitioning; [0, 51, 0, 67, 7882]([0.0, 0.0064, 0.0, 0.0084, 0.9853])
+Maximum degree in residual graph D3; 66
+9014/105492
+
+2 Level relaxed k-reach (k=8) index on graph G; G: n=62586, m=147892, cm=147892
+Index size became; <G: n=52678, m=942887, cm=942887, G: n=49308, m=553770, cm=553770, G: n=62065, m=143361, cm=143361, 250, 271>
+Index construction time; 2816
+Query amount; 9000, time spent on queries; 125173851289ns (125173ms), ( 13908us/query), ammount of trues returned; 814
+Case partitioning; [0, 57, 1, 75, 8867]([0.0, 0.0063, 1.0E-4, 0.0083, 0.9852])
+Maximum degree in residual graph D3; 66
+9092/106469
+
+2 Level relaxed k-reach (k=8) index on graph G; G: n=62586, m=147892, cm=147892
+Index size became; <G: n=52678, m=942887, cm=942887, G: n=49308, m=553770, cm=553770, G: n=62065, m=143361, cm=143361, 250, 271>
+Index construction time; 2816
+Query amount; 10000, time spent on queries; 139908636408ns (139908ms), ( 13990us/query), ammount of trues returned; 905
+Case partitioning; [0, 63, 1, 80, 9856]([0.0, 0.0063, 1.0E-4, 0.008, 0.9856])
+Maximum degree in residual graph D3; 66
+9174/107449
+
+
+
+
+!!
+
+2 Level relaxed k-reach (k=8) index on graph G; G: n=62586, m=147892, cm=147892
+Index size became; <G: n=52678, m=942887, cm=942887, G: n=49308, m=553770, cm=553770, G: n=62065, m=143361, cm=143361, 250, 271>
+Index construction time; 2816
+Query amount; 10000, time spent on queries; 139908636408ns (139908ms), ( 13990us/query), ammount of trues returned; 905
+Case partitioning; [0, 63, 1, 80, 9856]([0.0, 0.0063, 1.0E-4, 0.008, 0.9856])
+Maximum degree in residual graph D3; 66
+9174/107449
+
+Now starting Datasets\Gnutella\out.p2p-Gnutella31 for k=8
+Size of intersection; 1
+Tuning done, staring constrution of D3
+index done
+2 Level relaxed k-reach (k=8) index on graph G; G: n=62586, m=147892, cm=147892
+Index size became; <G: n=52678, m=942887, cm=942887, G: n=49308, m=553770, cm=553770, G: n=62065, m=143361, cm=143361, 250, 271>
+Index construction time; 2552
+Query amount; 1000, time spent on queries; 14633792469ns (14633ms), ( 14633us/query), ammount of trues returned; 97
+Case partitioning; [0, 9, 0, 7, 984]([0.0, 0.009, 0.0, 0.007, 0.984])
+Maximum degree in residual graph D3; 66
+9266/108429
+
+2 Level relaxed k-reach (k=8) index on graph G; G: n=62586, m=147892, cm=147892
+Index size became; <G: n=52678, m=942887, cm=942887, G: n=49308, m=553770, cm=553770, G: n=62065, m=143361, cm=143361, 250, 271>
+Index construction time; 2552
+Query amount; 2000, time spent on queries; 28793580005ns (28793ms), ( 14396us/query), ammount of trues returned; 195
+Case partitioning; [0, 15, 0, 13, 1972]([0.0, 0.0075, 0.0, 0.0065, 0.986])
+Maximum degree in residual graph D3; 66
+9356/109410
+
+2 Level relaxed k-reach (k=8) index on graph G; G: n=62586, m=147892, cm=147892
+Index size became; <G: n=52678, m=942887, cm=942887, G: n=49308, m=553770, cm=553770, G: n=62065, m=143361, cm=143361, 250, 271>
+Index construction time; 2552
+Query amount; 3000, time spent on queries; 42867442807ns (42867ms), ( 14289us/query), ammount of trues returned; 286
+Case partitioning; [0, 22, 0, 18, 2960]([0.0, 0.0073, 0.0, 0.006, 0.9867])
+Maximum degree in residual graph D3; 66
+9443/110394
+
+2 Level relaxed k-reach (k=8) index on graph G; G: n=62586, m=147892, cm=147892
+Index size became; <G: n=52678, m=942887, cm=942887, G: n=49308, m=553770, cm=553770, G: n=62065, m=143361, cm=143361, 250, 271>
+Index construction time; 2552
+Query amount; 4000, time spent on queries; 56795011386ns (56795ms), ( 14198us/query), ammount of trues returned; 367
+Case partitioning; [0, 27, 0, 31, 3942]([0.0, 0.0068, 0.0, 0.0078, 0.9855])
+Maximum degree in residual graph D3; 66
+9518/111370
+
+2 Level relaxed k-reach (k=8) index on graph G; G: n=62586, m=147892, cm=147892
+Index size became; <G: n=52678, m=942887, cm=942887, G: n=49308, m=553770, cm=553770, G: n=62065, m=143361, cm=143361, 250, 271>
+Index construction time; 2552
+Query amount; 5000, time spent on queries; 70397849112ns (70397ms), ( 14079us/query), ammount of trues returned; 444
+Case partitioning; [0, 37, 0, 42, 4921]([0.0, 0.0074, 0.0, 0.0084, 0.9842])
+Maximum degree in residual graph D3; 66
+9591/112345
+
+2 Level relaxed k-reach (k=8) index on graph G; G: n=62586, m=147892, cm=147892
+Index size became; <G: n=52678, m=942887, cm=942887, G: n=49308, m=553770, cm=553770, G: n=62065, m=143361, cm=143361, 250, 271>
+Index construction time; 2552
+Query amount; 6000, time spent on queries; 84335825435ns (84335ms), ( 14055us/query), ammount of trues returned; 539
+Case partitioning; [0, 41, 0, 45, 5914]([0.0, 0.0068, 0.0, 0.0075, 0.9857])
+Maximum degree in residual graph D3; 66
+9679/113331
+
+2 Level relaxed k-reach (k=8) index on graph G; G: n=62586, m=147892, cm=147892
+Index size became; <G: n=52678, m=942887, cm=942887, G: n=49308, m=553770, cm=553770, G: n=62065, m=143361, cm=143361, 250, 271>
+Index construction time; 2552
+Query amount; 7000, time spent on queries; 98278365672ns (98278ms), ( 14039us/query), ammount of trues returned; 628
+Case partitioning; [0, 44, 0, 52, 6904]([0.0, 0.0063, 0.0, 0.0074, 0.9863])
+Maximum degree in residual graph D3; 66
+9763/114317
+
+2 Level relaxed k-reach (k=8) index on graph G; G: n=62586, m=147892, cm=147892
+Index size became; <G: n=52678, m=942887, cm=942887, G: n=49308, m=553770, cm=553770, G: n=62065, m=143361, cm=143361, 250, 271>
+Index construction time; 2552
+Query amount; 8000, time spent on queries; 112781991110ns (112781ms), ( 14097us/query), ammount of trues returned; 728
+Case partitioning; [0, 51, 0, 67, 7882]([0.0, 0.0064, 0.0, 0.0084, 0.9853])
+Maximum degree in residual graph D3; 66
+9863/115295
+
+2 Level relaxed k-reach (k=8) index on graph G; G: n=62586, m=147892, cm=147892
+Index size became; <G: n=52678, m=942887, cm=942887, G: n=49308, m=553770, cm=553770, G: n=62065, m=143361, cm=143361, 250, 271>
+Index construction time; 2552
+Query amount; 9000, time spent on queries; 126519378030ns (126519ms), ( 14057us/query), ammount of trues returned; 814
+Case partitioning; [0, 57, 1, 75, 8867]([0.0, 0.0063, 1.0E-4, 0.0083, 0.9852])
+Maximum degree in residual graph D3; 66
+9941/116272
+
+2 Level relaxed k-reach (k=8) index on graph G; G: n=62586, m=147892, cm=147892
+Index size became; <G: n=52678, m=942887, cm=942887, G: n=49308, m=553770, cm=553770, G: n=62065, m=143361, cm=143361, 250, 271>
+Index construction time; 2552
+Query amount; 10000, time spent on queries; 140825364423ns (140825ms), ( 14082us/query), ammount of trues returned; 905
+Case partitioning; [0, 63, 1, 80, 9856]([0.0, 0.0063, 1.0E-4, 0.008, 0.9856])
+Maximum degree in residual graph D3; 66
+10023/117252
+
+
+
+
+!!
+
+2 Level relaxed k-reach (k=8) index on graph G; G: n=62586, m=147892, cm=147892
+Index size became; <G: n=52678, m=942887, cm=942887, G: n=49308, m=553770, cm=553770, G: n=62065, m=143361, cm=143361, 250, 271>
+Index construction time; 2552
+Query amount; 10000, time spent on queries; 140825364423ns (140825ms), ( 14082us/query), ammount of trues returned; 905
+Case partitioning; [0, 63, 1, 80, 9856]([0.0, 0.0063, 1.0E-4, 0.008, 0.9856])
+Maximum degree in residual graph D3; 66
+10023/117252
+
+File; Datasets\Gnutella\out.p2p-Gnutella31; k=8, avarage query time for 10000 queries; 141088024950
+loading Datasets\Epinions\out.soc-Epinions1
+LoadingDatasets\Epinions\out.soc-Epinions1
+Stream done
+Now starting Datasets\Epinions\out.soc-Epinions1 for k=8
+Size of intersection; 1
+Tuning done, staring constrution of D3
+index done
+2 Level relaxed k-reach (k=8) index on graph G; G: n=75879, m=508837, cm=508837
+Index size became; <G: n=72639, m=116936, cm=116936, G: n=71944, m=104286, cm=104286, G: n=75532, m=502678, cm=502678, 250, 97>
+Index construction time; 1109
+Query amount; 1000, time spent on queries; 6491440352ns (6491ms), ( 6491us/query), ammount of trues returned; 474
+Case partitioning; [0, 9, 0, 1, 990]([0.0, 0.009, 0.0, 0.001, 0.99])
+Maximum degree in residual graph D3; 1996
+10029/117774
+
+2 Level relaxed k-reach (k=8) index on graph G; G: n=75879, m=508837, cm=508837
+Index size became; <G: n=72639, m=116936, cm=116936, G: n=71944, m=104286, cm=104286, G: n=75532, m=502678, cm=502678, 250, 97>
+Index construction time; 1109
+Query amount; 2000, time spent on queries; 12297949994ns (12297ms), ( 6148us/query), ammount of trues returned; 914
+Case partitioning; [0, 20, 0, 3, 1977]([0.0, 0.01, 0.0, 0.0015, 0.9885])
+Maximum degree in residual graph D3; 1996
+10035/118327
+
+2 Level relaxed k-reach (k=8) index on graph G; G: n=75879, m=508837, cm=508837
+Index size became; <G: n=72639, m=116936, cm=116936, G: n=71944, m=104286, cm=104286, G: n=75532, m=502678, cm=502678, 250, 97>
+Index construction time; 1109
+Query amount; 3000, time spent on queries; 17943023508ns (17943ms), ( 5981us/query), ammount of trues returned; 1383
+Case partitioning; [0, 26, 0, 4, 2970]([0.0, 0.0087, 0.0, 0.0013, 0.99])
+Maximum degree in residual graph D3; 1996
+10043/118859
+
+2 Level relaxed k-reach (k=8) index on graph G; G: n=75879, m=508837, cm=508837
+Index size became; <G: n=72639, m=116936, cm=116936, G: n=71944, m=104286, cm=104286, G: n=75532, m=502678, cm=502678, 250, 97>
+Index construction time; 1109
+Query amount; 4000, time spent on queries; 23759277645ns (23759ms), ( 5939us/query), ammount of trues returned; 1836
+Case partitioning; [0, 30, 0, 7, 3963]([0.0, 0.0075, 0.0, 0.0018, 0.9908])
+Maximum degree in residual graph D3; 1996
+10049/119405
+
+2 Level relaxed k-reach (k=8) index on graph G; G: n=75879, m=508837, cm=508837
+Index size became; <G: n=72639, m=116936, cm=116936, G: n=71944, m=104286, cm=104286, G: n=75532, m=502678, cm=502678, 250, 97>
+Index construction time; 1109
+Query amount; 5000, time spent on queries; 29640290284ns (29640ms), ( 5928us/query), ammount of trues returned; 2299
+Case partitioning; [0, 35, 0, 8, 4957]([0.0, 0.007, 0.0, 0.0016, 0.9914])
+Maximum degree in residual graph D3; 1996
+10060/119947
+
+2 Level relaxed k-reach (k=8) index on graph G; G: n=75879, m=508837, cm=508837
+Index size became; <G: n=72639, m=116936, cm=116936, G: n=71944, m=104286, cm=104286, G: n=75532, m=502678, cm=502678, 250, 97>
+Index construction time; 1109
+Query amount; 6000, time spent on queries; 35383773833ns (35383ms), ( 5897us/query), ammount of trues returned; 2740
+Case partitioning; [0, 41, 0, 11, 5948]([0.0, 0.0068, 0.0, 0.0018, 0.9913])
+Maximum degree in residual graph D3; 1996
+10065/120502
+
+2 Level relaxed k-reach (k=8) index on graph G; G: n=75879, m=508837, cm=508837
+Index size became; <G: n=72639, m=116936, cm=116936, G: n=71944, m=104286, cm=104286, G: n=75532, m=502678, cm=502678, 250, 97>
+Index construction time; 1109
+Query amount; 7000, time spent on queries; 40724147299ns (40724ms), ( 5817us/query), ammount of trues returned; 3236
+Case partitioning; [0, 50, 0, 12, 6938]([0.0, 0.0071, 0.0, 0.0017, 0.9911])
+Maximum degree in residual graph D3; 1996
+10075/121006
+
+2 Level relaxed k-reach (k=8) index on graph G; G: n=75879, m=508837, cm=508837
+Index size became; <G: n=72639, m=116936, cm=116936, G: n=71944, m=104286, cm=104286, G: n=75532, m=502678, cm=502678, 250, 97>
+Index construction time; 1109
+Query amount; 8000, time spent on queries; 46275956704ns (46275ms), ( 5784us/query), ammount of trues returned; 3701
+Case partitioning; [0, 61, 0, 15, 7924]([0.0, 0.0076, 0.0, 0.0019, 0.9905])
+Maximum degree in residual graph D3; 1996
+10082/121534
+
+2 Level relaxed k-reach (k=8) index on graph G; G: n=75879, m=508837, cm=508837
+Index size became; <G: n=72639, m=116936, cm=116936, G: n=71944, m=104286, cm=104286, G: n=75532, m=502678, cm=502678, 250, 97>
+Index construction time; 1109
+Query amount; 9000, time spent on queries; 51781580541ns (51781ms), ( 5753us/query), ammount of trues returned; 4159
+Case partitioning; [0, 67, 0, 20, 8913]([0.0, 0.0074, 0.0, 0.0022, 0.9903])
+Maximum degree in residual graph D3; 1996
+10090/122073
+
+2 Level relaxed k-reach (k=8) index on graph G; G: n=75879, m=508837, cm=508837
+Index size became; <G: n=72639, m=116936, cm=116936, G: n=71944, m=104286, cm=104286, G: n=75532, m=502678, cm=502678, 250, 97>
+Index construction time; 1109
+Query amount; 10000, time spent on queries; 57363612996ns (57363ms), ( 5736us/query), ammount of trues returned; 4636
+Case partitioning; [0, 72, 0, 27, 9901]([0.0, 0.0072, 0.0, 0.0027, 0.9901])
+Maximum degree in residual graph D3; 1996
+10094/122588
+
+
+
+
+!!
+
+2 Level relaxed k-reach (k=8) index on graph G; G: n=75879, m=508837, cm=508837
+Index size became; <G: n=72639, m=116936, cm=116936, G: n=71944, m=104286, cm=104286, G: n=75532, m=502678, cm=502678, 250, 97>
+Index construction time; 1109
+Query amount; 10000, time spent on queries; 57363612996ns (57363ms), ( 5736us/query), ammount of trues returned; 4636
+Case partitioning; [0, 72, 0, 27, 9901]([0.0, 0.0072, 0.0, 0.0027, 0.9901])
+Maximum degree in residual graph D3; 1996
+10094/122588
+
+Now starting Datasets\Epinions\out.soc-Epinions1 for k=8
+Size of intersection; 1
+Tuning done, staring constrution of D3
+index done
+2 Level relaxed k-reach (k=8) index on graph G; G: n=75879, m=508837, cm=508837
+Index size became; <G: n=72639, m=116936, cm=116936, G: n=71944, m=104286, cm=104286, G: n=75532, m=502678, cm=502678, 250, 97>
+Index construction time; 1108
+Query amount; 1000, time spent on queries; 6467195865ns (6467ms), ( 6467us/query), ammount of trues returned; 474
+Case partitioning; [0, 9, 0, 1, 990]([0.0, 0.009, 0.0, 0.001, 0.99])
+Maximum degree in residual graph D3; 1996
+10100/123110
+
+2 Level relaxed k-reach (k=8) index on graph G; G: n=75879, m=508837, cm=508837
+Index size became; <G: n=72639, m=116936, cm=116936, G: n=71944, m=104286, cm=104286, G: n=75532, m=502678, cm=502678, 250, 97>
+Index construction time; 1108
+Query amount; 2000, time spent on queries; 12161505831ns (12161ms), ( 6080us/query), ammount of trues returned; 914
+Case partitioning; [0, 20, 0, 3, 1977]([0.0, 0.01, 0.0, 0.0015, 0.9885])
+Maximum degree in residual graph D3; 1996
+10106/123663
+
+2 Level relaxed k-reach (k=8) index on graph G; G: n=75879, m=508837, cm=508837
+Index size became; <G: n=72639, m=116936, cm=116936, G: n=71944, m=104286, cm=104286, G: n=75532, m=502678, cm=502678, 250, 97>
+Index construction time; 1108
+Query amount; 3000, time spent on queries; 17778273493ns (17778ms), ( 5926us/query), ammount of trues returned; 1383
+Case partitioning; [0, 26, 0, 4, 2970]([0.0, 0.0087, 0.0, 0.0013, 0.99])
+Maximum degree in residual graph D3; 1996
+10114/124195
+
+2 Level relaxed k-reach (k=8) index on graph G; G: n=75879, m=508837, cm=508837
+Index size became; <G: n=72639, m=116936, cm=116936, G: n=71944, m=104286, cm=104286, G: n=75532, m=502678, cm=502678, 250, 97>
+Index construction time; 1108
+Query amount; 4000, time spent on queries; 23558320866ns (23558ms), ( 5889us/query), ammount of trues returned; 1836
+Case partitioning; [0, 30, 0, 7, 3963]([0.0, 0.0075, 0.0, 0.0018, 0.9908])
+Maximum degree in residual graph D3; 1996
+10120/124741
+
+2 Level relaxed k-reach (k=8) index on graph G; G: n=75879, m=508837, cm=508837
+Index size became; <G: n=72639, m=116936, cm=116936, G: n=71944, m=104286, cm=104286, G: n=75532, m=502678, cm=502678, 250, 97>
+Index construction time; 1108
+Query amount; 5000, time spent on queries; 29382120902ns (29382ms), ( 5876us/query), ammount of trues returned; 2299
+Case partitioning; [0, 35, 0, 8, 4957]([0.0, 0.007, 0.0, 0.0016, 0.9914])
+Maximum degree in residual graph D3; 1996
+10131/125283
+
+2 Level relaxed k-reach (k=8) index on graph G; G: n=75879, m=508837, cm=508837
+Index size became; <G: n=72639, m=116936, cm=116936, G: n=71944, m=104286, cm=104286, G: n=75532, m=502678, cm=502678, 250, 97>
+Index construction time; 1108
+Query amount; 6000, time spent on queries; 35076979115ns (35076ms), ( 5846us/query), ammount of trues returned; 2740
+Case partitioning; [0, 41, 0, 11, 5948]([0.0, 0.0068, 0.0, 0.0018, 0.9913])
+Maximum degree in residual graph D3; 1996
+10136/125838
+
+2 Level relaxed k-reach (k=8) index on graph G; G: n=75879, m=508837, cm=508837
+Index size became; <G: n=72639, m=116936, cm=116936, G: n=71944, m=104286, cm=104286, G: n=75532, m=502678, cm=502678, 250, 97>
+Index construction time; 1108
+Query amount; 7000, time spent on queries; 40361800600ns (40361ms), ( 5765us/query), ammount of trues returned; 3236
+Case partitioning; [0, 50, 0, 12, 6938]([0.0, 0.0071, 0.0, 0.0017, 0.9911])
+Maximum degree in residual graph D3; 1996
+10146/126342
+
+2 Level relaxed k-reach (k=8) index on graph G; G: n=75879, m=508837, cm=508837
+Index size became; <G: n=72639, m=116936, cm=116936, G: n=71944, m=104286, cm=104286, G: n=75532, m=502678, cm=502678, 250, 97>
+Index construction time; 1108
+Query amount; 8000, time spent on queries; 45902594136ns (45902ms), ( 5737us/query), ammount of trues returned; 3701
+Case partitioning; [0, 61, 0, 15, 7924]([0.0, 0.0076, 0.0, 0.0019, 0.9905])
+Maximum degree in residual graph D3; 1996
+10153/126870
+
+2 Level relaxed k-reach (k=8) index on graph G; G: n=75879, m=508837, cm=508837
+Index size became; <G: n=72639, m=116936, cm=116936, G: n=71944, m=104286, cm=104286, G: n=75532, m=502678, cm=502678, 250, 97>
+Index construction time; 1108
+Query amount; 9000, time spent on queries; 51381012031ns (51381ms), ( 5709us/query), ammount of trues returned; 4159
+Case partitioning; [0, 67, 0, 20, 8913]([0.0, 0.0074, 0.0, 0.0022, 0.9903])
+Maximum degree in residual graph D3; 1996
+10161/127409
+
+2 Level relaxed k-reach (k=8) index on graph G; G: n=75879, m=508837, cm=508837
+Index size became; <G: n=72639, m=116936, cm=116936, G: n=71944, m=104286, cm=104286, G: n=75532, m=502678, cm=502678, 250, 97>
+Index construction time; 1108
+Query amount; 10000, time spent on queries; 56972234300ns (56972ms), ( 5697us/query), ammount of trues returned; 4636
+Case partitioning; [0, 72, 0, 27, 9901]([0.0, 0.0072, 0.0, 0.0027, 0.9901])
+Maximum degree in residual graph D3; 1996
+10165/127924
+
+
+
+
+!!
+
+2 Level relaxed k-reach (k=8) index on graph G; G: n=75879, m=508837, cm=508837
+Index size became; <G: n=72639, m=116936, cm=116936, G: n=71944, m=104286, cm=104286, G: n=75532, m=502678, cm=502678, 250, 97>
+Index construction time; 1108
+Query amount; 10000, time spent on queries; 56972234300ns (56972ms), ( 5697us/query), ammount of trues returned; 4636
+Case partitioning; [0, 72, 0, 27, 9901]([0.0, 0.0072, 0.0, 0.0027, 0.9901])
+Maximum degree in residual graph D3; 1996
+10165/127924
+
+Now starting Datasets\Epinions\out.soc-Epinions1 for k=8
+Size of intersection; 1
+Tuning done, staring constrution of D3
+index done
+2 Level relaxed k-reach (k=8) index on graph G; G: n=75879, m=508837, cm=508837
+Index size became; <G: n=72639, m=116936, cm=116936, G: n=71944, m=104286, cm=104286, G: n=75532, m=502678, cm=502678, 250, 97>
+Index construction time; 1106
+Query amount; 1000, time spent on queries; 6468119156ns (6468ms), ( 6468us/query), ammount of trues returned; 474
+Case partitioning; [0, 9, 0, 1, 990]([0.0, 0.009, 0.0, 0.001, 0.99])
+Maximum degree in residual graph D3; 1996
+10171/128446
+
+2 Level relaxed k-reach (k=8) index on graph G; G: n=75879, m=508837, cm=508837
+Index size became; <G: n=72639, m=116936, cm=116936, G: n=71944, m=104286, cm=104286, G: n=75532, m=502678, cm=502678, 250, 97>
+Index construction time; 1106
+Query amount; 2000, time spent on queries; 12149004687ns (12149ms), ( 6074us/query), ammount of trues returned; 914
+Case partitioning; [0, 20, 0, 3, 1977]([0.0, 0.01, 0.0, 0.0015, 0.9885])
+Maximum degree in residual graph D3; 1996
+10177/128999
+
+2 Level relaxed k-reach (k=8) index on graph G; G: n=75879, m=508837, cm=508837
+Index size became; <G: n=72639, m=116936, cm=116936, G: n=71944, m=104286, cm=104286, G: n=75532, m=502678, cm=502678, 250, 97>
+Index construction time; 1106
+Query amount; 3000, time spent on queries; 17792799956ns (17792ms), ( 5930us/query), ammount of trues returned; 1383
+Case partitioning; [0, 26, 0, 4, 2970]([0.0, 0.0087, 0.0, 0.0013, 0.99])
+Maximum degree in residual graph D3; 1996
+10185/129531
+
+2 Level relaxed k-reach (k=8) index on graph G; G: n=75879, m=508837, cm=508837
+Index size became; <G: n=72639, m=116936, cm=116936, G: n=71944, m=104286, cm=104286, G: n=75532, m=502678, cm=502678, 250, 97>
+Index construction time; 1106
+Query amount; 4000, time spent on queries; 23602732940ns (23602ms), ( 5900us/query), ammount of trues returned; 1836
+Case partitioning; [0, 30, 0, 7, 3963]([0.0, 0.0075, 0.0, 0.0018, 0.9908])
+Maximum degree in residual graph D3; 1996
+10191/130077
+
+2 Level relaxed k-reach (k=8) index on graph G; G: n=75879, m=508837, cm=508837
+Index size became; <G: n=72639, m=116936, cm=116936, G: n=71944, m=104286, cm=104286, G: n=75532, m=502678, cm=502678, 250, 97>
+Index construction time; 1106
+Query amount; 5000, time spent on queries; 29443216544ns (29443ms), ( 5888us/query), ammount of trues returned; 2299
+Case partitioning; [0, 35, 0, 8, 4957]([0.0, 0.007, 0.0, 0.0016, 0.9914])
+Maximum degree in residual graph D3; 1996
+10202/130619
+
+2 Level relaxed k-reach (k=8) index on graph G; G: n=75879, m=508837, cm=508837
+Index size became; <G: n=72639, m=116936, cm=116936, G: n=71944, m=104286, cm=104286, G: n=75532, m=502678, cm=502678, 250, 97>
+Index construction time; 1106
+Query amount; 6000, time spent on queries; 35412212616ns (35412ms), ( 5902us/query), ammount of trues returned; 2740
+Case partitioning; [0, 41, 0, 11, 5948]([0.0, 0.0068, 0.0, 0.0018, 0.9913])
+Maximum degree in residual graph D3; 1996
+10207/131174
+
+2 Level relaxed k-reach (k=8) index on graph G; G: n=75879, m=508837, cm=508837
+Index size became; <G: n=72639, m=116936, cm=116936, G: n=71944, m=104286, cm=104286, G: n=75532, m=502678, cm=502678, 250, 97>
+Index construction time; 1106
+Query amount; 7000, time spent on queries; 40701185748ns (40701ms), ( 5814us/query), ammount of trues returned; 3236
+Case partitioning; [0, 50, 0, 12, 6938]([0.0, 0.0071, 0.0, 0.0017, 0.9911])
+Maximum degree in residual graph D3; 1996
+10217/131678
+
+2 Level relaxed k-reach (k=8) index on graph G; G: n=75879, m=508837, cm=508837
+Index size became; <G: n=72639, m=116936, cm=116936, G: n=71944, m=104286, cm=104286, G: n=75532, m=502678, cm=502678, 250, 97>
+Index construction time; 1106
+Query amount; 8000, time spent on queries; 46649795234ns (46649ms), ( 5831us/query), ammount of trues returned; 3701
+Case partitioning; [0, 61, 0, 15, 7924]([0.0, 0.0076, 0.0, 0.0019, 0.9905])
+Maximum degree in residual graph D3; 1996
+10224/132206
+
+2 Level relaxed k-reach (k=8) index on graph G; G: n=75879, m=508837, cm=508837
+Index size became; <G: n=72639, m=116936, cm=116936, G: n=71944, m=104286, cm=104286, G: n=75532, m=502678, cm=502678, 250, 97>
+Index construction time; 1106
+Query amount; 9000, time spent on queries; 52233527621ns (52233ms), ( 5803us/query), ammount of trues returned; 4159
+Case partitioning; [0, 67, 0, 20, 8913]([0.0, 0.0074, 0.0, 0.0022, 0.9903])
+Maximum degree in residual graph D3; 1996
+10232/132745
+
+2 Level relaxed k-reach (k=8) index on graph G; G: n=75879, m=508837, cm=508837
+Index size became; <G: n=72639, m=116936, cm=116936, G: n=71944, m=104286, cm=104286, G: n=75532, m=502678, cm=502678, 250, 97>
+Index construction time; 1106
+Query amount; 10000, time spent on queries; 57770373059ns (57770ms), ( 5777us/query), ammount of trues returned; 4636
+Case partitioning; [0, 72, 0, 27, 9901]([0.0, 0.0072, 0.0, 0.0027, 0.9901])
+Maximum degree in residual graph D3; 1996
+10236/133260
+
+
+
+
+!!
+
+2 Level relaxed k-reach (k=8) index on graph G; G: n=75879, m=508837, cm=508837
+Index size became; <G: n=72639, m=116936, cm=116936, G: n=71944, m=104286, cm=104286, G: n=75532, m=502678, cm=502678, 250, 97>
+Index construction time; 1106
+Query amount; 10000, time spent on queries; 57770373059ns (57770ms), ( 5777us/query), ammount of trues returned; 4636
+Case partitioning; [0, 72, 0, 27, 9901]([0.0, 0.0072, 0.0, 0.0027, 0.9901])
+Maximum degree in residual graph D3; 1996
+10236/133260
+
+File; Datasets\Epinions\out.soc-Epinions1; k=8, avarage query time for 10000 queries; 57368740118
+loading Datasets\Gnutella\out.p2p-Gnutella31
+LoadingDatasets\Gnutella\out.p2p-Gnutella31
+Stream done
+Now starting Datasets\Gnutella\out.p2p-Gnutella31 for k=6
+Size of intersection; 1
+Tuning done, staring constrution of D3
+index done
+2 Level relaxed k-reach (k=6) index on graph G; G: n=62586, m=147892, cm=147892
+Index size became; <G: n=49246, m=339569, cm=339569, G: n=54792, m=1180645, cm=1180645, G: n=61266, m=134609, cm=134609, 250, 1070>
+Index construction time; 2989
+Query amount; 1000, time spent on queries; 147560308127ns (147560ms), ( 147560us/query), ammount of trues returned; 18
+Case partitioning; [0, 8, 0, 30, 962]([0.0, 0.008, 0.0, 0.03, 0.962])
+Maximum degree in residual graph D3; 66
+10253/134221
+
+2 Level relaxed k-reach (k=6) index on graph G; G: n=62586, m=147892, cm=147892
+Index size became; <G: n=49246, m=339569, cm=339569, G: n=54792, m=1180645, cm=1180645, G: n=61266, m=134609, cm=134609, 250, 1070>
+Index construction time; 2989
+Query amount; 2000, time spent on queries; 298899192533ns (298899ms), ( 149449us/query), ammount of trues returned; 38
+Case partitioning; [0, 15, 0, 60, 1925]([0.0, 0.0075, 0.0, 0.03, 0.9625])
+Maximum degree in residual graph D3; 66
+10272/135183
+
+2 Level relaxed k-reach (k=6) index on graph G; G: n=62586, m=147892, cm=147892
+Index size became; <G: n=49246, m=339569, cm=339569, G: n=54792, m=1180645, cm=1180645, G: n=61266, m=134609, cm=134609, 250, 1070>
+Index construction time; 2989
+Query amount; 3000, time spent on queries; 449657763222ns (449657ms), ( 149885us/query), ammount of trues returned; 62
+Case partitioning; [0, 18, 0, 92, 2890]([0.0, 0.006, 0.0, 0.0307, 0.9633])
+Maximum degree in residual graph D3; 66
+10294/136146
+
+2 Level relaxed k-reach (k=6) index on graph G; G: n=62586, m=147892, cm=147892
+Index size became; <G: n=49246, m=339569, cm=339569, G: n=54792, m=1180645, cm=1180645, G: n=61266, m=134609, cm=134609, 250, 1070>
+Index construction time; 2989
+Query amount; 4000, time spent on queries; 601925694578ns (601925ms), ( 150481us/query), ammount of trues returned; 82
+Case partitioning; [0, 23, 0, 130, 3847]([0.0, 0.0058, 0.0, 0.0325, 0.9618])
+Maximum degree in residual graph D3; 66
+10312/137101
+
+2 Level relaxed k-reach (k=6) index on graph G; G: n=62586, m=147892, cm=147892
+Index size became; <G: n=49246, m=339569, cm=339569, G: n=54792, m=1180645, cm=1180645, G: n=61266, m=134609, cm=134609, 250, 1070>
+Index construction time; 2989
+Query amount; 5000, time spent on queries; 754786950078ns (754786ms), ( 150957us/query), ammount of trues returned; 101
+Case partitioning; [0, 33, 0, 157, 4810]([0.0, 0.0066, 0.0, 0.0314, 0.962])
+Maximum degree in residual graph D3; 66
+10331/138064
+
+2 Level relaxed k-reach (k=6) index on graph G; G: n=62586, m=147892, cm=147892
+Index size became; <G: n=49246, m=339569, cm=339569, G: n=54792, m=1180645, cm=1180645, G: n=61266, m=134609, cm=134609, 250, 1070>
+Index construction time; 2989
+Query amount; 6000, time spent on queries; 905068095897ns (905068ms), ( 150844us/query), ammount of trues returned; 119
+Case partitioning; [0, 42, 1, 200, 5757]([0.0, 0.007, 2.0E-4, 0.0333, 0.9595])
+Maximum degree in residual graph D3; 66
+10348/139010
+
+2 Level relaxed k-reach (k=6) index on graph G; G: n=62586, m=147892, cm=147892
+Index size became; <G: n=49246, m=339569, cm=339569, G: n=54792, m=1180645, cm=1180645, G: n=61266, m=134609, cm=134609, 250, 1070>
+Index construction time; 2989
+Query amount; 7000, time spent on queries; 1057491810689ns (1057491ms), ( 151070us/query), ammount of trues returned; 139
+Case partitioning; [0, 47, 1, 232, 6720]([0.0, 0.0067, 1.0E-4, 0.0331, 0.96])
+Maximum degree in residual graph D3; 66
+10367/139972
+
+2 Level relaxed k-reach (k=6) index on graph G; G: n=62586, m=147892, cm=147892
+Index size became; <G: n=49246, m=339569, cm=339569, G: n=54792, m=1180645, cm=1180645, G: n=61266, m=134609, cm=134609, 250, 1070>
+Index construction time; 2989
+Query amount; 8000, time spent on queries; 1213299327451ns (1213299ms), ( 151662us/query), ammount of trues returned; 156
+Case partitioning; [0, 54, 1, 263, 7682]([0.0, 0.0068, 1.0E-4, 0.0329, 0.9603])
+Maximum degree in residual graph D3; 66
+10383/140934
+
+2 Level relaxed k-reach (k=6) index on graph G; G: n=62586, m=147892, cm=147892
+Index size became; <G: n=49246, m=339569, cm=339569, G: n=54792, m=1180645, cm=1180645, G: n=61266, m=134609, cm=134609, 250, 1070>
+Index construction time; 2989
+Query amount; 9000, time spent on queries; 1368905706154ns (1368905ms), ( 152100us/query), ammount of trues returned; 182
+Case partitioning; [0, 57, 1, 298, 8644]([0.0, 0.0063, 1.0E-4, 0.0331, 0.9604])
+Maximum degree in residual graph D3; 66
+10409/141896
+
+2 Level relaxed k-reach (k=6) index on graph G; G: n=62586, m=147892, cm=147892
+Index size became; <G: n=49246, m=339569, cm=339569, G: n=54792, m=1180645, cm=1180645, G: n=61266, m=134609, cm=134609, 250, 1070>
+Index construction time; 2989
+Query amount; 10000, time spent on queries; 1522340837072ns (1522340ms), ( 152234us/query), ammount of trues returned; 203
+Case partitioning; [0, 61, 1, 339, 9599]([0.0, 0.0061, 1.0E-4, 0.0339, 0.9599])
+Maximum degree in residual graph D3; 66
+10428/142850
+
+
+
+
+!!
+
+2 Level relaxed k-reach (k=6) index on graph G; G: n=62586, m=147892, cm=147892
+Index size became; <G: n=49246, m=339569, cm=339569, G: n=54792, m=1180645, cm=1180645, G: n=61266, m=134609, cm=134609, 250, 1070>
+Index construction time; 2989
+Query amount; 10000, time spent on queries; 1522340837072ns (1522340ms), ( 152234us/query), ammount of trues returned; 203
+Case partitioning; [0, 61, 1, 339, 9599]([0.0, 0.0061, 1.0E-4, 0.0339, 0.9599])
+Maximum degree in residual graph D3; 66
+10428/142850
+
+Now starting Datasets\Gnutella\out.p2p-Gnutella31 for k=6
+Size of intersection; 1
+Tuning done, staring constrution of D3
+index done
+2 Level relaxed k-reach (k=6) index on graph G; G: n=62586, m=147892, cm=147892
+Index size became; <G: n=49246, m=339569, cm=339569, G: n=54792, m=1180645, cm=1180645, G: n=61266, m=134609, cm=134609, 250, 1070>
+Index construction time; 2762
+Query amount; 1000, time spent on queries; 150197710863ns (150197ms), ( 150197us/query), ammount of trues returned; 18
+Case partitioning; [0, 8, 0, 30, 962]([0.0, 0.008, 0.0, 0.03, 0.962])
+Maximum degree in residual graph D3; 66
+10445/143811
+
+2 Level relaxed k-reach (k=6) index on graph G; G: n=62586, m=147892, cm=147892
+Index size became; <G: n=49246, m=339569, cm=339569, G: n=54792, m=1180645, cm=1180645, G: n=61266, m=134609, cm=134609, 250, 1070>
+Index construction time; 2762
+Query amount; 2000, time spent on queries; 304063552962ns (304063ms), ( 152031us/query), ammount of trues returned; 38
+Case partitioning; [0, 15, 0, 60, 1925]([0.0, 0.0075, 0.0, 0.03, 0.9625])
+Maximum degree in residual graph D3; 66
+10464/144773
+
+2 Level relaxed k-reach (k=6) index on graph G; G: n=62586, m=147892, cm=147892
+Index size became; <G: n=49246, m=339569, cm=339569, G: n=54792, m=1180645, cm=1180645, G: n=61266, m=134609, cm=134609, 250, 1070>
+Index construction time; 2762
+Query amount; 3000, time spent on queries; 456889019588ns (456889ms), ( 152296us/query), ammount of trues returned; 62
+Case partitioning; [0, 18, 0, 92, 2890]([0.0, 0.006, 0.0, 0.0307, 0.9633])
+Maximum degree in residual graph D3; 66
+10486/145736
+
+2 Level relaxed k-reach (k=6) index on graph G; G: n=62586, m=147892, cm=147892
+Index size became; <G: n=49246, m=339569, cm=339569, G: n=54792, m=1180645, cm=1180645, G: n=61266, m=134609, cm=134609, 250, 1070>
+Index construction time; 2762
+Query amount; 4000, time spent on queries; 611704877704ns (611704ms), ( 152926us/query), ammount of trues returned; 82
+Case partitioning; [0, 23, 0, 130, 3847]([0.0, 0.0058, 0.0, 0.0325, 0.9618])
+Maximum degree in residual graph D3; 66
+10504/146691
+
+2 Level relaxed k-reach (k=6) index on graph G; G: n=62586, m=147892, cm=147892
+Index size became; <G: n=49246, m=339569, cm=339569, G: n=54792, m=1180645, cm=1180645, G: n=61266, m=134609, cm=134609, 250, 1070>
+Index construction time; 2762
+Query amount; 5000, time spent on queries; 766141999810ns (766141ms), ( 153228us/query), ammount of trues returned; 101
+Case partitioning; [0, 33, 0, 157, 4810]([0.0, 0.0066, 0.0, 0.0314, 0.962])
+Maximum degree in residual graph D3; 66
+10523/147654
+
+2 Level relaxed k-reach (k=6) index on graph G; G: n=62586, m=147892, cm=147892
+Index size became; <G: n=49246, m=339569, cm=339569, G: n=54792, m=1180645, cm=1180645, G: n=61266, m=134609, cm=134609, 250, 1070>
+Index construction time; 2762
+Query amount; 6000, time spent on queries; 918796587739ns (918796ms), ( 153132us/query), ammount of trues returned; 119
+Case partitioning; [0, 42, 1, 200, 5757]([0.0, 0.007, 2.0E-4, 0.0333, 0.9595])
+Maximum degree in residual graph D3; 66
+10540/148600
+
+2 Level relaxed k-reach (k=6) index on graph G; G: n=62586, m=147892, cm=147892
+Index size became; <G: n=49246, m=339569, cm=339569, G: n=54792, m=1180645, cm=1180645, G: n=61266, m=134609, cm=134609, 250, 1070>
+Index construction time; 2762
+Query amount; 7000, time spent on queries; 1073846841574ns (1073846ms), ( 153406us/query), ammount of trues returned; 139
+Case partitioning; [0, 47, 1, 232, 6720]([0.0, 0.0067, 1.0E-4, 0.0331, 0.96])
+Maximum degree in residual graph D3; 66
+10559/149562
+
+2 Level relaxed k-reach (k=6) index on graph G; G: n=62586, m=147892, cm=147892
+Index size became; <G: n=49246, m=339569, cm=339569, G: n=54792, m=1180645, cm=1180645, G: n=61266, m=134609, cm=134609, 250, 1070>
+Index construction time; 2762
+Query amount; 8000, time spent on queries; 1232372713031ns (1232372ms), ( 154046us/query), ammount of trues returned; 156
+Case partitioning; [0, 54, 1, 263, 7682]([0.0, 0.0068, 1.0E-4, 0.0329, 0.9603])
+Maximum degree in residual graph D3; 66
+10575/150524
+
+2 Level relaxed k-reach (k=6) index on graph G; G: n=62586, m=147892, cm=147892
+Index size became; <G: n=49246, m=339569, cm=339569, G: n=54792, m=1180645, cm=1180645, G: n=61266, m=134609, cm=134609, 250, 1070>
+Index construction time; 2762
+Query amount; 9000, time spent on queries; 1391066167683ns (1391066ms), ( 154562us/query), ammount of trues returned; 182
+Case partitioning; [0, 57, 1, 298, 8644]([0.0, 0.0063, 1.0E-4, 0.0331, 0.9604])
+Maximum degree in residual graph D3; 66
+10601/151486
+
+2 Level relaxed k-reach (k=6) index on graph G; G: n=62586, m=147892, cm=147892
+Index size became; <G: n=49246, m=339569, cm=339569, G: n=54792, m=1180645, cm=1180645, G: n=61266, m=134609, cm=134609, 250, 1070>
+Index construction time; 2762
+Query amount; 10000, time spent on queries; 1547047235961ns (1547047ms), ( 154704us/query), ammount of trues returned; 203
+Case partitioning; [0, 61, 1, 339, 9599]([0.0, 0.0061, 1.0E-4, 0.0339, 0.9599])
+Maximum degree in residual graph D3; 66
+10620/152440
+
+
+
+
+!!
+
+2 Level relaxed k-reach (k=6) index on graph G; G: n=62586, m=147892, cm=147892
+Index size became; <G: n=49246, m=339569, cm=339569, G: n=54792, m=1180645, cm=1180645, G: n=61266, m=134609, cm=134609, 250, 1070>
+Index construction time; 2762
+Query amount; 10000, time spent on queries; 1547047235961ns (1547047ms), ( 154704us/query), ammount of trues returned; 203
+Case partitioning; [0, 61, 1, 339, 9599]([0.0, 0.0061, 1.0E-4, 0.0339, 0.9599])
+Maximum degree in residual graph D3; 66
+10620/152440
+
+Now starting Datasets\Gnutella\out.p2p-Gnutella31 for k=6
+Size of intersection; 1
+Tuning done, staring constrution of D3
+index done
+2 Level relaxed k-reach (k=6) index on graph G; G: n=62586, m=147892, cm=147892
+Index size became; <G: n=49246, m=339569, cm=339569, G: n=54792, m=1180645, cm=1180645, G: n=61266, m=134609, cm=134609, 250, 1070>
+Index construction time; 3017
+Query amount; 1000, time spent on queries; 147211104499ns (147211ms), ( 147211us/query), ammount of trues returned; 18
+Case partitioning; [0, 8, 0, 30, 962]([0.0, 0.008, 0.0, 0.03, 0.962])
+Maximum degree in residual graph D3; 66
+10637/153401
+
+2 Level relaxed k-reach (k=6) index on graph G; G: n=62586, m=147892, cm=147892
+Index size became; <G: n=49246, m=339569, cm=339569, G: n=54792, m=1180645, cm=1180645, G: n=61266, m=134609, cm=134609, 250, 1070>
+Index construction time; 3017
+Query amount; 2000, time spent on queries; 298579670530ns (298579ms), ( 149289us/query), ammount of trues returned; 38
+Case partitioning; [0, 15, 0, 60, 1925]([0.0, 0.0075, 0.0, 0.03, 0.9625])
+Maximum degree in residual graph D3; 66
+10656/154363
+
+2 Level relaxed k-reach (k=6) index on graph G; G: n=62586, m=147892, cm=147892
+Index size became; <G: n=49246, m=339569, cm=339569, G: n=54792, m=1180645, cm=1180645, G: n=61266, m=134609, cm=134609, 250, 1070>
+Index construction time; 3017
+Query amount; 3000, time spent on queries; 449935896228ns (449935ms), ( 149978us/query), ammount of trues returned; 62
+Case partitioning; [0, 18, 0, 92, 2890]([0.0, 0.006, 0.0, 0.0307, 0.9633])
+Maximum degree in residual graph D3; 66
+10678/155326
+
+2 Level relaxed k-reach (k=6) index on graph G; G: n=62586, m=147892, cm=147892
+Index size became; <G: n=49246, m=339569, cm=339569, G: n=54792, m=1180645, cm=1180645, G: n=61266, m=134609, cm=134609, 250, 1070>
+Index construction time; 3017
+Query amount; 4000, time spent on queries; 602707199826ns (602707ms), ( 150676us/query), ammount of trues returned; 82
+Case partitioning; [0, 23, 0, 130, 3847]([0.0, 0.0058, 0.0, 0.0325, 0.9618])
+Maximum degree in residual graph D3; 66
+10696/156281
+
+2 Level relaxed k-reach (k=6) index on graph G; G: n=62586, m=147892, cm=147892
+Index size became; <G: n=49246, m=339569, cm=339569, G: n=54792, m=1180645, cm=1180645, G: n=61266, m=134609, cm=134609, 250, 1070>
+Index construction time; 3017
+Query amount; 5000, time spent on queries; 754782937439ns (754782ms), ( 150956us/query), ammount of trues returned; 101
+Case partitioning; [0, 33, 0, 157, 4810]([0.0, 0.0066, 0.0, 0.0314, 0.962])
+Maximum degree in residual graph D3; 66
+10715/157244
+
+2 Level relaxed k-reach (k=6) index on graph G; G: n=62586, m=147892, cm=147892
+Index size became; <G: n=49246, m=339569, cm=339569, G: n=54792, m=1180645, cm=1180645, G: n=61266, m=134609, cm=134609, 250, 1070>
+Index construction time; 3017
+Query amount; 6000, time spent on queries; 905194361892ns (905194ms), ( 150865us/query), ammount of trues returned; 119
+Case partitioning; [0, 42, 1, 200, 5757]([0.0, 0.007, 2.0E-4, 0.0333, 0.9595])
+Maximum degree in residual graph D3; 66
+10732/158190
+
+2 Level relaxed k-reach (k=6) index on graph G; G: n=62586, m=147892, cm=147892
+Index size became; <G: n=49246, m=339569, cm=339569, G: n=54792, m=1180645, cm=1180645, G: n=61266, m=134609, cm=134609, 250, 1070>
+Index construction time; 3017
+Query amount; 7000, time spent on queries; 1058104903461ns (1058104ms), ( 151157us/query), ammount of trues returned; 139
+Case partitioning; [0, 47, 1, 232, 6720]([0.0, 0.0067, 1.0E-4, 0.0331, 0.96])
+Maximum degree in residual graph D3; 66
+10751/159152
+
+2 Level relaxed k-reach (k=6) index on graph G; G: n=62586, m=147892, cm=147892
+Index size became; <G: n=49246, m=339569, cm=339569, G: n=54792, m=1180645, cm=1180645, G: n=61266, m=134609, cm=134609, 250, 1070>
+Index construction time; 3017
+Query amount; 8000, time spent on queries; 1214849554910ns (1214849ms), ( 151856us/query), ammount of trues returned; 156
+Case partitioning; [0, 54, 1, 263, 7682]([0.0, 0.0068, 1.0E-4, 0.0329, 0.9603])
+Maximum degree in residual graph D3; 66
+10767/160114
+
+2 Level relaxed k-reach (k=6) index on graph G; G: n=62586, m=147892, cm=147892
+Index size became; <G: n=49246, m=339569, cm=339569, G: n=54792, m=1180645, cm=1180645, G: n=61266, m=134609, cm=134609, 250, 1070>
+Index construction time; 3017
+Query amount; 9000, time spent on queries; 1370903406145ns (1370903ms), ( 152322us/query), ammount of trues returned; 182
+Case partitioning; [0, 57, 1, 298, 8644]([0.0, 0.0063, 1.0E-4, 0.0331, 0.9604])
+Maximum degree in residual graph D3; 66
+10793/161076
+
+2 Level relaxed k-reach (k=6) index on graph G; G: n=62586, m=147892, cm=147892
+Index size became; <G: n=49246, m=339569, cm=339569, G: n=54792, m=1180645, cm=1180645, G: n=61266, m=134609, cm=134609, 250, 1070>
+Index construction time; 3017
+Query amount; 10000, time spent on queries; 1523946637930ns (1523946ms), ( 152394us/query), ammount of trues returned; 203
+Case partitioning; [0, 61, 1, 339, 9599]([0.0, 0.0061, 1.0E-4, 0.0339, 0.9599])
+Maximum degree in residual graph D3; 66
+10812/162030
+
+
+
+
+!!
+
+2 Level relaxed k-reach (k=6) index on graph G; G: n=62586, m=147892, cm=147892
+Index size became; <G: n=49246, m=339569, cm=339569, G: n=54792, m=1180645, cm=1180645, G: n=61266, m=134609, cm=134609, 250, 1070>
+Index construction time; 3017
+Query amount; 10000, time spent on queries; 1523946637930ns (1523946ms), ( 152394us/query), ammount of trues returned; 203
+Case partitioning; [0, 61, 1, 339, 9599]([0.0, 0.0061, 1.0E-4, 0.0339, 0.9599])
+Maximum degree in residual graph D3; 66
+10812/162030
+
+File; Datasets\Gnutella\out.p2p-Gnutella31; k=6, avarage query time for 10000 queries; 1531111570321
+loading Datasets\Epinions\out.soc-Epinions1
+LoadingDatasets\Epinions\out.soc-Epinions1
+Stream done
+Now starting Datasets\Epinions\out.soc-Epinions1 for k=6
+Size of intersection; 1
+Tuning done, staring constrution of D3
+index done
+2 Level relaxed k-reach (k=6) index on graph G; G: n=75879, m=508837, cm=508837
+Index size became; <G: n=72087, m=176671, cm=176671, G: n=71601, m=109576, cm=109576, G: n=75473, m=502479, cm=502479, 250, 156>
+Index construction time; 1347
+Query amount; 1000, time spent on queries; 7204076898ns (7204ms), ( 7204us/query), ammount of trues returned; 449
+Case partitioning; [0, 11, 0, 2, 987]([0.0, 0.011, 0.0, 0.002, 0.987])
+Maximum degree in residual graph D3; 1996
+10927/162683
+
+2 Level relaxed k-reach (k=6) index on graph G; G: n=75879, m=508837, cm=508837
+Index size became; <G: n=72087, m=176671, cm=176671, G: n=71601, m=109576, cm=109576, G: n=75473, m=502479, cm=502479, 250, 156>
+Index construction time; 1347
+Query amount; 2000, time spent on queries; 13510295526ns (13510ms), ( 6755us/query), ammount of trues returned; 875
+Case partitioning; [0, 22, 0, 6, 1972]([0.0, 0.011, 0.0, 0.003, 0.986])
+Maximum degree in residual graph D3; 1996
+11006/163321
+
+2 Level relaxed k-reach (k=6) index on graph G; G: n=75879, m=508837, cm=508837
+Index size became; <G: n=72087, m=176671, cm=176671, G: n=71601, m=109576, cm=109576, G: n=75473, m=502479, cm=502479, 250, 156>
+Index construction time; 1347
+Query amount; 3000, time spent on queries; 19891605604ns (19891ms), ( 6630us/query), ammount of trues returned; 1325
+Case partitioning; [0, 27, 0, 9, 2964]([0.0, 0.009, 0.0, 0.003, 0.988])
+Maximum degree in residual graph D3; 1996
+11106/163963
+
+2 Level relaxed k-reach (k=6) index on graph G; G: n=75879, m=508837, cm=508837
+Index size became; <G: n=72087, m=176671, cm=176671, G: n=71601, m=109576, cm=109576, G: n=75473, m=502479, cm=502479, 250, 156>
+Index construction time; 1347
+Query amount; 4000, time spent on queries; 26590205771ns (26590ms), ( 6647us/query), ammount of trues returned; 1760
+Case partitioning; [0, 32, 0, 13, 3955]([0.0, 0.008, 0.0, 0.0033, 0.9888])
+Maximum degree in residual graph D3; 1996
+11212/164625
+
+2 Level relaxed k-reach (k=6) index on graph G; G: n=75879, m=508837, cm=508837
+Index size became; <G: n=72087, m=176671, cm=176671, G: n=71601, m=109576, cm=109576, G: n=75473, m=502479, cm=502479, 250, 156>
+Index construction time; 1347
+Query amount; 5000, time spent on queries; 33253877873ns (33253ms), ( 6650us/query), ammount of trues returned; 2199
+Case partitioning; [0, 39, 0, 14, 4947]([0.0, 0.0078, 0.0, 0.0028, 0.9894])
+Maximum degree in residual graph D3; 1996
+11309/165275
+
+2 Level relaxed k-reach (k=6) index on graph G; G: n=75879, m=508837, cm=508837
+Index size became; <G: n=72087, m=176671, cm=176671, G: n=71601, m=109576, cm=109576, G: n=75473, m=502479, cm=502479, 250, 156>
+Index construction time; 1347
+Query amount; 6000, time spent on queries; 39997877588ns (39997ms), ( 6666us/query), ammount of trues returned; 2619
+Case partitioning; [0, 44, 0, 19, 5937]([0.0, 0.0073, 0.0, 0.0032, 0.9895])
+Maximum degree in residual graph D3; 1996
+11414/165950
+
+2 Level relaxed k-reach (k=6) index on graph G; G: n=75879, m=508837, cm=508837
+Index size became; <G: n=72087, m=176671, cm=176671, G: n=71601, m=109576, cm=109576, G: n=75473, m=502479, cm=502479, 250, 156>
+Index construction time; 1347
+Query amount; 7000, time spent on queries; 46572174669ns (46572ms), ( 6653us/query), ammount of trues returned; 3088
+Case partitioning; [0, 52, 0, 21, 6927]([0.0, 0.0074, 0.0, 0.003, 0.9896])
+Maximum degree in residual graph D3; 1996
+11535/166592
+
+2 Level relaxed k-reach (k=6) index on graph G; G: n=75879, m=508837, cm=508837
+Index size became; <G: n=72087, m=176671, cm=176671, G: n=71601, m=109576, cm=109576, G: n=75473, m=502479, cm=502479, 250, 156>
+Index construction time; 1347
+Query amount; 8000, time spent on queries; 53089897627ns (53089ms), ( 6636us/query), ammount of trues returned; 3529
+Case partitioning; [0, 61, 0, 25, 7914]([0.0, 0.0076, 0.0, 0.0031, 0.9893])
+Maximum degree in residual graph D3; 1996
+11627/167230
+
+2 Level relaxed k-reach (k=6) index on graph G; G: n=75879, m=508837, cm=508837
+Index size became; <G: n=72087, m=176671, cm=176671, G: n=71601, m=109576, cm=109576, G: n=75473, m=502479, cm=502479, 250, 156>
+Index construction time; 1347
+Query amount; 9000, time spent on queries; 59406937554ns (59406ms), ( 6600us/query), ammount of trues returned; 3966
+Case partitioning; [0, 65, 0, 34, 8901]([0.0, 0.0072, 0.0, 0.0038, 0.989])
+Maximum degree in residual graph D3; 1996
+11724/167877
+
+2 Level relaxed k-reach (k=6) index on graph G; G: n=75879, m=508837, cm=508837
+Index size became; <G: n=72087, m=176671, cm=176671, G: n=71601, m=109576, cm=109576, G: n=75473, m=502479, cm=502479, 250, 156>
+Index construction time; 1347
+Query amount; 10000, time spent on queries; 66004613970ns (66004ms), ( 6600us/query), ammount of trues returned; 4423
+Case partitioning; [0, 72, 0, 41, 9887]([0.0, 0.0072, 0.0, 0.0041, 0.9887])
+Maximum degree in residual graph D3; 1996
+11830/168512
+
+
+
+
+!!
+
+2 Level relaxed k-reach (k=6) index on graph G; G: n=75879, m=508837, cm=508837
+Index size became; <G: n=72087, m=176671, cm=176671, G: n=71601, m=109576, cm=109576, G: n=75473, m=502479, cm=502479, 250, 156>
+Index construction time; 1347
+Query amount; 10000, time spent on queries; 66004613970ns (66004ms), ( 6600us/query), ammount of trues returned; 4423
+Case partitioning; [0, 72, 0, 41, 9887]([0.0, 0.0072, 0.0, 0.0041, 0.9887])
+Maximum degree in residual graph D3; 1996
+11830/168512
+
+Now starting Datasets\Epinions\out.soc-Epinions1 for k=6
+Size of intersection; 1
+Tuning done, staring constrution of D3
+index done
+2 Level relaxed k-reach (k=6) index on graph G; G: n=75879, m=508837, cm=508837
+Index size became; <G: n=72087, m=176671, cm=176671, G: n=71601, m=109576, cm=109576, G: n=75473, m=502479, cm=502479, 250, 156>
+Index construction time; 1295
+Query amount; 1000, time spent on queries; 7352200621ns (7352ms), ( 7352us/query), ammount of trues returned; 449
+Case partitioning; [0, 11, 0, 2, 987]([0.0, 0.011, 0.0, 0.002, 0.987])
+Maximum degree in residual graph D3; 1996
+11945/169165
+
+2 Level relaxed k-reach (k=6) index on graph G; G: n=75879, m=508837, cm=508837
+Index size became; <G: n=72087, m=176671, cm=176671, G: n=71601, m=109576, cm=109576, G: n=75473, m=502479, cm=502479, 250, 156>
+Index construction time; 1295
+Query amount; 2000, time spent on queries; 13933251143ns (13933ms), ( 6966us/query), ammount of trues returned; 875
+Case partitioning; [0, 22, 0, 6, 1972]([0.0, 0.011, 0.0, 0.003, 0.986])
+Maximum degree in residual graph D3; 1996
+12024/169803
+
+2 Level relaxed k-reach (k=6) index on graph G; G: n=75879, m=508837, cm=508837
+Index size became; <G: n=72087, m=176671, cm=176671, G: n=71601, m=109576, cm=109576, G: n=75473, m=502479, cm=502479, 250, 156>
+Index construction time; 1295
+Query amount; 3000, time spent on queries; 20547980185ns (20547ms), ( 6849us/query), ammount of trues returned; 1325
+Case partitioning; [0, 27, 0, 9, 2964]([0.0, 0.009, 0.0, 0.003, 0.988])
+Maximum degree in residual graph D3; 1996
+12124/170445
+
+2 Level relaxed k-reach (k=6) index on graph G; G: n=75879, m=508837, cm=508837
+Index size became; <G: n=72087, m=176671, cm=176671, G: n=71601, m=109576, cm=109576, G: n=75473, m=502479, cm=502479, 250, 156>
+Index construction time; 1295
+Query amount; 4000, time spent on queries; 27498091137ns (27498ms), ( 6874us/query), ammount of trues returned; 1760
+Case partitioning; [0, 32, 0, 13, 3955]([0.0, 0.008, 0.0, 0.0033, 0.9888])
+Maximum degree in residual graph D3; 1996
+12230/171107
+
+2 Level relaxed k-reach (k=6) index on graph G; G: n=75879, m=508837, cm=508837
+Index size became; <G: n=72087, m=176671, cm=176671, G: n=71601, m=109576, cm=109576, G: n=75473, m=502479, cm=502479, 250, 156>
+Index construction time; 1295
+Query amount; 5000, time spent on queries; 34389377673ns (34389ms), ( 6877us/query), ammount of trues returned; 2199
+Case partitioning; [0, 39, 0, 14, 4947]([0.0, 0.0078, 0.0, 0.0028, 0.9894])
+Maximum degree in residual graph D3; 1996
+12327/171757
+
+2 Level relaxed k-reach (k=6) index on graph G; G: n=75879, m=508837, cm=508837
+Index size became; <G: n=72087, m=176671, cm=176671, G: n=71601, m=109576, cm=109576, G: n=75473, m=502479, cm=502479, 250, 156>
+Index construction time; 1295
+Query amount; 6000, time spent on queries; 41341397241ns (41341ms), ( 6890us/query), ammount of trues returned; 2619
+Case partitioning; [0, 44, 0, 19, 5937]([0.0, 0.0073, 0.0, 0.0032, 0.9895])
+Maximum degree in residual graph D3; 1996
+12432/172432
+
+2 Level relaxed k-reach (k=6) index on graph G; G: n=75879, m=508837, cm=508837
+Index size became; <G: n=72087, m=176671, cm=176671, G: n=71601, m=109576, cm=109576, G: n=75473, m=502479, cm=502479, 250, 156>
+Index construction time; 1295
+Query amount; 7000, time spent on queries; 48177213871ns (48177ms), ( 6882us/query), ammount of trues returned; 3088
+Case partitioning; [0, 52, 0, 21, 6927]([0.0, 0.0074, 0.0, 0.003, 0.9896])
+Maximum degree in residual graph D3; 1996
+12553/173074
+
+2 Level relaxed k-reach (k=6) index on graph G; G: n=75879, m=508837, cm=508837
+Index size became; <G: n=72087, m=176671, cm=176671, G: n=71601, m=109576, cm=109576, G: n=75473, m=502479, cm=502479, 250, 156>
+Index construction time; 1295
+Query amount; 8000, time spent on queries; 54907198605ns (54907ms), ( 6863us/query), ammount of trues returned; 3529
+Case partitioning; [0, 61, 0, 25, 7914]([0.0, 0.0076, 0.0, 0.0031, 0.9893])
+Maximum degree in residual graph D3; 1996
+12645/173712
+
+2 Level relaxed k-reach (k=6) index on graph G; G: n=75879, m=508837, cm=508837
+Index size became; <G: n=72087, m=176671, cm=176671, G: n=71601, m=109576, cm=109576, G: n=75473, m=502479, cm=502479, 250, 156>
+Index construction time; 1295
+Query amount; 9000, time spent on queries; 61456068771ns (61456ms), ( 6828us/query), ammount of trues returned; 3966
+Case partitioning; [0, 65, 0, 34, 8901]([0.0, 0.0072, 0.0, 0.0038, 0.989])
+Maximum degree in residual graph D3; 1996
+12742/174359
+
+2 Level relaxed k-reach (k=6) index on graph G; G: n=75879, m=508837, cm=508837
+Index size became; <G: n=72087, m=176671, cm=176671, G: n=71601, m=109576, cm=109576, G: n=75473, m=502479, cm=502479, 250, 156>
+Index construction time; 1295
+Query amount; 10000, time spent on queries; 68298531986ns (68298ms), ( 6829us/query), ammount of trues returned; 4423
+Case partitioning; [0, 72, 0, 41, 9887]([0.0, 0.0072, 0.0, 0.0041, 0.9887])
+Maximum degree in residual graph D3; 1996
+12848/174994
+
+
+
+
+!!
+
+2 Level relaxed k-reach (k=6) index on graph G; G: n=75879, m=508837, cm=508837
+Index size became; <G: n=72087, m=176671, cm=176671, G: n=71601, m=109576, cm=109576, G: n=75473, m=502479, cm=502479, 250, 156>
+Index construction time; 1295
+Query amount; 10000, time spent on queries; 68298531986ns (68298ms), ( 6829us/query), ammount of trues returned; 4423
+Case partitioning; [0, 72, 0, 41, 9887]([0.0, 0.0072, 0.0, 0.0041, 0.9887])
+Maximum degree in residual graph D3; 1996
+12848/174994
+
+Now starting Datasets\Epinions\out.soc-Epinions1 for k=6
+Size of intersection; 1
+Tuning done, staring constrution of D3
+index done
+2 Level relaxed k-reach (k=6) index on graph G; G: n=75879, m=508837, cm=508837
+Index size became; <G: n=72087, m=176671, cm=176671, G: n=71601, m=109576, cm=109576, G: n=75473, m=502479, cm=502479, 250, 156>
+Index construction time; 1298
+Query amount; 1000, time spent on queries; 7291545861ns (7291ms), ( 7291us/query), ammount of trues returned; 449
+Case partitioning; [0, 11, 0, 2, 987]([0.0, 0.011, 0.0, 0.002, 0.987])
+Maximum degree in residual graph D3; 1996
+12963/175647
+
+2 Level relaxed k-reach (k=6) index on graph G; G: n=75879, m=508837, cm=508837
+Index size became; <G: n=72087, m=176671, cm=176671, G: n=71601, m=109576, cm=109576, G: n=75473, m=502479, cm=502479, 250, 156>
+Index construction time; 1298
+Query amount; 2000, time spent on queries; 13819711681ns (13819ms), ( 6909us/query), ammount of trues returned; 875
+Case partitioning; [0, 22, 0, 6, 1972]([0.0, 0.011, 0.0, 0.003, 0.986])
+Maximum degree in residual graph D3; 1996
+13042/176285
+
+2 Level relaxed k-reach (k=6) index on graph G; G: n=75879, m=508837, cm=508837
+Index size became; <G: n=72087, m=176671, cm=176671, G: n=71601, m=109576, cm=109576, G: n=75473, m=502479, cm=502479, 250, 156>
+Index construction time; 1298
+Query amount; 3000, time spent on queries; 20487522624ns (20487ms), ( 6829us/query), ammount of trues returned; 1325
+Case partitioning; [0, 27, 0, 9, 2964]([0.0, 0.009, 0.0, 0.003, 0.988])
+Maximum degree in residual graph D3; 1996
+13142/176927
+
+2 Level relaxed k-reach (k=6) index on graph G; G: n=75879, m=508837, cm=508837
+Index size became; <G: n=72087, m=176671, cm=176671, G: n=71601, m=109576, cm=109576, G: n=75473, m=502479, cm=502479, 250, 156>
+Index construction time; 1298
+Query amount; 4000, time spent on queries; 27424720199ns (27424ms), ( 6856us/query), ammount of trues returned; 1760
+Case partitioning; [0, 32, 0, 13, 3955]([0.0, 0.008, 0.0, 0.0033, 0.9888])
+Maximum degree in residual graph D3; 1996
+13248/177589
+
+2 Level relaxed k-reach (k=6) index on graph G; G: n=75879, m=508837, cm=508837
+Index size became; <G: n=72087, m=176671, cm=176671, G: n=71601, m=109576, cm=109576, G: n=75473, m=502479, cm=502479, 250, 156>
+Index construction time; 1298
+Query amount; 5000, time spent on queries; 34314200772ns (34314ms), ( 6862us/query), ammount of trues returned; 2199
+Case partitioning; [0, 39, 0, 14, 4947]([0.0, 0.0078, 0.0, 0.0028, 0.9894])
+Maximum degree in residual graph D3; 1996
+13345/178239
+
+2 Level relaxed k-reach (k=6) index on graph G; G: n=75879, m=508837, cm=508837
+Index size became; <G: n=72087, m=176671, cm=176671, G: n=71601, m=109576, cm=109576, G: n=75473, m=502479, cm=502479, 250, 156>
+Index construction time; 1298
+Query amount; 6000, time spent on queries; 41264879226ns (41264ms), ( 6877us/query), ammount of trues returned; 2619
+Case partitioning; [0, 44, 0, 19, 5937]([0.0, 0.0073, 0.0, 0.0032, 0.9895])
+Maximum degree in residual graph D3; 1996
+13450/178914
+
+2 Level relaxed k-reach (k=6) index on graph G; G: n=75879, m=508837, cm=508837
+Index size became; <G: n=72087, m=176671, cm=176671, G: n=71601, m=109576, cm=109576, G: n=75473, m=502479, cm=502479, 250, 156>
+Index construction time; 1298
+Query amount; 7000, time spent on queries; 48480894460ns (48480ms), ( 6925us/query), ammount of trues returned; 3088
+Case partitioning; [0, 52, 0, 21, 6927]([0.0, 0.0074, 0.0, 0.003, 0.9896])
+Maximum degree in residual graph D3; 1996
+13571/179556
+
+2 Level relaxed k-reach (k=6) index on graph G; G: n=75879, m=508837, cm=508837
+Index size became; <G: n=72087, m=176671, cm=176671, G: n=71601, m=109576, cm=109576, G: n=75473, m=502479, cm=502479, 250, 156>
+Index construction time; 1298
+Query amount; 8000, time spent on queries; 55252516217ns (55252ms), ( 6906us/query), ammount of trues returned; 3529
+Case partitioning; [0, 61, 0, 25, 7914]([0.0, 0.0076, 0.0, 0.0031, 0.9893])
+Maximum degree in residual graph D3; 1996
+13663/180194
+
+2 Level relaxed k-reach (k=6) index on graph G; G: n=75879, m=508837, cm=508837
+Index size became; <G: n=72087, m=176671, cm=176671, G: n=71601, m=109576, cm=109576, G: n=75473, m=502479, cm=502479, 250, 156>
+Index construction time; 1298
+Query amount; 9000, time spent on queries; 61789318028ns (61789ms), ( 6865us/query), ammount of trues returned; 3966
+Case partitioning; [0, 65, 0, 34, 8901]([0.0, 0.0072, 0.0, 0.0038, 0.989])
+Maximum degree in residual graph D3; 1996
+13760/180841
+
+2 Level relaxed k-reach (k=6) index on graph G; G: n=75879, m=508837, cm=508837
+Index size became; <G: n=72087, m=176671, cm=176671, G: n=71601, m=109576, cm=109576, G: n=75473, m=502479, cm=502479, 250, 156>
+Index construction time; 1298
+Query amount; 10000, time spent on queries; 68632556566ns (68632ms), ( 6863us/query), ammount of trues returned; 4423
+Case partitioning; [0, 72, 0, 41, 9887]([0.0, 0.0072, 0.0, 0.0041, 0.9887])
+Maximum degree in residual graph D3; 1996
+13866/181476
+
+
+
+
+!!
+
+2 Level relaxed k-reach (k=6) index on graph G; G: n=75879, m=508837, cm=508837
+Index size became; <G: n=72087, m=176671, cm=176671, G: n=71601, m=109576, cm=109576, G: n=75473, m=502479, cm=502479, 250, 156>
+Index construction time; 1298
+Query amount; 10000, time spent on queries; 68632556566ns (68632ms), ( 6863us/query), ammount of trues returned; 4423
+Case partitioning; [0, 72, 0, 41, 9887]([0.0, 0.0072, 0.0, 0.0041, 0.9887])
+Maximum degree in residual graph D3; 1996
+13866/181476
+
+File; Datasets\Epinions\out.soc-Epinions1; k=6, avarage query time for 10000 queries; 67645234174
+loading Datasets\Gnutella\out.p2p-Gnutella31
+LoadingDatasets\Gnutella\out.p2p-Gnutella31
+Stream done
+Now starting Datasets\Gnutella\out.p2p-Gnutella31 for k=4
+Size of intersection; 1
+Tuning done, staring constrution of D3
+index done
+2 Level relaxed k-reach (k=4) index on graph G; G: n=62586, m=147892, cm=147892
+Index size became; <G: n=31039, m=60632, cm=60632, G: n=52420, m=373441, cm=373441, G: n=59002, m=110379, cm=110379, 250, 3334>
+Index construction time; 944
+Query amount; 1000, time spent on queries; 987612550996ns (987612ms), ( 987612us/query), ammount of trues returned; 5
+Case partitioning; [0, 4, 1, 102, 893]([0.0, 0.004, 0.001, 0.102, 0.893])
+Maximum degree in residual graph D3; 47
+13871/182369
+
+2 Level relaxed k-reach (k=4) index on graph G; G: n=62586, m=147892, cm=147892
+Index size became; <G: n=31039, m=60632, cm=60632, G: n=52420, m=373441, cm=373441, G: n=59002, m=110379, cm=110379, 250, 3334>
+Index construction time; 944
+Query amount; 2000, time spent on queries; 1936329637706ns (1936329ms), ( 968164us/query), ammount of trues returned; 8
+Case partitioning; [0, 12, 7, 198, 1783]([0.0, 0.006, 0.0035, 0.099, 0.8915])
+Maximum degree in residual graph D3; 47
+13874/183259
+
+2 Level relaxed k-reach (k=4) index on graph G; G: n=62586, m=147892, cm=147892
+Index size became; <G: n=31039, m=60632, cm=60632, G: n=52420, m=373441, cm=373441, G: n=59002, m=110379, cm=110379, 250, 3334>
+Index construction time; 944
+Query amount; 3000, time spent on queries; 2896036090407ns (2896036ms), ( 965345us/query), ammount of trues returned; 10
+Case partitioning; [0, 16, 11, 307, 2666]([0.0, 0.0053, 0.0037, 0.1023, 0.8887])
+Maximum degree in residual graph D3; 47
+13876/184142
+
+2 Level relaxed k-reach (k=4) index on graph G; G: n=62586, m=147892, cm=147892
+Index size became; <G: n=31039, m=60632, cm=60632, G: n=52420, m=373441, cm=373441, G: n=59002, m=110379, cm=110379, 250, 3334>
+Index construction time; 944
+Query amount; 4000, time spent on queries; 3885747837461ns (3885747ms), ( 971436us/query), ammount of trues returned; 15
+Case partitioning; [0, 27, 14, 410, 3549]([0.0, 0.0068, 0.0035, 0.1025, 0.8873])
+Maximum degree in residual graph D3; 47
+13880/185025
+
+2 Level relaxed k-reach (k=4) index on graph G; G: n=62586, m=147892, cm=147892
+Index size became; <G: n=31039, m=60632, cm=60632, G: n=52420, m=373441, cm=373441, G: n=59002, m=110379, cm=110379, 250, 3334>
+Index construction time; 944
+Query amount; 5000, time spent on queries; 4874771734248ns (4874771ms), ( 974954us/query), ammount of trues returned; 15
+Case partitioning; [0, 37, 17, 518, 4428]([0.0, 0.0074, 0.0034, 0.1036, 0.8856])
+Maximum degree in residual graph D3; 47
+13880/185904
+
+2 Level relaxed k-reach (k=4) index on graph G; G: n=62586, m=147892, cm=147892
+Index size became; <G: n=31039, m=60632, cm=60632, G: n=52420, m=373441, cm=373441, G: n=59002, m=110379, cm=110379, 250, 3334>
+Index construction time; 944
+Query amount; 6000, time spent on queries; 5831683996694ns (5831683ms), ( 971947us/query), ammount of trues returned; 15
+Case partitioning; [0, 47, 20, 619, 5314]([0.0, 0.0078, 0.0033, 0.1032, 0.8857])
+Maximum degree in residual graph D3; 47
+13880/186790
+
+2 Level relaxed k-reach (k=4) index on graph G; G: n=62586, m=147892, cm=147892
+Index size became; <G: n=31039, m=60632, cm=60632, G: n=52420, m=373441, cm=373441, G: n=59002, m=110379, cm=110379, 250, 3334>
+Index construction time; 944
+Query amount; 7000, time spent on queries; 6831718869602ns (6831718ms), ( 975959us/query), ammount of trues returned; 17
+Case partitioning; [0, 54, 21, 721, 6204]([0.0, 0.0077, 0.003, 0.103, 0.8863])
+Maximum degree in residual graph D3; 47
+13881/187679
+
+2 Level relaxed k-reach (k=4) index on graph G; G: n=62586, m=147892, cm=147892
+Index size became; <G: n=31039, m=60632, cm=60632, G: n=52420, m=373441, cm=373441, G: n=59002, m=110379, cm=110379, 250, 3334>
+Index construction time; 944
+Query amount; 8000, time spent on queries; 7802700603707ns (7802700ms), ( 975337us/query), ammount of trues returned; 17
+Case partitioning; [0, 63, 22, 832, 7083]([0.0, 0.0079, 0.0028, 0.104, 0.8854])
+Maximum degree in residual graph D3; 47
+13881/188558
+
+2 Level relaxed k-reach (k=4) index on graph G; G: n=62586, m=147892, cm=147892
+Index size became; <G: n=31039, m=60632, cm=60632, G: n=52420, m=373441, cm=373441, G: n=59002, m=110379, cm=110379, 250, 3334>
+Index construction time; 944
+Query amount; 9000, time spent on queries; 8776279465541ns (8776279ms), ( 975142us/query), ammount of trues returned; 17
+Case partitioning; [0, 67, 23, 917, 7993]([0.0, 0.0074, 0.0026, 0.1019, 0.8881])
+Maximum degree in residual graph D3; 47
+13881/189468
+
+2 Level relaxed k-reach (k=4) index on graph G; G: n=62586, m=147892, cm=147892
+Index size became; <G: n=31039, m=60632, cm=60632, G: n=52420, m=373441, cm=373441, G: n=59002, m=110379, cm=110379, 250, 3334>
+Index construction time; 944
+Query amount; 10000, time spent on queries; 9780458441394ns (9780458ms), ( 978045us/query), ammount of trues returned; 18
+Case partitioning; [0, 75, 26, 1013, 8886]([0.0, 0.0075, 0.0026, 0.1013, 0.8886])
+Maximum degree in residual graph D3; 47
+13881/190360
+
+
+
+
+!!
+
+2 Level relaxed k-reach (k=4) index on graph G; G: n=62586, m=147892, cm=147892
+Index size became; <G: n=31039, m=60632, cm=60632, G: n=52420, m=373441, cm=373441, G: n=59002, m=110379, cm=110379, 250, 3334>
+Index construction time; 944
+Query amount; 10000, time spent on queries; 9780458441394ns (9780458ms), ( 978045us/query), ammount of trues returned; 18
+Case partitioning; [0, 75, 26, 1013, 8886]([0.0, 0.0075, 0.0026, 0.1013, 0.8886])
+Maximum degree in residual graph D3; 47
+13881/190360
+
+Now starting Datasets\Gnutella\out.p2p-Gnutella31 for k=4
+Size of intersection; 1
+Tuning done, staring constrution of D3
+index done
+2 Level relaxed k-reach (k=4) index on graph G; G: n=62586, m=147892, cm=147892
+Index size became; <G: n=31039, m=60632, cm=60632, G: n=52420, m=373441, cm=373441, G: n=59002, m=110379, cm=110379, 250, 3334>
+Index construction time; 1016
+Query amount; 1000, time spent on queries; 1058423548413ns (1058423ms), ( 1058423us/query), ammount of trues returned; 5
+Case partitioning; [0, 4, 1, 102, 893]([0.0, 0.004, 0.001, 0.102, 0.893])
+Maximum degree in residual graph D3; 47
+13886/191253
+
+2 Level relaxed k-reach (k=4) index on graph G; G: n=62586, m=147892, cm=147892
+Index size became; <G: n=31039, m=60632, cm=60632, G: n=52420, m=373441, cm=373441, G: n=59002, m=110379, cm=110379, 250, 3334>
+Index construction time; 1016
+Query amount; 2000, time spent on queries; 2081240447013ns (2081240ms), ( 1040620us/query), ammount of trues returned; 8
+Case partitioning; [0, 12, 7, 198, 1783]([0.0, 0.006, 0.0035, 0.099, 0.8915])
+Maximum degree in residual graph D3; 47
+13889/192143
+
+2 Level relaxed k-reach (k=4) index on graph G; G: n=62586, m=147892, cm=147892
+Index size became; <G: n=31039, m=60632, cm=60632, G: n=52420, m=373441, cm=373441, G: n=59002, m=110379, cm=110379, 250, 3334>
+Index construction time; 1016
+Query amount; 3000, time spent on queries; 3105547076170ns (3105547ms), ( 1035182us/query), ammount of trues returned; 10
+Case partitioning; [0, 16, 11, 307, 2666]([0.0, 0.0053, 0.0037, 0.1023, 0.8887])
+Maximum degree in residual graph D3; 47
+13891/193026
+
+2 Level relaxed k-reach (k=4) index on graph G; G: n=62586, m=147892, cm=147892
+Index size became; <G: n=31039, m=60632, cm=60632, G: n=52420, m=373441, cm=373441, G: n=59002, m=110379, cm=110379, 250, 3334>
+Index construction time; 1016
+Query amount; 4000, time spent on queries; 4177540666943ns (4177540ms), ( 1044385us/query), ammount of trues returned; 15
+Case partitioning; [0, 27, 14, 410, 3549]([0.0, 0.0068, 0.0035, 0.1025, 0.8873])
+Maximum degree in residual graph D3; 47
+13895/193909
+
+BUILD STOPPED (total time: 345 minutes 25 seconds)

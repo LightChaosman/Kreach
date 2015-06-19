@@ -34,7 +34,11 @@ public class KReach {
      * @param args the command line arguments
      */
     public static void main(String[] args) throws FileNotFoundException, IOException {
-
+        K24681012CheckBigSets();
+        boolean a = true;
+        if (a) {
+            return;
+        }
         Graph g2;
         g2 = load(STANFORD);
         int b = 250;
@@ -45,10 +49,7 @@ public class KReach {
 
         List<Integer> vertices = new ArrayList<>();
         //index.printResults();
-        boolean a = false;
-        if (a) {
-            return;
-        }
+
         vertices.addAll(g2.vertices());
         Collections.sort(vertices);
         List<Integer> ss = new ArrayList<>(), ts = new ArrayList<>();
@@ -85,15 +86,16 @@ public class KReach {
     }
 
     private static void K24681012CheckBigSets() throws IOException {
-        File[] fs = new File[]{GNUTELLA2, EPINOMS, ARXIV, STANFORD};
-        int[] ks = new int[]{2, 4, 6, 8, 10, 12};
+        File[] fs = new File[]{EPINOMS};
+        int[] ks = new int[]{4, 2};
         int b = 250;
         int reps = 3;
         int imax = 10000;
-        for (File f : fs) {
-            System.out.println("loading " + f);
-            Graph g = load(f);
-            for (int k : ks) {
+        for (int k : ks) {
+            for (File f : fs) {
+                System.out.println("loading " + f);
+                Graph g = load(f);
+
                 long avg = 0;
                 for (int j = 0; j < reps; j++) {
                     System.gc();
@@ -117,13 +119,14 @@ public class KReach {
                             index.printResults();
                         }
                     }
-                    avg +=index.getQueryTime();
-                    
+                    avg += index.getQueryTime();
+                    System.out.println("\n\n\n!!\n");
+                    index.printResults();
                 }
-                avg = avg/reps;
+                avg = avg / reps;
                 System.out.println("File; " + f + "; k=" + k + ", avarage query time for " + imax + " queries; " + avg);
                 System.gc();
-                
+
             }
 
         }
