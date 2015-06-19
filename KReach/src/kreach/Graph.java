@@ -195,4 +195,10 @@ public class Graph {
         };
     }
 
+    void removeEdge(int n, int m) {
+        E.remove(new DirectedEdge(n,m));
+        adjecency.get(n).k2.remove((Integer)m);
+        adjecency.get(m).k1.remove((Integer)n);
+    }
+
 }
