@@ -27,6 +27,28 @@ public abstract class KReachIndex {
     {
         caseCounter[Case-1]++;
     }
+
+    public int[] getCaseCounter() {
+        return caseCounter;
+    }
+
+    public long getConstructionTime() {
+        return constructionTime;
+    }
+
+    public long getQueries() {
+        return queries;
+    }
+
+    public long getQueryTime() {
+        return queryTime;
+    }
+
+    public long getTrues() {
+        return trues;
+    }
+    
+    
     
     protected final void construct(Graph g)
     {
