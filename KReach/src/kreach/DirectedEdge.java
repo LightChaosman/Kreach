@@ -9,11 +9,24 @@ package kreach;
  *
  * @author Helmond
  */
-public class DirectedEdge extends AbstractEdge{
+public class DirectedEdge{
+
+public final int u,v;
 
     public DirectedEdge(int u, int v) {
-        super(u, v);
+        this.u = u;
+        this.v = v;
     }
+
+    public int getU() {
+        return u;
+    }
+
+    public int getV() {
+        return v;
+    }
+    
+    
 
     @Override
     public int hashCode() {

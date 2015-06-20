@@ -28,29 +28,26 @@ public class KReach {
             FIGEYS = new File("Datasets\\Human protein (Figeys)\\out.maayan-figeys"),
             STANFORD = new File("Datasets\\Stanford\\out.web-Stanford"),
             TARO = new File("Datasets\\Taro exchange\\out.moreno_taro_taro");
-    private static File[] ALL = new File[]{ARXIV, FAA, DBLP, EPINOMS, GNUTELLA2, GPLUS, FIGEYS, STANFORD, TARO};
+    private final static File[] ALL = new File[]{ARXIV, FAA, DBLP, EPINOMS, GNUTELLA2, GPLUS, FIGEYS, STANFORD, TARO};
 
     /**
      * @param args the command line arguments
      */
-    public static void main(String[] args) throws FileNotFoundException, IOException {
-        K24681012CheckBigSets();
-        boolean a = true;
-        if (a) {
-            return;
-        }
-        Graph g2;
-        g2 = load(STANFORD);
+    public static void main(String[] args) throws IOException {
+        Graph g;
+        //Choose dataset
+        g = load(ARXIV);
+        //Set parameters
         int b = 250;
         int k = 10;
-        //KReachIndex index = new KReachIndexBasic(g2, k);
-        KReachIndex index = new KReachIndexTwoLevel(g2, k, b);
-        //KReachIndex index = new KReachIndexFinal(g2, k, b);
+        //Choose index type
+        //KReachIndex index = new KReachIndexBasic(g, k);
+        //KReachIndex index = new KReachIndexTwoLevel(g, k, b);
+        KReachIndex index = new KReachIndexFinal(g, k, b);
 
+        //Generate queries
         List<Integer> vertices = new ArrayList<>();
-        //index.printResults();
-
-        vertices.addAll(g2.vertices());
+        vertices.addAll(g.vertices());
         Collections.sort(vertices);
         List<Integer> ss = new ArrayList<>(), ts = new ArrayList<>();
         int imax = 10000;
@@ -60,6 +57,7 @@ public class KReach {
             ss.add(vertices.get(r.nextInt(vertices.size())));
             ts.add(vertices.get(r.nextInt(vertices.size())));
         }
+        //perform queries
         for (int i = 0; i < imax; i++) {
             int s = ss.get(i);
             int t = ts.get(i);
@@ -86,7 +84,7 @@ public class KReach {
     }
 
     private static void K24681012CheckBigSets() throws IOException {
-        File[] fs = new File[]{ARXIV};
+        File[] fs = new File[]{EPINOMS,GNUTELLA2,ARXIV};
         int[] ks = new int[]{12,10,8,6,4, 2};
         int b = 250;
         int reps = 3;
@@ -129,36 +127,6 @@ public class KReach {
 
             }
 
-        }
-    }
-
-    private static void performDAGCheck(Graph g) {
-        Queue<Integer> Q = new LinkedList<>();
-        ArrayList<Integer> L = new ArrayList<>();
-        for (int v : g.vertices()) {
-            if (g.in(v).isEmpty()) {
-                Q.add(v);
-            }
-        }
-        while (!Q.isEmpty()) {
-            int n = Q.poll();
-            L.add(n);
-            HashSet<Integer> outs = new HashSet<>();
-            for (int m : g.out(n)) {
-                outs.add(m);
-                if (g.in(m).size() == 1) {
-                    Q.add(m);
-                }
-            }
-            for (int m : outs) {
-                g.removeEdge(n, m);
-            }
-
-        }
-        if (g.edges().isEmpty()) {
-            System.out.println("DAG");
-        } else {
-            System.out.println("Not DAG");
         }
     }
 }

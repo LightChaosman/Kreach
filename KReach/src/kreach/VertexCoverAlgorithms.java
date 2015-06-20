@@ -9,8 +9,6 @@ import java.util.Set;
  */
 public class VertexCoverAlgorithms {
 
-    public static final int DEFAULT_BUDGET = 1000;
-
     public static Set<Integer> computeBasic2AproxVertexCover(Graph G) {
         //System.out.println("input for 2aprox vcover: " + G);
         //System.out.println("undirected variant: " + G);
